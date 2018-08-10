@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.infrastructure.persistance
+package pl.braintelligence.projectmanager.persistance
 
 import org.springframework.data.annotation.Id
 import pl.braintelligence.projectmanager.domain.Team

@@ -16,17 +16,16 @@ import spock.lang.Specification
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class BaseSetupIntegrationTest extends Specification {
 
+    @Autowired
+    TestRestTemplate restTemplate
+    @Autowired
+    MongoTemplate mongo
+
     @Rule
     public WireMockRule wireMockRule = new WireMockRule(12346)
 
-    @Autowired
-    TestRestTemplate restTemplate
-
-    @Autowired
-    private MongoTemplate mongo
-
     void setupSpec() {
-        customWiremockSetup()
+        wiremockFix()
     }
 
     void setup() {
@@ -74,7 +73,7 @@ class BaseSetupIntegrationTest extends Specification {
         return restTemplate.exchange(uri, method, entity, responseBodyType)
     }
 
-    private static void customWiremockSetup() {
+    private static void wiremockFix() {
         System.setProperty('http.keepAlive', 'false')
         System.setProperty('http.maxConnections', '1')
     }
