@@ -24,7 +24,8 @@ class TeamService(
 
     fun getTeams(): ExistingTeamDto {
         val teams = teamRepository.findAll()
-        return
+
+        return ExistingTeamDto.mapToExistingTeams(teams)
     }
 }
 

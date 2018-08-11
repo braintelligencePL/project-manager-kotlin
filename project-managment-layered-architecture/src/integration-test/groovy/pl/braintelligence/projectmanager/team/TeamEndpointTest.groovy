@@ -10,7 +10,7 @@ import static org.springframework.http.HttpStatus.OK
 
 class TeamEndpointTest extends BaseSetupIntegrationTest {
 
-    def "test"() {
+    def "Should create new team"() {
         given:
         def teamName = "Team1"
 
@@ -25,7 +25,7 @@ class TeamEndpointTest extends BaseSetupIntegrationTest {
 
         then:
         response.statusCode == OK
-        response.body != null
+        response.body == ([name: teamName])
         response.body.size() == 1
         with(response.body[0]) {
             name == 'Team 1'

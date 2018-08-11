@@ -8,9 +8,9 @@ data class ExistingTeamDto(
         val count: Int
 ) {
     companion object {
-        fun mapToExistingTeams(teams: List<Team>, count: Int): ExistingTeamDto = ExistingTeamDto(
+        fun mapToExistingTeams(teams: List<Team>): ExistingTeamDto = ExistingTeamDto(
                 teams.map { ExistingTeam.mapToExistingTeam(it) },
-                count
+                teams.size
         )
     }
 }
