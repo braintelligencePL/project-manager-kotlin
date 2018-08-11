@@ -2,7 +2,7 @@ package pl.braintelligence.projectmanager.team
 
 import org.springframework.core.ParameterizedTypeReference
 import pl.braintelligence.projectmanager.BaseSetupIntegrationTest
-import pl.braintelligence.projectmanager.application.team.dto.ExistingTeam
+import pl.braintelligence.projectmanager.application.team.dto.ExistingTeamDto
 import pl.braintelligence.projectmanager.application.team.dto.NewTeamDto
 
 import static org.springframework.http.HttpStatus.CREATED
@@ -10,7 +10,7 @@ import static org.springframework.http.HttpStatus.OK
 
 class TeamEndpointTest extends BaseSetupIntegrationTest {
 
-    def "Should create new team"() {
+    def "Should create new team a"() {
         given:
         def teamName = "Team1"
 
@@ -21,11 +21,11 @@ class TeamEndpointTest extends BaseSetupIntegrationTest {
         response.statusCode == CREATED
 
         when:
-        response = get('/teams', new ParameterizedTypeReference<List<ExistingTeam>>() {})
+        response = get('/teams', new ParameterizedTypeReference<List<ExistingTeamDto>>() {})
 
         then:
         response.statusCode == OK
-        response.body == ([name: teamName])
+        response.body != null
         response.body.size() == 1
         with(response.body[0]) {
             name == 'Team 1'

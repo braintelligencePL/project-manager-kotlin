@@ -20,7 +20,7 @@ internal class TeamEndpoint(
 
     @GetMapping
     @ResponseStatus(OK)
-    fun getTeams(): ExistingTeamDto {
+    fun getTeams(): List<ExistingTeamDto> {
         return teamService.getTeams()
     }
 

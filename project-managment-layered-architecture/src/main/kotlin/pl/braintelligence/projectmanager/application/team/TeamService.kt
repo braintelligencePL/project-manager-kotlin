@@ -22,7 +22,7 @@ class TeamService(
         teamRepository.save(team)
     }
 
-    fun getTeams(): ExistingTeamDto {
+    fun getTeams(): List<ExistingTeamDto> {
         val teams = teamRepository.findAll()
 
         return ExistingTeamDto.mapToExistingTeams(teams)
