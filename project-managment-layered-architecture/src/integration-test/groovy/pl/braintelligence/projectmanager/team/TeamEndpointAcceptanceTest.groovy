@@ -29,7 +29,7 @@ class TeamEndpointAcceptanceTest extends BaseIntegrationTest implements Operatin
         with(response.body[0]) {
             name == NEW_TEAM_DTO.name
             currentlyImplementedProjects == 0
-            false
+            true
             members == []
         }
     }

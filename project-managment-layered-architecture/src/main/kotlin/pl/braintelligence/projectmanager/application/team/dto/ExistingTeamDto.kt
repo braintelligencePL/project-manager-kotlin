@@ -15,7 +15,7 @@ data class ExistingTeamDto(
                     ExistingTeamDto(
                             it.name,
                             it.currentlyImplementedProjects,
-                            false,
+                            true, //TODO:
                             TeamMemberDto.toTeamMembers(it.members)
                     )
                 }
