@@ -23,6 +23,4 @@ class TeamEndpoint(
     fun getTeams(): List<ExistingTeamDto> {
         return teamService.getTeams()
     }
-
-
 }

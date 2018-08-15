@@ -1,6 +1,5 @@
 package pl.braintelligence.projectmanager.team.base
 
-import groovy.json.JsonOutput
 import pl.braintelligence.projectmanager.application.team.dto.NewTeamDto
 
 class SampleNewTeamDto {

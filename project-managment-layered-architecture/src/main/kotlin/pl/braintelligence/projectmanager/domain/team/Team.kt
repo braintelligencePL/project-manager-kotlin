@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.domain
+package pl.braintelligence.projectmanager.domain.team
 
 import pl.braintelligence.projectmanager.domain.values.Employee
 

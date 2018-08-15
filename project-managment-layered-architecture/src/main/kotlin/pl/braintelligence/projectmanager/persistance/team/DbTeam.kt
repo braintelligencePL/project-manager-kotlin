@@ -1,7 +1,7 @@
-package pl.braintelligence.projectmanager.persistance
+package pl.braintelligence.projectmanager.persistance.team
 
 import org.springframework.data.annotation.Id
-import pl.braintelligence.projectmanager.domain.Team
+import pl.braintelligence.projectmanager.domain.team.Team
 import pl.braintelligence.projectmanager.domain.values.Employee
 import pl.braintelligence.projectmanager.domain.values.JobPosition
 
@@ -46,8 +46,7 @@ data class DbEmployee(
                 Employee(
                         dbEmployee.firstName,
                         dbEmployee.lastName,
-//                        JobPosition.valueOf(dbEmployee.jobPosition)
-                        JobPosition.DEVELOPER
+                        JobPosition.valueOf(dbEmployee.jobPosition)
                 )
     }
 }

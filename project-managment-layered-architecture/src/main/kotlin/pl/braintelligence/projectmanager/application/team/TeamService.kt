@@ -1,25 +1,31 @@
 package pl.braintelligence.projectmanager.application.team
 
-import org.springframework.http.HttpStatus
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import org.springframework.web.bind.annotation.ResponseStatus
 import pl.braintelligence.projectmanager.application.team.dto.ExistingTeamDto
 import pl.braintelligence.projectmanager.application.team.dto.NewTeamDto
-import pl.braintelligence.projectmanager.domain.Team
-import pl.braintelligence.projectmanager.domain.TeamRepository
+import pl.braintelligence.projectmanager.domain.team.Team
+import pl.braintelligence.projectmanager.domain.team.TeamRepository
+import pl.braintelligence.projectmanager.domain.exceptions.TeamAlreadyExistException
+import java.lang.invoke.MethodHandles
 
 @Service
 class TeamService(
         val teamRepository: TeamRepository
 ) {
     fun createTeam(newTeamDto: NewTeamDto) {
-        val team = Team(newTeamDto.name)
+        logger.info("Creating new team {}.", newTeamDto)
 
-        if(teamRepository.exist(team.name)) {
-            throw TeamAlreadyExistException("Team already exists")
+        when (teamRepository.existByName(newTeamDto.name)) {
+            true -> {
+                logger.warn("Team {} already exist.", newTeamDto)
+                throw TeamAlreadyExistException()
+            }
+            false -> {
+                val team = Team(newTeamDto.name)
+                teamRepository.save(team)
+            }
         }
-
-        teamRepository.save(team)
     }
 
     fun getTeams(): List<ExistingTeamDto> {
@@ -27,7 +33,8 @@ class TeamService(
 
         return ExistingTeamDto.mapToExistingTeams(teams)
     }
-}
 
-@ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Team already exists")
-internal class TeamAlreadyExistException(msg: String) : RuntimeException(msg)
+    companion object {
+        private val logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass())
+    }
+}

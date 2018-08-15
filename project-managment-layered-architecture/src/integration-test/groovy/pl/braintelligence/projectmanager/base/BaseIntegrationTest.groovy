@@ -6,11 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.data.mongodb.core.MongoTemplate
-import org.springframework.test.annotation.Rollback
 import pl.braintelligence.projectmanager.Application
 import spock.lang.Specification
 
-@Rollback
 @SpringBootTest(classes = [Application], webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 abstract class BaseIntegrationTest extends Specification {
 
