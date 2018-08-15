@@ -3,7 +3,7 @@
 
 
 You can find basic overview of Domain-Driven Design on my site: <BR>
-#️⃣ [The nature of domain-driven design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/)
+#️⃣ [The nature of domain-driven design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
 #️⃣ [Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
 
 # Working with application
