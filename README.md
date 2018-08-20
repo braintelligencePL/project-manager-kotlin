@@ -1,6 +1,4 @@
-# Project Manager (similar to Trello)
-🌐 [Project Managment Software - wiki](https://en.wikipedia.org/wiki/Project_management_software)
-
+# Project Manager (similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 ### Materials to read
 #️⃣ [The nature of domain-driven design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
