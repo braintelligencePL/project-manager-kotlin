@@ -1,8 +1,8 @@
 # Project Manager (similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 ### Something to read
-#️⃣ [The nature of domain-driven design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
-#️⃣ [Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
+#️⃣ [Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
+#️⃣ [#0 Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
 
 # Working with application
 ## Backend
