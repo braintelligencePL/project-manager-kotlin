@@ -6,7 +6,7 @@ data class Employee(
         val jobPosition: JobPosition
 )
 
-enum class JobPosition{
+enum class JobPosition {
     DEVELOPER,
     SCRUM_MASTER,
     PRODUCT_OWNER,

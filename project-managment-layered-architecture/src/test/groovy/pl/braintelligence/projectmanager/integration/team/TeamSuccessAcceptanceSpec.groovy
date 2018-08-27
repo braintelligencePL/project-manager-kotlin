@@ -1,26 +1,25 @@
-package pl.braintelligence.projectmanager.team
+package pl.braintelligence.projectmanager.integration.team
 
-
-import pl.braintelligence.projectmanager.base.BaseIntegrationTest
-import pl.braintelligence.projectmanager.team.base.OperatingOnTeamEndpoint
+import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
+import pl.braintelligence.projectmanager.integration.team.base.OperatingOnTeamEndpoint
 
 import static org.springframework.http.HttpStatus.CREATED
 import static org.springframework.http.HttpStatus.OK
-import static pl.braintelligence.projectmanager.team.base.SampleNewTeamDto.sampleNewTeamDto
+import static pl.braintelligence.projectmanager.integration.team.base.SampleNewTeamDto.sampleNewTeamDto
 
-class TeamEndpointAcceptanceTest extends BaseIntegrationTest implements OperatingOnTeamEndpoint {
+class TeamSuccessAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
 
     def "Should create new team and browse it"() {
         when: "new team is created"
         def response = postNewTeam(sampleNewTeamDto())
 
-        then: "system creates new team"
+        then: "system response that team is created"
         response.statusCode == CREATED
 
-        when: "get all created teams"
+        when: "returns all created teams"
         response = getAllTeams()
 
-        then: "verify that one team was created"
+        then: "checks that one team was created"
         response.statusCode == OK
         response.body.size() == 1
 
@@ -32,7 +31,4 @@ class TeamEndpointAcceptanceTest extends BaseIntegrationTest implements Operatin
             members == []
         }
     }
-
-
-
 }

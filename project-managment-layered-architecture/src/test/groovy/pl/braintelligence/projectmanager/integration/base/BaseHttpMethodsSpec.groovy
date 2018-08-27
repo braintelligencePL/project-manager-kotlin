@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.base
+package pl.braintelligence.projectmanager.integration.base
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.web.client.TestRestTemplate
@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity
 
 import static org.springframework.http.HttpMethod.GET
 
-trait BaseHttpMethodsTest {
+trait BaseHttpMethodsSpec {
 
     @Autowired
     TestRestTemplate restTemplate
@@ -39,6 +39,13 @@ trait BaseHttpMethodsTest {
         return sendRequest(uri, HttpMethod.PATCH, requestBody, Object)
     }
 
+    def <T> HttpEntity<T> preparePayload(T data, Map<String, List<String>> additionalHeaders = [:]) {
+        def headers = new HttpHeaders()
+
+        headers.putAll(additionalHeaders)
+        return new HttpEntity<T>(data, headers)
+    }
+
     private <T> ResponseEntity<T> sendRequest(String uri, HttpMethod method, Object requestBody, Class<T> responseBodyType) {
         def entity = new HttpEntity<>(requestBody)
         return restTemplate.exchange(uri, method, entity, responseBodyType)
@@ -47,12 +54,5 @@ trait BaseHttpMethodsTest {
     private <T> ResponseEntity<T> sendRequest(String uri, HttpMethod method, Object requestBody, ParameterizedTypeReference<T> responseBodyType) {
         def entity = new HttpEntity<>(requestBody)
         return restTemplate.exchange(uri, method, entity, responseBodyType)
-    }
-
-    def <T> HttpEntity<T> preparePayload(T data, Map<String, List<String>> additionalHeaders = [:]) {
-        def headers = new HttpHeaders()
-
-        headers.putAll(additionalHeaders)
-        return new HttpEntity<T>(data, headers)
     }
 }

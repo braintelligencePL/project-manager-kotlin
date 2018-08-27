@@ -1,9 +1,9 @@
-package pl.braintelligence.projectmanager.application.team
+package pl.braintelligence.projectmanager
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import pl.braintelligence.projectmanager.application.team.dto.ExistingTeamDto
-import pl.braintelligence.projectmanager.application.team.dto.NewTeamDto
+import pl.braintelligence.projectmanager.dto.ExistingTeamDto
+import pl.braintelligence.projectmanager.dto.NewTeamDto
 import pl.braintelligence.projectmanager.domain.team.Team
 import pl.braintelligence.projectmanager.domain.team.TeamRepository
 import pl.braintelligence.projectmanager.domain.exceptions.TeamAlreadyExistException
@@ -22,8 +22,7 @@ class TeamService(
                 throw TeamAlreadyExistException()
             }
             false -> {
-                val team = Team(newTeamDto.name)
-                teamRepository.save(team)
+                teamRepository.save(Team(newTeamDto.name))
             }
         }
     }
@@ -37,4 +36,5 @@ class TeamService(
     companion object {
         private val logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass())
     }
+
 }

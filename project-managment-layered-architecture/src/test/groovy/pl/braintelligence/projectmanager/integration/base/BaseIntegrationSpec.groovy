@@ -1,7 +1,7 @@
-package pl.braintelligence.projectmanager.base
+package pl.braintelligence.projectmanager.integration.base
 
-import org.junit.Rule
 import com.github.tomakehurst.wiremock.junit.WireMockRule
+import org.junit.Rule
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
@@ -10,7 +10,7 @@ import pl.braintelligence.projectmanager.Application
 import spock.lang.Specification
 
 @SpringBootTest(classes = [Application], webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-abstract class BaseIntegrationTest extends Specification {
+abstract class BaseIntegrationSpec extends Specification {
 
     @Autowired
     TestRestTemplate restTemplate
