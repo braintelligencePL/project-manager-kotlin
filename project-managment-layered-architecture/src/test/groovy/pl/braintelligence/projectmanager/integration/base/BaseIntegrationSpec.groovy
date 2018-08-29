@@ -35,5 +35,4 @@ abstract class BaseIntegrationSpec extends Specification {
             mongo.dropCollection(collection)
         }
     }
-
 }

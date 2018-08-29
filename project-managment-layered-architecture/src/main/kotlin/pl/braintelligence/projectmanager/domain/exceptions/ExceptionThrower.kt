@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus
 internal class TeamAlreadyExistException
     : RuntimeException()
 
-@ResponseStatus(value = HttpStatus.UNPROCESSABLE_ENTITY, reason = "Team doesn't exists.")
-internal class NonExistentTeanException
-    : RuntimeException()
+@ResponseStatus(value = HttpStatus.UNPROCESSABLE_ENTITY)
+internal class EntityAlreadyExistsException(message: String)
+    : RuntimeException(message)
+

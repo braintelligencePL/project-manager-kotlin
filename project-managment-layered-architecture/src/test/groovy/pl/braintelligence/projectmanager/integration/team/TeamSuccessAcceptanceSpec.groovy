@@ -1,5 +1,6 @@
 package pl.braintelligence.projectmanager.integration.team
 
+import org.springframework.http.ResponseEntity
 import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
 import pl.braintelligence.projectmanager.integration.team.base.OperatingOnTeamEndpoint
 
@@ -12,18 +13,23 @@ class TeamSuccessAcceptanceSpec extends BaseIntegrationSpec implements Operating
     def "Should create new team and browse it"() {
         when: "new team is created"
         def response = postNewTeam(sampleNewTeamDto())
+        response = postNewTeam(sampleNewTeamDto())
 
         then: "system response that team is created"
+        response.body.message == "TEAM_ALREADY_EXISTS"
         response.statusCode == CREATED
 
-        when: "returns all created teams"
-        response = getAllTeams()
+//        when: "returns all created teams"
+//        response = getAllTeams()
+//
+//        then: "checks that one team was created and has default settings"
+//        response.statusCode == OK
+//        response.body.size() == 1
+//        hasDefaultSetting(response)
 
-        then: "checks that one team was created"
-        response.statusCode == OK
-        response.body.size() == 1
+    }
 
-        and: "has default settings"
+    private boolean hasDefaultSetting(ResponseEntity response) {
         with(response.body[0]) {
             name == sampleNewTeamDto().name
             currentlyImplementedProjects == 0

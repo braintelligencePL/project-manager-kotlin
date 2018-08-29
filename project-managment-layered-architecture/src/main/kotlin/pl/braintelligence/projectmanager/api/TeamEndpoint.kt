@@ -2,9 +2,9 @@ package pl.braintelligence.projectmanager.api
 
 import org.springframework.http.HttpStatus.*
 import org.springframework.web.bind.annotation.*
-import pl.braintelligence.projectmanager.dto.NewTeamDto
-import pl.braintelligence.projectmanager.TeamService
-import pl.braintelligence.projectmanager.dto.ExistingTeamDto
+import pl.braintelligence.projectmanager.application.team.dto.NewTeamDto
+import pl.braintelligence.projectmanager.application.team.TeamService
+import pl.braintelligence.projectmanager.application.team.dto.ExistingTeamDto
 
 @RestController
 @RequestMapping(value = ["/teams"])
