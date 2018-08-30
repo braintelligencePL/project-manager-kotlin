@@ -45,4 +45,4 @@ To run integration tests:
 - [ ] Public and private endpoints ( plus useless endpoint that counts users )
 
 ### Credits
-[#1](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
+# [#1](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
