@@ -11,16 +11,27 @@ class TeamFailureAcceptanceSpec extends BaseIntegrationSpec implements Operating
 
     @Unroll
     def "Should not create an unnamed new team"() {
-        when:
+        when: "try to post new team with empty-name"
         def response = postNewTeam(sampleNewTeamDto(name: name))
 
-        then:
+        then: "system cannot create a team with empty team-name"
         response.statusCode == UNPROCESSABLE_ENTITY
+        response.body.message == "EMPTY_TEAM_NAME"
 
         where:
         name << ['', '  ']
     }
 
+    def "Should not create a team that already exists"() {
+        given: "create new team"
+        postNewTeam(sampleNewTeamDto())
 
+        when: "create team with already existing team-name"
+        def response = postNewTeam(sampleNewTeamDto())
+
+        then: "throws exception "
+        response.statusCode == UNPROCESSABLE_ENTITY
+        response.body.message == "TEAM_ALREADY_EXISTS"
+    }
 
 }
