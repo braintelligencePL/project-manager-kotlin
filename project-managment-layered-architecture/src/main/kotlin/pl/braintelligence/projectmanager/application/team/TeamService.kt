@@ -16,12 +16,8 @@ class TeamService(
     fun createTeam(newTeamDto: NewTeamDto) {
         logger.info("Creating new team {}.", newTeamDto)
         val team = Team(newTeamDto.name)
-
         when (teamRepository.existByName(team.name)) {
-            true -> {
-                logger.warn("Team {} already exist.", newTeamDto)
-                throw EntityAlreadyExistsException("Team already exist.")
-            }
+            true -> throw EntityAlreadyExistsException("Team already exist.")
             false -> teamRepository.save(team)
         }
     }
@@ -30,6 +26,10 @@ class TeamService(
         val teams = teamRepository.findAll()
 
         return ExistingTeamDto.mapToExistingTeams(teams)
+    }
+
+    fun addMemberToTeam() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     companion object {
