@@ -44,5 +44,8 @@ To run integration tests:
 - [ ] Search all tasks by text ( configure elasticsearch )
 - [ ] Public and private endpoints ( plus useless endpoint that counts users )
 
-### Credits
-# [#1](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
+## Credits repositories
+#### [#1](https://github.com/BottegaIT/ddd-leaven-v2)
+#### [#2](https://github.com/mkopylec/project-manager)
+#### [#3](https://github.com/jakubnabrdalik/hentai)
+
