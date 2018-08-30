@@ -44,7 +44,6 @@ To run integration tests:
 - [ ] Search all tasks by text ( configure elasticsearch )
 - [ ] Public and private endpoints ( plus useless endpoint that counts users )
 
-## Credits repositories
-#### [#1](https://github.com/BottegaIT/ddd-leaven-v2) #### [ #2](https://github.com/mkopylec/project-manager)
-#### [#3](https://github.com/jakubnabrdalik/hentai)
+## Credits
+#### [#1](https://github.com/kamranahmedse/design-patterns-for-humans)[ #2](https://github.com/BottegaIT/ddd-leaven-v2)[ #3](https://github.com/mkopylec/project-manager)[ #3](https://github.com/jakubnabrdalik/hentai) [ #4](https://github.com/heynickc/awesome-ddd)
 
