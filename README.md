@@ -43,3 +43,6 @@ To run integration tests:
 - [ ] OAuth2 for login/registration
 - [ ] Search all tasks by text ( configure elasticsearch )
 - [ ] Public and private endpoints ( plus useless endpoint that counts users )
+
+### Credits
+[#1](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
