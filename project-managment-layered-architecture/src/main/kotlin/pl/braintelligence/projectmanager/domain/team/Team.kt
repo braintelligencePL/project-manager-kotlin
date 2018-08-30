@@ -10,7 +10,7 @@ class Team(
         val members: List<Employee> = emptyList()
 ) {
     init {
-//        validateName(name)
+        validateName(name)
     }
 
     private fun validateName(name: String) {

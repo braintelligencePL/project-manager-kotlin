@@ -15,15 +15,14 @@ class TeamService(
 ) {
     fun createTeam(newTeamDto: NewTeamDto) {
         logger.info("Creating new team {}.", newTeamDto)
-        val name = newTeamDto.name
+        val team = Team(newTeamDto.name)
 
-        when (teamRepository.existByName(name)) {
+        when (teamRepository.existByName(team.name)) {
             true -> {
                 logger.warn("Team {} already exist.", newTeamDto)
                 throw EntityAlreadyExistsException("Team already exist.")
             }
-            false -> teamRepository.save(Team(name))
-
+            false -> teamRepository.save(team)
         }
     }
 
