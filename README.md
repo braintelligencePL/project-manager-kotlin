@@ -45,5 +45,5 @@ To run integration tests:
 - [ ] Public and private endpoints ( plus useless endpoint that counts users )
 
 ## Credits
-#### [#1](https://github.com/kamranahmedse/design-patterns-for-humans)[ #2](https://github.com/BottegaIT/ddd-leaven-v2)[ #3](https://github.com/mkopylec/project-manager)[ #4](https://github.com/jakubnabrdalik/hentai) [ #5](https://github.com/heynickc/awesome-ddd)[ #6](https://github.com/kbastani/spring-cloud-event-sourcing-example)
+#### [ #1 ](https://github.com/kamranahmedse/design-patterns-for-humans)[ #2 ](https://github.com/BottegaIT/ddd-leaven-v2)[ #3 ](https://github.com/mkopylec/project-manager)[ #4 ](https://github.com/jakubnabrdalik/hentai) [ #5 ](https://github.com/heynickc/awesome-ddd)[ #6 ](https://github.com/kbastani/spring-cloud-event-sourcing-example)
 
