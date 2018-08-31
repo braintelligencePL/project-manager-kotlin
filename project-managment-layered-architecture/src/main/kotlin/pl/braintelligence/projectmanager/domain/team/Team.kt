@@ -6,9 +6,9 @@ import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.*
 import pl.braintelligence.projectmanager.domain.values.Employee
 
 class Team(
-        val name: String,
-        val currentlyImplementedProjects: Int = 0,
-        val members: List<Employee> = emptyList()
+    val name: String,
+    val currentlyImplementedProjects: Int = 0,
+    val members: List<Employee> = emptyList()
 ) {
     init {
         validateName(name)

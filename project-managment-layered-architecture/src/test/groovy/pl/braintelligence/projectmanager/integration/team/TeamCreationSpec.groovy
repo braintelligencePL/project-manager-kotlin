@@ -7,11 +7,23 @@ import spock.lang.Unroll
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
 import static pl.braintelligence.projectmanager.integration.team.base.SampleNewTeamDto.sampleNewTeamDto
 
-class TeamFailureAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
+class TeamCreationSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
+
+    def "Should not create a team that already exists"() {
+        given: "create new team"
+        postNewTeam(sampleNewTeamDto())
+
+        when: "create team with already existing team-name"
+        def response = postNewTeam(sampleNewTeamDto())
+
+        then: "system throws that team already exist"
+        response.statusCode == UNPROCESSABLE_ENTITY
+        response.body.message == "TEAM_ALREADY_EXISTS"
+    }
 
     @Unroll
-    def "Should not create an unnamed new team"() {
-        when: "try to post new team with empty-name"
+    def "Should not create unnamed new-team"() {
+        when: "post new team with empty-name"
         def response = postNewTeam(sampleNewTeamDto(name: name))
 
         then: "system cannot create a team with empty team-name"
@@ -21,17 +33,4 @@ class TeamFailureAcceptanceSpec extends BaseIntegrationSpec implements Operating
         where:
         name << ['', '  ']
     }
-
-    def "Should not create a team that already exists"() {
-        given: "create new team"
-        postNewTeam(sampleNewTeamDto())
-
-        when: "create team with already existing team-name"
-        def response = postNewTeam(sampleNewTeamDto())
-
-        then: "throws exception "
-        response.statusCode == UNPROCESSABLE_ENTITY
-        response.body.message == "TEAM_ALREADY_EXISTS"
-    }
-
 }
