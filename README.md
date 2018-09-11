@@ -1,8 +1,9 @@
 # From Zero to Hero (or something like that) - Practical-Roadmap
 ##### tltr; Practical-Roadmap for backend developer. 
-There is a lot of roadmaps on github for anything. Most of them are simple agregators of links. I always give it a 'star', but never really use it. There was a lot of materials, but none was really helpful. None of them was like step-by-step to make a good-quality software using some good-practices. I will try to include most of the modern approaches for wring good-quality software. That's probably be more like a marathon than spring. We'll see how it ends. Project will take probably few months/years to complete but in the end it'll contain a lot of knowledge that is needed for backend developer. Especially one that sits with JVM at one table. Anyway main purpose of this repo is that its not focused on technology, but instead on good practices, architectures, design in general and all other cool things.
+There is a lot of roadmaps on github for anything. Most of them are simple agregators of links. I always give it a 'star', but never really use it. There is lots of materials, but none was really helpful. None of them was like step-by-step to make a good-quality software using some good-practices. So... I have a brilliant idea I will do it myself! To be completely honest, I'm doing this project to practice all these good-practices and learn kotlin a bit better. I will try to include most of the modern approaches for wring good-quality software. Project will be more like a marathon than sprint. I'm really curious how it'll ends. It'll take me probably few months/years to complete, but in the end it'll contain a lot of knowledge that is needed for backend developer. Especially one that sits with JVM at one table. Anyway main purpose of this repo is that its not focused on technology per se, but instead on good-practices, architectures, designs in general and all other cool-things.
 
-# Core Application/Domain - Project Manager 
+# What'll we do here?
+## Core Application/Domain - Project Manager 
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 ### Working with application
@@ -67,7 +68,8 @@ Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 🐿 `centralized-configuration-server`
 
 ### #️⃣ `branch: will-be-more` <br>
-- asynchrnous programming - JavaRx or Coroutines (somewhere)
+- asynchrnous programming - JavaRx or Coroutines (somewhere, sometime)
+- docker
 
 <BR><BR>
   
