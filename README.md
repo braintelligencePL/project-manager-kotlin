@@ -49,8 +49,8 @@ To run integration tests:
 ### 3️⃣ `branch: step-3-refactor` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance along with Unit-Tests for corner-cases mostly<BR>
-🛸 **Features**: DB implementation in code with `ConcurrentHashMap` for fast unit-tests `InMemoryCrudRepository.kt` and simple CQRS.<BR> 
-❗❗We have made a mistake by making only integration-tests time to fix that. Only crucial parts will be tested now and the rest will be in unit-tests. ❗
+🛸 **Features**: DB implementation with `ConcurrentHashMap` for fast unit-tests `InMemoryCrudRepository.kt` and simple CQRS.<BR> 
+❗❗From now on only crucial parts are going to be tested with integration-tests.
 
 ### 5️⃣ `branch: step-4-zoo-of-microservices` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
