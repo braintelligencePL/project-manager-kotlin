@@ -1,8 +1,3 @@
-# From Zero to Hero (or something like that) - Practical-Roadmap
-##### tltr; Practical-Roadmap for backend developer. 
-There is lots of roadmaps on github. Most of them are simple agregators of links. I always give it a 'star', but never really use it. None of them was really helpful. I barely found one or two that was step-by-step to make something. Sometimes they went into good practices, sometimes not. There is probably too much of it anyway so no one can possibly know everything. 
-So... anyway... I have a brilliant idea I will do project like I was looking for by myself! Mostly it's for me to practice  all these good-practices and learn kotlin a bit better. I'm not a guru or something like that. I will try to include most of the modern approaches for wring good-quality software, but I'm only a human and I might be wrong, so pull-requests and advices are welcome! Project will be more like a marathon than sprint. I'm really curious how it'll ends. It'll take me probably few months/years to complete, but in the end it'll contain a lot of knowledge that is needed for backend developer. Especially one that sits with JVM at one table. Anyway main purpose of this repo is that its not focused on technology per se, but instead on good-practices, architectures, designs in general and all other cool-things.
-
 # What'll we do here?
 ## Core Application/Domain - Project Manager 
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
