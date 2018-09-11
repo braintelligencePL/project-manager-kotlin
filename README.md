@@ -1,5 +1,5 @@
 # Project Manager 
-(similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
+The project is a simple application for managing projects at company. You can create team, add members to it. Create, modify projects and assing them to teams. (something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 # Working with application
 ## Backend
