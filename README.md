@@ -1,5 +1,5 @@
 # Project Manager 
-The project manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing them to teams. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
+The project manager is a simple application for managing projects at company. You can create teams and add members to team. You can create, modify projects and assing them to teams. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 ### Working with application
 
