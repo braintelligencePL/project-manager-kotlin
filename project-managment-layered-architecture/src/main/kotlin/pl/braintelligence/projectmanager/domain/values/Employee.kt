@@ -9,9 +9,7 @@ data class Employee(
     val lastName: String,
     val jobPosition: JobPosition
 ) {
-    fun hasNoFirstName(): Boolean {
-        return isBlank(firstName)
-    }
+    fun hasNoFirstName(): Boolean = isBlank(firstName)
 
     companion object {
         fun toEmployee(teamMemberDto: TeamMemberDto) =

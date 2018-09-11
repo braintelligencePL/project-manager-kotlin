@@ -15,8 +15,7 @@ data class Team(
     }
 
     fun addMember(teamMember: Employee) {
-//        validateMember(teamMember)
-
+        validateMember(teamMember)
         members.add(teamMember)
     }
 
