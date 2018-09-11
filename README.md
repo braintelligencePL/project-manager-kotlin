@@ -23,12 +23,16 @@ To run integration tests:
 Someday... 
 
 # Application will be implemented in following steps:
-## 1  `branch: step-1-team` <br>
+## 1️⃣ [x] `branch: step-1-team` <br>
 * [x] `POST /teams` - create a team. <br>
 * [x] `POST /teams/:teamName/members` - add members to the team. <br>
 * [x] `GET /teams` - show teams. <br> <br>
 
-## 2  `branch: step-2-projects` <br>
+## 2️⃣ `branch: step-2-projects` <br>
+
+## 2️⃣ `branch: step-3-microservice-zoo` <br>
+## 2️⃣ `branch: step-4-microservice-zoo` <br>
+
 
 
 ## Features
