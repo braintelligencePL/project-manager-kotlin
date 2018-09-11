@@ -10,7 +10,6 @@ import static pl.braintelligence.projectmanager.integration.team.base.SampleTeam
 
 class TeamCreationSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
 
-
     def "Should not create a team that already exists"() {
         given: "create new team"
         createNewTeam(sampleNewTeamDto())

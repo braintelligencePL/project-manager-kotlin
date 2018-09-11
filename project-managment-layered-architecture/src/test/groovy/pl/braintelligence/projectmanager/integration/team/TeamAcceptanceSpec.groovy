@@ -11,7 +11,7 @@ import static pl.braintelligence.projectmanager.integration.team.base.SampleTeam
 
 class TeamAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
 
-    def "Should create new team and browse it"() {
+    def "Should create team and add member to it "() {
         when: "new team is created"
         def response = createNewTeam(sampleNewTeamDto())
 
