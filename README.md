@@ -42,14 +42,23 @@ To run integration tests:
 * [ ] `GET: /projects` - show draft projects <br>
 * [ ] `GET: /projects/:id` - show project (project not project draft)<br>
 * [ ] `PUT: /projects/:id` - change/update project <br>
-
+* [ ] `PATCH: /projects/:id/started` - start team when team assigned <br>
+* [ ] `PATCH: /projects/:id/ended` - close project when features are done <br>
 
 ### 3️⃣ `branch: step-3-refactor` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
-🕳 **Tests**: Integration/Acceptance corner cases with unit-tests<BR>
+🕳 **Tests**: Integration/Acceptance along with unit-tests for corner-cases mostly<BR>
 🛸 **Features**: `InMemoryCrudRepository` with `ConcurrentHashMap` for fast unit-tests
 
 ### 4️⃣ `branch: step-4-microservice-zoo` <br>
+🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
+🕳 **Tests**: Integration/Acceptance corner cases with unit-tests<BR>
+🛸 **Features**: Event-Sourcing, Microservices<BR>
+
+- `user-autorization-service` - 
+- `edge-service`
+- `discovery-service`
+- `centralized-configuration-server`
 
 
 
