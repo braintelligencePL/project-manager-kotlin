@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.domain.team
 
 import org.apache.commons.lang3.StringUtils.isBlank
-import pl.braintelligence.projectmanager.domain.exceptions.InvalidTeamException
+import pl.braintelligence.projectmanager.domain.exceptions.InvalidEntityException
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.*
 import pl.braintelligence.projectmanager.domain.values.Employee
 
@@ -21,14 +21,17 @@ data class Team(
 
     private fun validateName(name: String) {
         when (isBlank(name)) {
-            true -> throw InvalidTeamException(EMPTY_TEAM_NAME)
+            true -> throw InvalidEntityException(EMPTY_TEAM_NAME)
         }
     }
 
     private fun validateMember(teamMember: Employee) {
         if(teamMember.hasNoFirstName())
-            throw InvalidTeamException(EMPTY_MEMBER_FIRST_NAME)
-
+            throw InvalidEntityException(EMPTY_MEMBER_FIRST_NAME)
+        if(teamMember.hasNoLastName())
+            throw InvalidEntityException(EMPTY_MEMBER_LAST_NAME)
+        if(teamMember.hasInvalidJobPosition())
+            throw InvalidEntityException(EMPTY_OR_INVALID_JOB_POSITION)
     }
 }
 

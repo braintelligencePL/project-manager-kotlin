@@ -24,12 +24,11 @@ class TeamAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamE
         then: "checks that one team was created and has default settings"
         response.statusCode == OK
         response.body.size() == 1
-        with(response.body[0]) {
-            name == sampleNewTeamDto().name
-            currentlyImplementedProjects == 0
-            !busy
-            members == []
-        }
+
+        response.body[0].name == sampleNewTeamDto().name
+        response.body[0].currentlyImplementedProjects == 0
+        response.body[0].busy == false
+        response.body[0].members == []
 
         when: "member is added to a team"
         response = addMemberToTeam(sampleTeamMemberDto(), sampleNewTeamDto())

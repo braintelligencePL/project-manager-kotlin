@@ -8,7 +8,7 @@ internal class EntityAlreadyExistsException(message: ErrorCode)
     : RuntimeException(message.toString())
 
 @ResponseStatus(value = HttpStatus.UNPROCESSABLE_ENTITY)
-internal class InvalidTeamException(message: ErrorCode)
+internal class InvalidEntityException(message: ErrorCode)
     : RuntimeException(message.toString())
 
 @ResponseStatus(value = HttpStatus.UNPROCESSABLE_ENTITY)

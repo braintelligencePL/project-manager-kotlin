@@ -1,6 +1,7 @@
 package pl.braintelligence.projectmanager.domain.values
 
 import org.apache.commons.lang3.StringUtils.isBlank
+import org.apache.commons.lang3.StringUtils.isEmpty
 import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 import java.util.Arrays
 
@@ -9,7 +10,12 @@ data class Employee(
     val lastName: String,
     val jobPosition: JobPosition
 ) {
+
     fun hasNoFirstName(): Boolean = isBlank(firstName)
+
+    fun hasNoLastName(): Boolean = isBlank(lastName)
+
+    fun hasInvalidJobPosition(): Boolean = jobPosition.isInvalid()
 
     companion object {
         fun toEmployee(teamMemberDto: TeamMemberDto) =
@@ -19,8 +25,12 @@ data class Employee(
                 toJobPosition(teamMemberDto.jobPosition)
             )
 
-        fun toJobPosition(position: String): JobPosition {
-            return JobPosition.DEVELOPER //TODO:
+        fun toJobPosition(jobPosition: String): JobPosition {
+            return try {
+                JobPosition.valueOf(jobPosition)
+            } catch (e: IllegalArgumentException) {
+                JobPosition.INVALID
+            }
         }
     }
 }
@@ -30,4 +40,8 @@ enum class JobPosition {
     SCRUM_MASTER,
     PRODUCT_OWNER,
     INVALID;
+
+    fun isInvalid(): Boolean {
+        return this == INVALID
+    }
 }
