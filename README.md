@@ -63,7 +63,7 @@ To run integration tests:
 ### #️⃣ `branch: there-will-be-more` <br>
 
 
-### Blog to read and credits from repos that were inspiration (or copy/paste ideas)
+### My blog to read and credits from repos that were inspiration (or copy/paste ideas)
 * [Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
 * [Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) 
 <BR>
