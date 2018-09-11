@@ -28,7 +28,7 @@ To run integration tests:
 ## Implementation step-by-step
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
-🕳 **Tests**: Integration/Acceptance with BDD approach.
+🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
 * [x] `POST: /teams` - create a team. <br>
 * [x] `POST: /teams/:teamName/members` - add members to the team. <br>
@@ -36,7 +36,7 @@ To run integration tests:
 
 ### 2️⃣ `branch: step-2-projects` <br>
 🏠 **Architecture**: Layered Architecure <BR>
-🕳 **Tests**: Integration/Acceptance with BDD approach.
+🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
 * [ ] `POST: /projects/drafts` - create project draft. <br>
 * [ ] `POST: /projects` - create full project (project with features📊). <br>
@@ -48,8 +48,8 @@ To run integration tests:
 
 ### 3️⃣ `branch: step-3-refactor` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
-🕳 **Tests**: Integration/Acceptance along with unit-tests for corner-cases mostly<BR>
-🛸 **Features**: Db implementation with `ConcurrentHashMap` for fast unit-tests `InMemoryCrudRepository.kt` and simple CQRS.<BR> 
+🕳 **Tests**: Integration/Acceptance along with Unit-Tests for corner-cases mostly<BR>
+🛸 **Features**: DB implementation in code with `ConcurrentHashMap` for fast unit-tests `InMemoryCrudRepository.kt` and simple CQRS.<BR> 
 ❗❗We have made a mistake by making only integration-tests time to fix that. Only crucial parts will be tested now and the rest will be in unit-tests. ❗
 
 ### 5️⃣ `branch: step-4-zoo-of-microservices` <br>
