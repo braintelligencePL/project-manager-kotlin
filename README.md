@@ -53,29 +53,19 @@ To run integration tests:
 ### 4️⃣ `branch: step-4-microservice-zoo` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance corner cases with unit-tests<BR>
-🛸 **Features**: Event-Sourcing, Microservices<BR>
+🛸 **Features**: Event-Sourcing, Microservices, Eventual-Consistency <BR>
 
 - `user-autorization-service` - 
 - `edge-service`
 - `discovery-service`
 - `centralized-configuration-server`
 
+### #️⃣ `branch: there-will-be-more` <br>
 
 
-## Features
-- [ ] Create branches and divide project into incremental stages 
-- [ ] Mock sample data into DB on start
-- [ ] Task priority and sorting list
-- [ ] Sort by createdAt and priority? 
-- [ ] OAuth2 for login/registration
-- [ ] Search all tasks by text ( configure elasticsearch )
-- [ ] Public and private endpoints ( plus useless endpoint that counts users )
-
-
-### Something to read and credits
+### Blog to read and credits from repos that were inspiration (or copy/paste ideas)
 * [Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) 
 <BR>
 * [#0 Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
 
 #### [ #1 ](https://github.com/kamranahmedse/design-patterns-for-humans)[ #2 ](https://github.com/BottegaIT/ddd-leaven-v2)[ #3 ](https://github.com/mkopylec/project-manager)[ #4 ](https://github.com/jakubnabrdalik/hentai) [ #5 ](https://github.com/heynickc/awesome-ddd)[ #6 ](https://github.com/kbastani/spring-cloud-event-sourcing-example)
-
