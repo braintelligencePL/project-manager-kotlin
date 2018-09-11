@@ -52,7 +52,7 @@ To run integration tests:
 
 ### 4️⃣ `branch: step-4-microservice-zoo` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
-🕳 **Tests**: Integration/Acceptance corner cases with unit-tests<BR>
+🕳 **Tests**: Integration/Acceptance/Unit<BR>
 🛸 **Features**: Event-Sourcing, Microservices, Eventual-Consistency <BR>
 
 - `user-autorization-service` - 
