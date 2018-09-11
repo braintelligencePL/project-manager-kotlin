@@ -20,16 +20,15 @@ To run integration tests:
 ./gradlew clean build test integrationTest
 ```
 ## Frontend
+Someday... 
 
-<br>
-
-# Endpoints: <br>
-## Branch `step-1-team` <br>
+# Application will be implemented in following steps:
+## 1  `branch: step-1-team` <br>
 * [x] `POST /teams` - create a team. <br>
 * [x] `POST /teams/:teamName/members` - add members to the team. <br>
 * [x] `GET /teams` - show teams. <br> <br>
 
-#### Branch `step-2-project` <br>
+## 2  `branch: step-2-projects` <br>
 
 
 ## Features
