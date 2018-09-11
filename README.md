@@ -25,7 +25,7 @@ To run integration tests:
 ```
 <BR>
 
-## It'll be done like this
+## Implementation step-by-step
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
 🕳 **Tests**: Integration/Acceptance with BDD approach.
