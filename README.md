@@ -1,8 +1,5 @@
-# Project Manager (similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
-
-### Something to read
-[Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) <BR>
-[#0 Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
+# Project Manager 
+(similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 # Working with application
 ## Backend
@@ -44,6 +41,11 @@ To run integration tests:
 - [ ] Search all tasks by text ( configure elasticsearch )
 - [ ] Public and private endpoints ( plus useless endpoint that counts users )
 
-## Credits
+
+### Something to read and credits
+[Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) 
+<BR>
+[#0 Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
+
 #### [ #1 ](https://github.com/kamranahmedse/design-patterns-for-humans)[ #2 ](https://github.com/BottegaIT/ddd-leaven-v2)[ #3 ](https://github.com/mkopylec/project-manager)[ #4 ](https://github.com/jakubnabrdalik/hentai) [ #5 ](https://github.com/heynickc/awesome-ddd)[ #6 ](https://github.com/kbastani/spring-cloud-event-sourcing-example)
 
