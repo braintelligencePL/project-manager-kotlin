@@ -11,10 +11,10 @@ class TeamCreationSpec extends BaseIntegrationSpec implements OperatingOnTeamEnd
 
     def "Should not create a team that already exists"() {
         given: "create new team"
-        postNewTeam(sampleNewTeamDto())
+        createNewTeam(sampleNewTeamDto())
 
         when: "create team with already existing team-name"
-        def response = postNewTeam(sampleNewTeamDto())
+        def response = createNewTeam(sampleNewTeamDto())
 
         then: "system throws that team already exist"
         response.statusCode == UNPROCESSABLE_ENTITY
@@ -24,7 +24,7 @@ class TeamCreationSpec extends BaseIntegrationSpec implements OperatingOnTeamEnd
     @Unroll
     def "Should not create unnamed new-team"() {
         when: "post new team with empty-name"
-        def response = postNewTeam(sampleNewTeamDto(name: name))
+        def response = createNewTeam(sampleNewTeamDto(name: name))
 
         then: "system cannot create a team with empty team-name"
         response.statusCode == UNPROCESSABLE_ENTITY

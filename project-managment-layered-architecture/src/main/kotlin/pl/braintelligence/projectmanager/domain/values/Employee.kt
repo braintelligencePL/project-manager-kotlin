@@ -1,5 +1,6 @@
 package pl.braintelligence.projectmanager.domain.values
 
+import org.apache.commons.lang3.StringUtils.isBlank
 import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 import java.util.Arrays
 
@@ -8,6 +9,10 @@ data class Employee(
     val lastName: String,
     val jobPosition: JobPosition
 ) {
+    fun hasNoFirstName(): Boolean {
+        return isBlank(firstName)
+    }
+
     companion object {
         fun toEmployee(teamMemberDto: TeamMemberDto) =
             Employee(

@@ -5,13 +5,19 @@ import pl.braintelligence.projectmanager.domain.exceptions.InvalidTeamException
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.*
 import pl.braintelligence.projectmanager.domain.values.Employee
 
-class Team(
+data class Team(
     val name: String,
     val currentlyImplementedProjects: Int = 0,
-    val members: List<Employee> = emptyList()
+    var members: MutableList<Employee> = mutableListOf()
 ) {
     init {
         validateName(name)
+    }
+
+    fun addMember(teamMember: Employee) {
+//        validateMember(teamMember)
+
+        members.add(teamMember)
     }
 
     private fun validateName(name: String) {
@@ -19,4 +25,9 @@ class Team(
             true -> throw InvalidTeamException(EMPTY_TEAM_NAME)
         }
     }
+
+    private fun validateMember(teamMember: Employee) {
+        teamMember.hasNoFirstName()
+    }
 }
+

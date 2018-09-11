@@ -10,13 +10,13 @@ data class ExistingTeamDto(
 ) {
     companion object {
         fun mapToExistingTeams(teams: List<Team>): List<ExistingTeamDto> =
-                teams.map {
-                    ExistingTeamDto(
-                        it.name,
-                        it.currentlyImplementedProjects,
-                        true, // TODO: Team is busy when have more than X projects
-                        TeamMemberDto.toTeamMembers(it.members)
-                    )
-                }
+            teams.map {
+                ExistingTeamDto(
+                    it.name,
+                    it.currentlyImplementedProjects,
+                    false, // TODO: Team is busy when have more than X projects (from domain)
+                    TeamMemberDto.toTeamMembers(it.members)
+                )
+            }
     }
 }

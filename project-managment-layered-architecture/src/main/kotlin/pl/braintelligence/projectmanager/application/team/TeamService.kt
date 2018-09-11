@@ -34,10 +34,14 @@ class TeamService(
     }
 
     fun addMemberToTeam(teamName: String, teamMemberDto: TeamMemberDto) {
-        val team = teamRepository.findByName(teamName)
+        val team = Team(teamName)
+
+        teamRepository.findByName(teamName)
+            ?: throw MissingEntityException(NONEXISTENT_TEAM)
 
         val teamMember = Employee.toEmployee(teamMemberDto)
-
+        team.addMember(teamMember)
+        teamRepository.save(team)
     }
 
     companion object {

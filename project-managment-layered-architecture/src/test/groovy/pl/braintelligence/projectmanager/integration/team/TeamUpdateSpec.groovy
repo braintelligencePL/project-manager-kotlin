@@ -12,7 +12,7 @@ class TeamUpdateSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpo
     @Unroll
     def "Should not create an unnamed new team"() {
         when: "try to post new team with empty-name"
-        def response = postNewTeam(sampleNewTeamDto(name: name))
+        def response = createNewTeam(sampleNewTeamDto(name: name))
 
         then: "system cannot create a team with empty team-name"
         response.statusCode == UNPROCESSABLE_ENTITY
@@ -24,10 +24,10 @@ class TeamUpdateSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpo
 
     def "Should not create a team that already exists"() {
         given: "create new team"
-        postNewTeam(sampleNewTeamDto())
+        createNewTeam(sampleNewTeamDto())
 
         when: "create team with already existing team-name"
-        def response = postNewTeam(sampleNewTeamDto())
+        def response = createNewTeam(sampleNewTeamDto())
 
         then: "throws exception that team already exist"
         response.statusCode == UNPROCESSABLE_ENTITY

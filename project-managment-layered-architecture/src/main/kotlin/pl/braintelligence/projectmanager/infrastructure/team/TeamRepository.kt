@@ -21,12 +21,12 @@ class TeamRepositoryImpl(
     override fun save(team: Team) {
         val dbTeam = DbTeam.fromTeam(team)
         dbTeamRepository.save(dbTeam)
-        logger.info("Saved team {} with default parameters.", dbTeam)
+        logger.info("Team saved {}", dbTeam)
     }
 
-    override fun findByName(name: String): Team {
+    override fun findByName(name: String): Team? {
         val dbTeam = dbTeamRepository.findByName(name)
-        return DbTeam.toTeam(dbTeam)
+        return dbTeam?.let { DbTeam.toTeam(it) }
     }
 
     override fun existByName(id: String): Boolean {
@@ -40,5 +40,5 @@ class TeamRepositoryImpl(
 
 @Repository
 interface DbTeamRepository : MongoRepository<DbTeam, String> {
-    fun findByName(name: String): DbTeam
+    fun findByName(name: String): DbTeam?
 }
