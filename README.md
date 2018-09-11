@@ -54,8 +54,7 @@ To run integration tests:
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance/Unit<BR>
 🛸 **Features**: Event-Sourcing, Microservices, Eventual-Consistency <BR>
-
-##### Backing-Services from methodology [Twelve-Factor-App](https://12factor.net/)
+Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
 - `user-autorization-service` - 
 - `edge-service`
