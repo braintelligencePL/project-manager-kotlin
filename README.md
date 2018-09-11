@@ -1,4 +1,9 @@
-# Project Manager 
+# From zero to hero (or something like that)
+###### Don't read that - boring
+At first I wanted to do a simple DDD project but after few thoughts I decided to make a **Practical-Roadmap** for backend developer. Project will take probably few months/years to complete but in the end it'll contain a lot of knowledge that is needed for backend developer. Especially one that sits with JVM at one table. Anyway main purpose of this repo is that its not focused on technology, but instead on good practices, architectures, design in general and all other that good stuff.
+**This project is a marathon not a sprint.**
+
+# Core Application/Domain - Project Manager 
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 ### Working with application
@@ -24,7 +29,7 @@ To run integration tests:
 ```
 <BR>
 
-## It'll be implmented in following way:
+## It'll be done like this
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
 🕳 **Tests**: Integration/Acceptance with BDD approach.
