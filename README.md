@@ -1,4 +1,4 @@
-# From zero to hero (or something like that)
+# From Zero to Hero (or something like that)
 ###### Don't read that - boring
 At first I wanted to do a simple DDD project but after few thoughts I decided to make a **Practical-Roadmap** for backend developer. Project will take probably few months/years to complete but in the end it'll contain a lot of knowledge that is needed for backend developer. Especially one that sits with JVM at one table. Anyway main purpose of this repo is that its not focused on technology, but instead on good practices, architectures, design in general and all other that good stuff.
 **This project is a marathon not a sprint.**
