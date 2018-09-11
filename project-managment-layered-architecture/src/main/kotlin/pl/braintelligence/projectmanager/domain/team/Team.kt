@@ -26,7 +26,9 @@ data class Team(
     }
 
     private fun validateMember(teamMember: Employee) {
-        teamMember.hasNoFirstName()
+        if(teamMember.hasNoFirstName())
+            throw InvalidTeamException(EMPTY_MEMBER_FIRST_NAME)
+
     }
 }
 
