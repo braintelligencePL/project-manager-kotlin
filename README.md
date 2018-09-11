@@ -48,8 +48,8 @@ To run integration tests:
 ### 3️⃣ `branch: step-3-refactor` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance along with unit-tests for corner-cases mostly<BR>
-🛸 **Features**: Db implementation with `ConcurrentHashMap` for fast unit-tests `InMemoryCrudRepository.kt` and simple CQRS 
-  
+🛸 **Features**: Db implementation with `ConcurrentHashMap` for fast unit-tests `InMemoryCrudRepository.kt` and simple CQRS.<BR> 
+❗❗We have made a mistake by making only integration-tests time to fix that. Only crucial parts will be tested now and the rest will be in unit-tests. ❗
 
 ### 5️⃣ `branch: step-4-microservice-zoo` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
@@ -57,12 +57,13 @@ To run integration tests:
 🛸 **Features**: Event-Sourcing, Microservices, Eventual-Consistency, <BR>
 Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
-- `user-autorization-service` - 
+- `user-autorization-service` 
 - `edge-service`
 - `discovery-service`
 - `centralized-configuration-server`
 
 ### #️⃣ `branch: will-be-more` <br>
+- asynchrnous programming - JavaRx or Coroutines (somewhere)
 
 <BR><BR>
   
