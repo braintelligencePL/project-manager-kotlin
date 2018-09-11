@@ -23,7 +23,7 @@ To run integration tests:
 Someday... 
 
 # Application will be implemented in following steps:
-## 1️⃣ [x] `branch: step-1-team` <br>
+## 1️⃣ `branch: step-1-team` <br>
 * [x] `POST /teams` - create a team. <br>
 * [x] `POST /teams/:teamName/members` - add members to the team. <br>
 * [x] `GET /teams` - show teams. <br> <br>
