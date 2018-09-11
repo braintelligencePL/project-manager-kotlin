@@ -1,8 +1,6 @@
-# From Zero to Hero (or something like that)
-###### tltr; Practical-Roadmap for backend developer
-I found lots of good quality project, but neither of them had everything. I'm not saying that mine will have everything, but I will try to include most of the modern approaches to wring good quality software.
-At first I wanted to do a simple DDD project but after few thoughts I decided to make a **Practical-Roadmap** for backend developer. Project will take probably few months/years to complete but in the end it'll contain a lot of knowledge that is needed for backend developer. Especially one that sits with JVM at one table. Anyway main purpose of this repo is that its not focused on technology, but instead on good practices, architectures, design in general and all other that good stuff.
-**This project is a marathon not a sprint.**
+# From Zero to Hero (or something like that) - Practical-Roadmap
+##### tltr; Practical-Roadmap for backend developer. 
+There is a lot of roadmaps on github for anything. Most of them are simple agregators of links. I always give it a 'star', but never really use it. There was a lot of materials, but none was really helpful. Neither of them went like a little bigger step-by-step how to make something using good practices. I will try to include most of the modern approaches for wring good-quality software. That's probably be more like a marathon than spring. We'll see how it ends. Project will take probably few months/years to complete but in the end it'll contain a lot of knowledge that is needed for backend developer. Especially one that sits with JVM at one table. Anyway main purpose of this repo is that its not focused on technology, but instead on good practices, architectures, design in general and all other cool things.
 
 # Core Application/Domain - Project Manager 
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
@@ -57,16 +55,16 @@ To run integration tests:
 🛸 **Features**: Db implementation with `ConcurrentHashMap` for fast unit-tests `InMemoryCrudRepository.kt` and simple CQRS.<BR> 
 ❗❗We have made a mistake by making only integration-tests time to fix that. Only crucial parts will be tested now and the rest will be in unit-tests. ❗
 
-### 5️⃣ `branch: step-4-microservice-zoo` <br>
+### 5️⃣ `branch: step-4-zoo-of-microservices` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance/Unit<BR>
 🛸 **Features**: Event-Sourcing, Microservices, Eventual-Consistency, <BR>
 Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
-- `user-autorization-service` 
-- `edge-service`
-- `discovery-service`
-- `centralized-configuration-server`
+🦓`user-autorization-service` 
+🐼 `edge-service`
+🐰 `discovery-service`
+🐿 `centralized-configuration-server`
 
 ### #️⃣ `branch: will-be-more` <br>
 - asynchrnous programming - JavaRx or Coroutines (somewhere)
