@@ -55,6 +55,8 @@ To run integration tests:
 🕳 **Tests**: Integration/Acceptance/Unit<BR>
 🛸 **Features**: Event-Sourcing, Microservices, Eventual-Consistency <BR>
 
+##### Backing-Services from methodology [Twelve-Factor-App](https://12factor.net/)
+
 - `user-autorization-service` - 
 - `edge-service`
 - `discovery-service`
