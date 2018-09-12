@@ -58,24 +58,23 @@ To run integration tests:
 🛸 **Feature**: Event-Sourcing, Microservices, Eventual-Consistency, <BR>
 Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
-🦓`user-autorization-service` 
-🐼 `edge-service`
-🐰 `discovery-service`
-🐿 `centralized-configuration-server`
+🦓`user-autorization-service` <BR>
+🐼 `edge-service` <BR>
+🐰 `discovery-service` <BR>
+🐿 `centralized-configuration-server` <BR>
 
 ### #️⃣ `branch: will-be-more` <br>
-- asynchrnous programming - JavaRx or Coroutines (somewhere, sometime)
-- docker
+- asynchrnous examples - JavaRx or Coroutines (somewhere, sometime)
 
 <BR><BR>
   
 ## Technologies: 
-- kotlin with Spring 
-- groovy (Spock) for tests
+- kotlin with spring 
+- groovy (spock) for tests
 - gradle to build project
 - docker in the future
   
-### My blog to read and credits from repos that were inspiration (or copy/paste ideas)
+### Something to read on my site and credits from repos that were inspiration (or copy/paste ideas)
 * [Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
 * [Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) 
 * [ #1 ](https://github.com/kamranahmedse/design-patterns-for-humans)[ #2 ](https://github.com/BottegaIT/ddd-leaven-v2)[ #3 ](https://github.com/mkopylec/project-manager)[ #4 ](https://github.com/jakubnabrdalik/hentai) [ #5 ](https://github.com/heynickc/awesome-ddd)[ #6 ](https://github.com/kbastani/spring-cloud-event-sourcing-example)
