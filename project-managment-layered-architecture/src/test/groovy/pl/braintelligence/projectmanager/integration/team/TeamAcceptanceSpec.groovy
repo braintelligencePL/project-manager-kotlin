@@ -24,7 +24,6 @@ class TeamAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamE
         then: "checks that one team was created and has default settings"
         response.statusCode == OK
         response.body.size() == 1
-
         response.body[0].name == sampleNewTeamDto().name
         response.body[0].currentlyImplementedProjects == 0
         response.body[0].busy == false

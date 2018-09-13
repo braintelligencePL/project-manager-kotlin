@@ -1,28 +1,21 @@
 
-# Application - Project Manager 
+# Applications
+## Project-Manager
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
-### Working with application
+#### Working with Project-Manager
 
-To run application:
-```
-./gradlew bootRun
-```
+`./gradlew bootRun` - to run application. <BR>
+`./gradlew test` - to run unit tests. <BR>
+`./gradlew integrationTest` - to run integration tests. <BR>
+`./gradlew clean build test integrationTest`- 💍 One to rule them all. <BR>
+<BR>
 
-To run unit tests:
-```
-./gradlew test
-```
-
-To run integration tests:
-```
-./gradlew integrationTest
-```
-
-💍 One to rule them all:
-```
-./gradlew clean build test integrationTest
-```
+## Microservices ZOO
+🦓`user-autorization-service` <BR>
+🐼 `edge-service` <BR>
+🐰 `discovery-service` <BR>
+🐿 `centralized-configuration-server` <BR>
 <BR>
 
 ## Implementation step-by-step
