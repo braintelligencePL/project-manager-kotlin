@@ -39,7 +39,7 @@ class TeamAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamE
         when: "user asks again for all created teams"
         response = getExistingTeams()
 
-        then:
+        then: "member is added to a team"
         response.body[0].members[0] == TEAM_MEMBER_DTO
     }
 }
