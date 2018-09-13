@@ -42,5 +42,3 @@ class TeamAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamE
         response.body[0].members[0] == TEAM_MEMBER_DTO
     }
 }
-
-

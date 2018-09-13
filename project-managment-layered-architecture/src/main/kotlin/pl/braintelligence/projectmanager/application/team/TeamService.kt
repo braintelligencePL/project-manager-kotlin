@@ -39,8 +39,10 @@ class TeamService(
         teamRepository.findByName(teamName)
             ?: throw MissingEntityException(NONEXISTENT_TEAM)
 
-        val teamMember = Employee.toEmployee(teamMemberDto)
-        team.addMember(teamMember)
+        Employee.toEmployee(teamMemberDto).apply {
+            team.addMember(this)
+        }
+
         teamRepository.save(team)
     }
 
