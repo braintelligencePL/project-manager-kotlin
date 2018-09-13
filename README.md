@@ -12,7 +12,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 <BR>
 
 ## Microservices ZOO
-🦓`user-autorization-service` <BR>
+🦓 `user-autorization-service` <BR>
 🐼 `edge-service` <BR>
 🐰 `discovery-service` <BR>
 🐿 `centralized-configuration-server` <BR>
