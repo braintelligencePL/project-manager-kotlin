@@ -61,7 +61,7 @@ Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
 <BR><BR>
   
-## Technologies: 
+## Technologies used: 
 - kotlin with spring 
 - groovy (spock) for tests
 - gradle to build project
