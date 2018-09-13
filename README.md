@@ -8,7 +8,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 `./gradlew bootRun` - to run application. <BR>
 `./gradlew test` - to run unit tests. <BR>
 `./gradlew integrationTest` - to run integration tests. <BR>
-`./gradlew clean build test integrationTest`- 💍 One to rule them all. <BR>
+`./gradlew clean build test integrationTest`- one to rule them all 💍 <BR>
 <BR>
 
 ## Microservices ZOO
