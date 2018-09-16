@@ -13,9 +13,6 @@ import spock.lang.Specification
 abstract class BaseIntegrationSpec extends Specification {
 
     @Autowired
-    TestRestTemplate restTemplate
-
-    @Autowired
     MongoTemplate mongo
 
     @Rule

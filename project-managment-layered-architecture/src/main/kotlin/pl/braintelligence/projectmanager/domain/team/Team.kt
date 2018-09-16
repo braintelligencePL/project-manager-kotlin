@@ -26,11 +26,11 @@ data class Team(
     }
 
     private fun validateMember(teamMember: Employee) {
-        if(teamMember.hasNoFirstName())
+        if (teamMember.hasNoFirstName())
             throw InvalidEntityException(EMPTY_MEMBER_FIRST_NAME)
-        if(teamMember.hasNoLastName())
+        if (teamMember.hasNoLastName())
             throw InvalidEntityException(EMPTY_MEMBER_LAST_NAME)
-        if(teamMember.hasInvalidJobPosition())
+        if (teamMember.hasInvalidJobPosition())
             throw InvalidEntityException(EMPTY_OR_INVALID_JOB_POSITION)
     }
 }
