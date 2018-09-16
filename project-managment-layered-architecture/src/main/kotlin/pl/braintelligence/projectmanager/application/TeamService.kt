@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.application.team
+package pl.braintelligence.projectmanager.application
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
@@ -39,9 +39,7 @@ class TeamService(
         teamRepository.findByName(teamName)
             ?: throw MissingEntityException(NONEXISTENT_TEAM)
 
-        Employee.toEmployee(teamMemberDto).apply {
-            team.addMember(this)
-        }
+        Employee.toEmployee(teamMemberDto).apply { team.addMember(this) }
 
         teamRepository.save(team)
     }

@@ -13,6 +13,7 @@ import java.lang.invoke.MethodHandles
 class TeamRepositoryImpl(
     val dbTeamRepository: DbTeamRepository
 ) : TeamRepository {
+
     override fun findAll(): List<Team> {
         val dbTeams: List<DbTeam> = dbTeamRepository.findAll()
         return DbTeam.toTeams(dbTeams)
@@ -29,9 +30,7 @@ class TeamRepositoryImpl(
         return dbTeam?.let { DbTeam.toTeam(it) }
     }
 
-    override fun existByName(id: String): Boolean {
-        return dbTeamRepository.existsById(id)
-    }
+    override fun existByName(id: String): Boolean = dbTeamRepository.existsById(id)
 
     companion object {
         private val logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass())
