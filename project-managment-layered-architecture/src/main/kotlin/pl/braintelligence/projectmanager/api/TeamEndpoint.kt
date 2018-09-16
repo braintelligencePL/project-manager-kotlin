@@ -10,7 +10,7 @@ import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 @RestController
 @RequestMapping(value = ["/teams"])
 class TeamEndpoint(
-    val teamService: TeamService
+    private val teamService: TeamService
 ) {
 
     @PostMapping
