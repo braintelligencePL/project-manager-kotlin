@@ -12,7 +12,7 @@ data class DbTeam(
         fun fromTeam(team: Team): DbTeam =
             DbTeam(
                 team.name,
-                team.currentlyImplementedProjects,
+                team.currentProjects,
                 team.members.map {
                     DbEmployee.toDbEmployee(it)
                 }

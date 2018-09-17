@@ -7,9 +7,10 @@ import pl.braintelligence.projectmanager.domain.values.Employee
 
 data class Team(
     val name: String,
-    val currentlyImplementedProjects: Int = 0,
+    val currentProjects: Int = 0,
     var members: MutableList<Employee> = mutableListOf()
 ) {
+
     init {
         validateName(name)
     }
@@ -33,5 +34,10 @@ data class Team(
         if (teamMember.hasInvalidJobPosition())
             throw InvalidEntityException(EMPTY_OR_INVALID_JOB_POSITION)
     }
-}
 
+    fun isBusy(): Boolean = currentProjects > THRESHOLD_BUSY_TEAM
+
+    companion object {
+        private const val THRESHOLD_BUSY_TEAM = 3
+    }
+}
