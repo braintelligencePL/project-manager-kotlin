@@ -13,8 +13,8 @@ data class ExistingTeamDto(
             teams.map {
                 ExistingTeamDto(
                     it.name,
-                    it.currentlyImplementedProjects,
-                    false, // TODO: Team is busy when have more than X projects (from domain)
+                    it.currentProjects,
+                    it.isBusy(),
                     TeamMemberDto.toTeamMembers(it.members)
                 )
             }
