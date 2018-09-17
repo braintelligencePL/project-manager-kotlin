@@ -21,9 +21,8 @@ data class Team(
     }
 
     private fun validateName(name: String) {
-        when (isBlank(name)) {
-            true -> throw InvalidEntityException(EMPTY_TEAM_NAME)
-        }
+        if (isBlank(name))
+            throw InvalidEntityException(EMPTY_TEAM_NAME)
     }
 
     private fun validateMember(teamMember: Employee) {
