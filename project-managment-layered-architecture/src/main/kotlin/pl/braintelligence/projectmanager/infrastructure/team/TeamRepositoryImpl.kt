@@ -11,7 +11,7 @@ import java.lang.invoke.MethodHandles
 
 @Component
 class TeamRepositoryImpl(
-    val dbTeamRepository: DbTeamRepository
+    private val dbTeamRepository: DbTeamRepository
 ) : TeamRepository {
 
     override fun findAll(): List<Team> {
