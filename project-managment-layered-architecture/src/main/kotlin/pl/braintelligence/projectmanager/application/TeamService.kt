@@ -39,6 +39,9 @@ class TeamService(
         teamRepository.findByName(teamName)
             ?: throw MissingEntityException(NONEXISTENT_TEAM)
 
+        Employee.toEmployee(teamMember).apply {
+            team.addMember(this)
+        }
         Employee.toEmployee(teamMember).apply { team.addMember(this) }
 
         teamRepository.save(team)
