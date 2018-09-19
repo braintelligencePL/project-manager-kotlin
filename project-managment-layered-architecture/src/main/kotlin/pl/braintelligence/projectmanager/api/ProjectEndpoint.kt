@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 import pl.braintelligence.projectmanager.application.ProjectService
-import pl.braintelligence.projectmanager.application.dto.NewProjectDraftDto
+import pl.braintelligence.projectmanager.application.dto.NewProjectDraft
 
 @RestController
 @RequestMapping("/projects")
@@ -17,7 +17,7 @@ class ProjectEndpoint(
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/drafts")
-    fun createProject(@RequestBody newProjectDraftDto: NewProjectDraftDto) {
-        projectService.createProject(newProjectDraftDto)
+    fun createProject(@RequestBody newProjectDraft: NewProjectDraft) {
+        projectService.createProject(newProjectDraft)
     }
 }
