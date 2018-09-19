@@ -26,6 +26,10 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `POST: /teams/:teamName/members` - add members to the team. <br>
 * [x] `GET: /teams` - show teams. <br> <br>
 
+#### Tests naming convention
+* SampleAcceptanceSpec - shows possitive flow of bounded context
+* SampleCreationalSpec, SampleUpdate etc. - tests corner cases
+
 ### 2️⃣ `branch: step-2-projects` <br>
 🏠 **Architecture**: Layered Architecure <BR>
 🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
