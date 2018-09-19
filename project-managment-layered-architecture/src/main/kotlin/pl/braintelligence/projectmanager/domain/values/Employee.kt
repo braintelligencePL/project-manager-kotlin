@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.domain.values
 
 import org.apache.commons.lang3.StringUtils.isBlank
-import pl.braintelligence.projectmanager.application.dto.TeamMember
+import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 
 data class Employee(
     val firstName: String,
@@ -16,11 +16,11 @@ data class Employee(
     fun hasInvalidJobPosition(): Boolean = jobPosition.isInvalid()
 
     companion object {
-        fun toEmployee(teamMember: TeamMember) =
+        fun toEmployee(teamMemberDto: TeamMemberDto) =
             Employee(
-                teamMember.firstName,
-                teamMember.lastName,
-                toJobPosition(teamMember.jobPosition)
+                teamMemberDto.firstName,
+                teamMemberDto.lastName,
+                toJobPosition(teamMemberDto.jobPosition)
             )
 
         fun toJobPosition(jobPosition: String): JobPosition {
