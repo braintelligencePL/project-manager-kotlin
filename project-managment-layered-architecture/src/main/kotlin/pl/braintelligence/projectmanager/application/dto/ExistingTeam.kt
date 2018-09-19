@@ -2,20 +2,20 @@ package pl.braintelligence.projectmanager.application.dto
 
 import pl.braintelligence.projectmanager.domain.team.Team
 
-data class ExistingTeamDto(
+data class ExistingTeam(
     val name: String,
     val currentlyImplementedProjects: Int,
     val busy: Boolean,
-    val memberDtos: List<TeamMemberDto>
+    val members: List<TeamMember>
 ) {
     companion object {
-        fun mapToExistingTeams(teams: List<Team>): List<ExistingTeamDto> =
+        fun mapToExistingTeams(teams: List<Team>): List<ExistingTeam> =
             teams.map {
-                ExistingTeamDto(
+                ExistingTeam(
                     it.name,
                     it.currentProjects,
                     it.isBusy(),
-                    TeamMemberDto.toTeamMembers(it.members)
+                    TeamMember.toTeamMembers(it.members)
                 )
             }
     }
