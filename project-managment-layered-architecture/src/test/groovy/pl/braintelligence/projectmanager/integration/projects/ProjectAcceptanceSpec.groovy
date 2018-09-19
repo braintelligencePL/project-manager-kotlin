@@ -1,20 +1,16 @@
 package pl.braintelligence.projectmanager.integration.projects
 
-import
-import pl.braintelligence.projectmanager.application.dto.NewProjectDraft
 import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
+import pl.braintelligence.projectmanager.integration.projects.base.OperatingOnProjectsEndpoint
 
 import static org.springframework.http.HttpStatus.CREATED
+import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewProjectDraftDto.sampleNewProjectDraftDto
 
-
-class ProjectAcceptanceSpec extends BaseIntegrationSpec {
+class ProjectAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnProjectsEndpoint {
 
     def "Successful flow for project draft creation"() {
-        given:
-        def projectDraft = new NewProjectDraft(name: 'Project 1')
-
         when:
-        def response = post('/projects/drafts', projectDraft)
+        def response = createProjectDraft(sampleNewProjectDraftDto())
 
         then:
         response.statusCode == CREATED

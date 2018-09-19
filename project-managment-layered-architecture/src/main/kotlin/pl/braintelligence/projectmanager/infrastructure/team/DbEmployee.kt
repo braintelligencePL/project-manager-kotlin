@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.infrastructure.team.entities
+package pl.braintelligence.projectmanager.infrastructure.team
 
 import pl.braintelligence.projectmanager.domain.values.Employee
 import pl.braintelligence.projectmanager.domain.values.JobPosition

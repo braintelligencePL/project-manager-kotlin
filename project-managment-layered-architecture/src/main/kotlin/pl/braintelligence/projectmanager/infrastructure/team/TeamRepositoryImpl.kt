@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
 import pl.braintelligence.projectmanager.domain.team.Team
 import pl.braintelligence.projectmanager.domain.team.TeamRepository
-import pl.braintelligence.projectmanager.infrastructure.team.entities.DbTeam
 import java.lang.invoke.MethodHandles
 
 @Component
