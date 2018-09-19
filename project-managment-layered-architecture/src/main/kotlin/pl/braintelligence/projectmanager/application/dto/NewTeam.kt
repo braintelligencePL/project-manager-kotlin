@@ -1,5 +1,5 @@
 package pl.braintelligence.projectmanager.application.dto
 
-data class NewTeamDto(
+data class NewTeam(
     val name: String
 )

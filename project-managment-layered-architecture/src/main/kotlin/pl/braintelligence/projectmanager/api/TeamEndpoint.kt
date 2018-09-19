@@ -2,10 +2,10 @@ package pl.braintelligence.projectmanager.api
 
 import org.springframework.http.HttpStatus.*
 import org.springframework.web.bind.annotation.*
-import pl.braintelligence.projectmanager.application.dto.NewTeamDto
+import pl.braintelligence.projectmanager.application.dto.NewTeam
 import pl.braintelligence.projectmanager.application.team.TeamService
-import pl.braintelligence.projectmanager.application.dto.ExistingTeamDto
-import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
+import pl.braintelligence.projectmanager.application.dto.ExistingTeam
+import pl.braintelligence.projectmanager.application.dto.TeamMember
 
 @RestController
 @RequestMapping(value = ["/teams"])
@@ -15,19 +15,19 @@ class TeamEndpoint(
 
     @PostMapping
     @ResponseStatus(CREATED)
-    fun createTeam(@RequestBody newTeamDto: NewTeamDto) {
-        teamService.createTeam(newTeamDto)
+    fun createTeam(@RequestBody newTeam: NewTeam) {
+        teamService.createTeam(newTeam)
     }
 
     @PostMapping("{teamName}/members")
     @ResponseStatus(CREATED)
-    fun addMemberToTeam(@PathVariable teamName: String, @RequestBody teamMemberDto: TeamMemberDto) {
-        teamService.addMemberToTeam(teamName, teamMemberDto)
+    fun addMemberToTeam(@PathVariable teamName: String, @RequestBody teamMember: TeamMember) {
+        teamService.addMemberToTeam(teamName, teamMember)
     }
 
     @GetMapping
     @ResponseStatus(OK)
-    fun getTeams(): List<ExistingTeamDto> {
+    fun getTeams(): List<ExistingTeam> {
         return teamService.getTeams()
     }
 }
