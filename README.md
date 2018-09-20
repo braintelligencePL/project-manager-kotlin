@@ -21,7 +21,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 
 #### Tests naming convention
 * SampleAcceptanceSpec - shows possitive flow of bounded context
-* SampleCreationalSpec, SampleUpdate etc. - tests corner cases
+* SampleCreationalSpec, SampleUpdateSpec... - tests corner cases
 
 ### 2️⃣ `branch: step-2-projects` <br>
 🏠 **Architecture**: Layered Architecure <BR>
