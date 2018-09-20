@@ -22,6 +22,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 #### Tests naming convention
 * TeamAcceptanceSpec - shows possitive flow of interactions with team API.
 * TeamCreationSpec - tests corner cases.
+* `/base` - encapsulated things to make tests more readable.
 
 ### 2️⃣ `branch: step-2-projects` <br>
 🏠 **Architecture**: Layered Architecure <BR>
@@ -36,9 +37,9 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [ ] `PATCH: /projects/:id/ended` - close project when features are done <br>
 
 #### Tests naming convention and packages
-* TESTS: SampleAcceptanceSpec - shows possitive flow of bounded context
-* TESTS: SampleCreationalSpec, SampleUpdateSpec... - tests corner cases
-* TESTS: `/base` - encapsulated things to make tests more readable.
+*  SampleAcceptanceSpec - shows possitive flow of bounded context
+*  SampleCreationalSpec, SampleUpdateSpec... - tests corner cases
+* `/base` - encapsulated things to make tests more readable.
 
 ### 3️⃣ `branch: step-3-refactor` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
