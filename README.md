@@ -23,7 +23,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `GET: /teams` - show teams. <br> <br>
 
 #### Tests naming convention and packages
-* TeamAcceptanceSpec - shows possitive flow of interactions with team API.
+* TeamAcceptanceSpec - shows positive flow for interactions with team API.
 * TeamCreationSpec - tests corner cases.
 * `/base` - encapsulated things to make tests more readable. 
 
@@ -33,17 +33,17 @@ Project-Manager is a simple application for managing projects at company. You ca
 🏠 **Architecture**: Layered Architecure <BR>
 🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
-* [ ] `POST: /projects/drafts` - create project draft. <br>
-* [ ] `POST: /projects` - create full project (project with features📊). <br>
-* [ ] `GET: /projects` - show draft projects <br>
+* [x] `POST: /projects/drafts` - create project draft. <br>
+* [x] `POST: /projects` - create full project (project with features📊). <br>
+* [x] `GET: /projects` - show draft projects <br>
 * [ ] `GET: /projects/:id` - show project (project not project draft)<br>
 * [ ] `PUT: /projects/:id` - change/update project <br>
 * [ ] `PATCH: /projects/:id/started` - start team when team assigned <br>
 * [ ] `PATCH: /projects/:id/ended` - close project when features are done <br>
 
 #### Tests naming convention and packages
-*  ProjectAcceptanceSpec - shows possitive flow of bounded context
-*  ProjectCreationalSpec - tests corner cases
+*  ProjectAcceptanceSpec - shows positive flow for interactions with projects API.
+*  ProjectCreationalSpec - tests corner cases.
 * `/base` - encapsulated things to make tests more readable.
 
 <BR>
