@@ -64,7 +64,7 @@ Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
 Services from our zoo:<BR>
 🦓 **user-autorization-service** - authentication gateway that protects back-end resources. There is two kinds of resources protected and unprotected. First one requires user-level authentication and second one is just read-only such as listing of offers/products. <BR><BR>
-🐼 **edge-service** - gives possibility to expose unified REST API from all of ours backend services. <BR><BR>
+🐼 **edge-service** - gives possibility to expose unified REST API from all of ours backend services. To be able to do this, the Edge Service matches a request route’s URL fragment from a front-end application to a back-end microservice through a reverse proxy to retrieve the remote REST API response. <BR><BR>
 🐰 **discovery-service** - Edge-service matches a request route’s URL fragment from a front-end application to a back-end microservice through a reverse proxy to retrieve the remote REST API response. <BR><BR>
 🐿 **centralized-configuration-server** - Spring Cloud application that centralizes external configurations using various methodologies of [building twelve-factor applications](https://12factor.net/config). <BR><BR>
 
