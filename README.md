@@ -10,13 +10,6 @@ Project-Manager is a simple application for managing projects at company. You ca
 `./gradlew clean build test integrationTest`- one to rule them all 💍 <BR>
 <BR>
 
-## Microservices ZOO
-🦓 `user-autorization-service` <BR>
-🐼 `edge-service` <BR>
-🐰 `discovery-service` <BR>
-🐿 `centralized-configuration-server` <BR>
-<BR>
-
 ## Implementation step-by-step
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
