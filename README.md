@@ -11,6 +11,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 <BR>
 
 ## Implementation step-by-step
+<BR>
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
 🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
@@ -23,6 +24,8 @@ Project-Manager is a simple application for managing projects at company. You ca
 * TeamAcceptanceSpec - shows possitive flow of interactions with team API.
 * TeamCreationSpec - tests corner cases.
 * `/base` - encapsulated things to make tests more readable.
+
+<BR>
 
 ### 2️⃣ `branch: step-2-projects` <br>
 🏠 **Architecture**: Layered Architecure <BR>
@@ -41,11 +44,15 @@ Project-Manager is a simple application for managing projects at company. You ca
 *  SampleCreationalSpec, SampleUpdateSpec... - tests corner cases
 * `/base` - encapsulated things to make tests more readable.
 
+<BR>
+
 ### 3️⃣ `branch: step-3-refactor` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance along with Unit-Tests for corner-cases mostly<BR>
 🛸 **Features**: db-in-memory implementation (ConcurrentHashMap) for fast unit-tests and simple CQRS.<BR> 
 ❗❗From now on only crucial parts are going to be tested with integration-tests.
+
+<BR>
 
 ### 4️⃣ `branch: step-4-zoo-of-microservices` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
@@ -58,6 +65,8 @@ Services from our zoo:<BR>
 🐼 **edge-service** - gives possibility to expose unified REST API from all of ours backend services. <BR><BR>
 🐰 **discovery-service** - Edge-service matches a request route’s URL fragment from a front-end application to a back-end microservice through a reverse proxy to retrieve the remote REST API response. <BR><BR>
 🐿 **centralized-configuration-server** - Spring Cloud application that centralizes external configurations using various methodologies of [building twelve-factor applications](https://12factor.net/config). <BR><BR>
+
+<BR>
 
 ### #️⃣ `branch: will-be-more` <br>
 - asynchrnous examples - JavaRx or Coroutines (somewhere, sometime)
