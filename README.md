@@ -19,7 +19,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `POST: /teams/:teamName/members` - add members to the team. <br>
 * [x] `GET: /teams` - show teams. <br> <br>
 
-#### Tests naming convention
+#### Tests naming convention and packages
 * TeamAcceptanceSpec - shows possitive flow of interactions with team API.
 * TeamCreationSpec - tests corner cases.
 * `/base` - encapsulated things to make tests more readable.
@@ -47,7 +47,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 🛸 **Features**: db-in-memory implementation (ConcurrentHashMap) for fast unit-tests and simple CQRS.<BR> 
 ❗❗From now on only crucial parts are going to be tested with integration-tests.
 
-### 5️⃣ `branch: step-4-zoo-of-microservices` <br>
+### 4️⃣ `branch: step-4-zoo-of-microservices` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance/Unit<BR>
 🛸 **Feature**: Event-Sourcing, Microservices, Eventual-Consistency, <BR>
