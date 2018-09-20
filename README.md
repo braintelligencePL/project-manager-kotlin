@@ -39,7 +39,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [ ] `GET: /projects/:id` - show project (project not project draft)<br>
 * [ ] `PUT: /projects/:id` - change/update project <br>
 * [ ] `PATCH: /projects/:id/started` - start team when team assigned <br>
-* [ ] `PATCH: /projects/:id/ended` - close project when features are done <br>
+* [ ] `PATCH: /projects/:id/ended` - close project when features are done <br><br>
 
 #### Tests naming convention and packages
 *  ProjectAcceptanceSpec - shows positive flow for interactions with projects API.
