@@ -11,7 +11,9 @@ Project-Manager is a simple application for managing projects at company. You ca
 <BR>
 
 ## Implementation step-by-step
+
 <BR>
+  
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
 🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
