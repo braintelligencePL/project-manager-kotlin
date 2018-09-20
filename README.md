@@ -54,10 +54,10 @@ Project-Manager is a simple application for managing projects at company. You ca
 🛸 **Feature**: Event-Sourcing, Microservices, Eventual-Consistency, <BR>
 Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
-🦓`user-autorization-service` <BR>
-🐼 `edge-service` <BR>
-🐰 `discovery-service` <BR>
-🐿 `centralized-configuration-server` <BR>
+🦓 `user-autorization-service` - authentication gateway that protects back-end resources. There is two kinds of resources protected and unprotected. First one requires user-level authentication and second one is just read-only like listing of offers/products. <BR>
+🐼 `edge-service` - <BR>
+🐰 `discovery-service` - <BR>
+🐿 `centralized-configuration-server` - <BR>
 
 ### #️⃣ `branch: will-be-more` <br>
 - asynchrnous examples - JavaRx or Coroutines (somewhere, sometime)
