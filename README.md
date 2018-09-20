@@ -25,7 +25,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 #### Tests naming convention and packages
 * TeamAcceptanceSpec - shows positive flow for interactions with team API.
 * TeamCreationSpec - tests corner cases.
-* `/base` - encapsulated things to make tests more readable. `OperatingOnEndpoint` to hide details of http requests and `SampleObjectDto` to hide details for object creation.  
+* `/base` - encapsulated things to make tests more readable. **OperatingOnEndpoint** to hide details of http requests and **SampleObjectDto** to hide details for object creation.  
 
 <BR>
 
@@ -44,7 +44,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 #### Tests naming convention and packages
 *  ProjectAcceptanceSpec - shows positive flow for interactions with projects API.
 *  ProjectCreationalSpec - tests corner cases.
-* `/base` - encapsulated things to make tests more readable. `OperatingOnEndpoint` to hide details of http requests and `SampleObjectDto` to hide details for object creation.  
+* `/base` - encapsulated things to make tests more readable. **OperatingOnEndpoint** to hide details of http requests and **SampleObjectDto** to hide details for object creation.
 
 <BR>
 
