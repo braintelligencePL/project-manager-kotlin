@@ -18,13 +18,12 @@ data class Project(
     }
 
     private fun validateIdentifier() {
-        if(isBlank(id))
+        if (isBlank(id))
             throw InvalidEntityException(ErrorCode.EMPTY_PROJECT_IDENTIFIER)
     }
 
     private fun validateName() {
-        if(isBlank(name))
+        if (isBlank(name))
             throw InvalidEntityException(ErrorCode.EMPTY_PROJECT_NAME)
     }
-
 }

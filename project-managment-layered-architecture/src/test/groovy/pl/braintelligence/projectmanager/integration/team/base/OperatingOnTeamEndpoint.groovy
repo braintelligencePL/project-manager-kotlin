@@ -18,5 +18,4 @@ trait OperatingOnTeamEndpoint implements BaseHttpMethodsSpec {
     ResponseEntity getExistingTeams() {
         return get("/teams", List)
     }
-
 }

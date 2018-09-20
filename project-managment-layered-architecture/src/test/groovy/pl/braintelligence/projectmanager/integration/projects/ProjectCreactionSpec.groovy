@@ -4,7 +4,6 @@ import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
 import pl.braintelligence.projectmanager.integration.projects.base.OperatingOnProjectsEndpoint
 import spock.lang.Unroll
 
-import static org.springframework.http.HttpStatus.CREATED
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
 import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewProjectDraftDto.sampleNewProjectDraftDto
 
