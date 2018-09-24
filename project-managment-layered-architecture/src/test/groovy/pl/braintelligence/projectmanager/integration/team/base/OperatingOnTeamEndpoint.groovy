@@ -12,7 +12,7 @@ trait OperatingOnTeamEndpoint implements BaseHttpMethodsSpec {
 
     ResponseEntity addMemberToTeam(Object requestBody, NewTeamDto newTeamDto) {
         def teamName = newTeamDto.name
-        return post("/teams/$teamName/memberDtos", requestBody)
+        return post("/teams/$teamName/member", requestBody)
     }
 
     ResponseEntity getExistingTeams() {

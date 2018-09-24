@@ -20,7 +20,7 @@ class TeamEndpoint(
     }
 
     @ResponseStatus(CREATED)
-    @PostMapping("{teamName}/memberDtos")
+    @PostMapping("{teamName}/member")
     fun addMemberToTeam(@PathVariable teamName: String, @RequestBody teamMemberDto: TeamMemberDto) {
         teamService.addMemberToTeam(teamName, teamMemberDto)
     }

@@ -1,5 +1,7 @@
 package pl.braintelligence.projectmanager.domain.project;
 
+import static java.util.Collections.unmodifiableList;
+import static org.apache.commons.collections4.ListUtils.emptyIfNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import org.springframework.data.annotation.Id;
@@ -27,6 +29,8 @@ public class Project {
     Project(String id, String name, List<Feature> features) {
         validateIdentifier(id);
         validateName(name);
+        features = normalize(features);
+        validateFeatures(features);
         this.id = id;
         this.name = name;
         this.status = Status.TO_DO;
@@ -34,16 +38,31 @@ public class Project {
     }
 
     private void validateIdentifier(String id) {
-        if (isBlank(id)) {
+        if (isBlank(id))
             throw new InvalidEntityException(ErrorCode.EMPTY_PROJECT_ID);
-        }
     }
 
     private void validateName(String name) {
-        if()
+        if (isBlank(name))
+            throw new InvalidEntityException(ErrorCode.EMPTY_PROJECT_NAME);
     }
 
-    private Project() {
-
+    private List<Feature> normalize(List<Feature> features) {
+        return unmodifiableList(emptyIfNull(features));
     }
+
+    private void validateFeatures(List<Feature> features) {
+        features.forEach(this::validateFeature);
+    }
+
+    private void validateFeature(Feature feature) {
+        if (feature.isUnnamed())
+            throw new InvalidEntityException(ErrorCode.EMPTY_FEATURE);
+        if (feature.hasNoStatus())
+            throw new InvalidEntityException(ErrorCode.EMPTY_FEATURE_STATUS);
+        if (feature.hasNoRequirement())
+            throw new InvalidEntityException(ErrorCode.EMPTY_FEATURE_REQUIREMENT);
+    }
+
+    private Project() {}
 }

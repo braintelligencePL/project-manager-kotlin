@@ -42,7 +42,6 @@ class TeamService(
         Employee.toEmployee(teamMemberDto).apply {
             team.addMember(this)
         }
-        Employee.toEmployee(teamMemberDto).apply { team.addMember(this) }
 
         teamRepository.save(team)
     }
