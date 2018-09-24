@@ -40,5 +40,4 @@ class FullProjectCreactionSpec extends BaseIntegrationSpec implements OperatingO
         where:
         featureName << ['', '  ']
     }
-
 }

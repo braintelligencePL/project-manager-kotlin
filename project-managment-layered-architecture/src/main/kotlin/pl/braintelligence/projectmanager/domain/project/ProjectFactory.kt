@@ -6,7 +6,7 @@ import pl.braintelligence.projectmanager.domain.values.Feature
 
 @Component
 class ProjectFactory(
-    private val identifierGenerator: UniqueIdentifierGenerator
+        private val identifierGenerator: UniqueIdentifierGenerator
 ) {
     fun createProjectDraft(name: String): Project {
         val id = identifierGenerator.generateUniqueIdentifier()
@@ -15,6 +15,10 @@ class ProjectFactory(
 
     fun createFullProject(name: String, features: List<Feature>): Project {
         val id = identifierGenerator.generateUniqueIdentifier()
-        return Project(id, name, features)
+        return Project(
+                id = id,
+                name = name,
+                features = features
+        )
     }
 }
