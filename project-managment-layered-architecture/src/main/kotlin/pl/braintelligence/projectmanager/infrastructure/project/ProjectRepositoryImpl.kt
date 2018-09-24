@@ -1,7 +1,6 @@
 package pl.braintelligence.projectmanager.infrastructure.project
 
 import org.springframework.data.mongodb.core.MongoTemplate
-import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 import pl.braintelligence.projectmanager.domain.project.Project
 import pl.braintelligence.projectmanager.domain.project.ProjectRepository

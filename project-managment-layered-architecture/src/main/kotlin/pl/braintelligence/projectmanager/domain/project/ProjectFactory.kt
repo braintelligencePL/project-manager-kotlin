@@ -15,6 +15,6 @@ class ProjectFactory(
 
     fun createFullProject(name: String, features: List<Feature>): Project {
         val id = identifierGenerator.generateUniqueIdentifier()
-        return Project(id, name)
+        return Project(id, name, features)
     }
 }

@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.domain.values
 
-import pl.braintelligence.projectmanager.application.dto.NewFeature
+import pl.braintelligence.projectmanager.application.dto.NewFeatureDto
 
 data class Feature(
     val name: String,
@@ -8,13 +8,13 @@ data class Feature(
     val requirement: Requirement
 ) {
     companion object {
-        fun toFeatures(newFeature: List<NewFeature>): List<Feature> =
-                newFeature.map { toFeature(it) }
+        fun toFeatures(newFeatureDto: List<NewFeatureDto>): List<Feature> =
+                newFeatureDto.map { toFeature(it) }
 
-        fun toFeature(newFeature: NewFeature): Feature =
+        fun toFeature(newFeatureDto: NewFeatureDto): Feature =
                 Feature(
-                    name = newFeature.name,
-                    requirement = newFeature.requirement
+                    name = newFeatureDto.name,
+                    requirement = Requirement.valueOf(newFeatureDto.requirement)
                 )
     }
 }

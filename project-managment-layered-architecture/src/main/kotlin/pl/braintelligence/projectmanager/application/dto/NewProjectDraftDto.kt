@@ -1,5 +1,5 @@
 package pl.braintelligence.projectmanager.application.dto
 
-data class NewTeam(
+data class NewProjectDraftDto(
     val name: String
 )

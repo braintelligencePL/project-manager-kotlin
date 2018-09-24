@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.application.dto
 
-data class NewProject(
+data class NewProjectDto(
     val name: String,
-    val features: List<NewFeature>
+    val features: List<NewFeatureDto>
 )
