@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.integration.team.base
 
-import pl.braintelligence.projectmanager.application.dto.TeamMember
+import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 
 class SampleTeamMemberDto {
 
@@ -10,12 +10,12 @@ class SampleTeamMemberDto {
             "jobPosition": "DEVELOPER"
     ]
 
-    static final TeamMember sampleTeamMemberDto(Map<String, Object> properties = [:]) {
+    static final TeamMemberDto sampleTeamMemberDto(Map<String, Object> properties = [:]) {
         properties = TEAM_MEMBER_DTO + properties
-        return new TeamMember(
+        return new TeamMemberDto(
                 properties.firstName,
                 properties.lastName,
-                properties.jobPosition.toString()
+                properties.jobPosition
         )
     }
 }

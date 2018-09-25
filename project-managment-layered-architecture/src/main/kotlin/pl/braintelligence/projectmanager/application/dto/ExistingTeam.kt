@@ -6,7 +6,7 @@ data class ExistingTeam(
     val name: String,
     val currentlyImplementedProjects: Int,
     val busy: Boolean,
-    val members: List<TeamMember>
+    val members: List<TeamMemberDto>
 ) {
     companion object {
         fun mapToExistingTeams(teams: List<Team>): List<ExistingTeam> =
@@ -15,8 +15,9 @@ data class ExistingTeam(
                     it.name,
                     it.currentProjects,
                     it.isBusy(),
-                    TeamMember.toTeamMembers(it.members)
+                    TeamMemberDto.toTeamMembers(it.members)
                 )
             }
     }
+
 }

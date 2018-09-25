@@ -1,10 +1,10 @@
-package pl.braintelligence.projectmanager.application.team
+package pl.braintelligence.projectmanager.application
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import pl.braintelligence.projectmanager.application.dto.ExistingTeam
-import pl.braintelligence.projectmanager.application.dto.NewTeam
-import pl.braintelligence.projectmanager.application.dto.TeamMember
+import pl.braintelligence.projectmanager.application.dto.NewTeamDto
+import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 import pl.braintelligence.projectmanager.domain.exceptions.EntityAlreadyExistsException
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.NONEXISTENT_TEAM
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.TEAM_ALREADY_EXISTS
@@ -18,9 +18,9 @@ import java.lang.invoke.MethodHandles
 class TeamService(
     val teamRepository: TeamRepository
 ) {
-    fun createTeam(newTeam: NewTeam) {
-        logger.info("Creating new team {}.", newTeam)
-        val team = Team(newTeam.name)
+    fun createTeam(newTeamDto: NewTeamDto) {
+        logger.info("Creating new team {}.", newTeamDto)
+        val team = Team(newTeamDto.name)
         when (teamRepository.existByName(team.name)) {
             true  -> throw EntityAlreadyExistsException(TEAM_ALREADY_EXISTS)
             false -> teamRepository.save(team)
@@ -33,13 +33,13 @@ class TeamService(
         return ExistingTeam.mapToExistingTeams(teams)
     }
 
-    fun addMemberToTeam(teamName: String, teamMember: TeamMember) {
+    fun addMemberToTeam(teamName: String, teamMemberDto: TeamMemberDto) {
         val team = Team(teamName)
 
         teamRepository.findByName(teamName)
             ?: throw MissingEntityException(NONEXISTENT_TEAM)
 
-        Employee.toEmployee(teamMember).apply {
+        Employee.toEmployee(teamMemberDto).apply {
             team.addMember(this)
         }
 

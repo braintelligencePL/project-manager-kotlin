@@ -1,8 +1,10 @@
-package pl.braintelligence.projectmanager.infrastructure.team.entities
+package pl.braintelligence.projectmanager.infrastructure.team
 
 import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
 import pl.braintelligence.projectmanager.domain.team.Team
 
+@Document(collection = "teams")
 data class DbTeam(
     @Id val name: String,
     val currentlyImplementedProjects: Int,
@@ -23,7 +25,11 @@ data class DbTeam(
                 Team(
                     it.name,
                     it.currentlyImplementedProjects,
-                    ArrayList(it.members.map { DbEmployee.fromDbEmployee(it) })
+                    ArrayList(it.members.map {
+                        DbEmployee.fromDbEmployee(
+                            it
+                        )
+                    })
                 )
             }
 
@@ -32,7 +38,11 @@ data class DbTeam(
                 Team(
                     dbTeam.name,
                     dbTeam.currentlyImplementedProjects,
-                    ArrayList(dbTeam.members.map { DbEmployee.fromDbEmployee(it) })
+                    ArrayList(dbTeam.members.map {
+                        DbEmployee.fromDbEmployee(
+                            it
+                        )
+                    })
                 )
             }
     }

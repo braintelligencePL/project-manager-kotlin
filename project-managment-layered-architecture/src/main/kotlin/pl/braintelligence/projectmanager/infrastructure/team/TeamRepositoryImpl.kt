@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
 import pl.braintelligence.projectmanager.domain.team.Team
 import pl.braintelligence.projectmanager.domain.team.TeamRepository
-import pl.braintelligence.projectmanager.infrastructure.team.entities.DbTeam
 import java.lang.invoke.MethodHandles
 
 @Component
 class TeamRepositoryImpl(
-    val dbTeamRepository: DbTeamRepository
+    private val dbTeamRepository: DbTeamRepository
 ) : TeamRepository {
+
     override fun findAll(): List<Team> {
         val dbTeams: List<DbTeam> = dbTeamRepository.findAll()
         return DbTeam.toTeams(dbTeams)
@@ -29,9 +29,7 @@ class TeamRepositoryImpl(
         return dbTeam?.let { DbTeam.toTeam(it) }
     }
 
-    override fun existByName(id: String): Boolean {
-        return dbTeamRepository.existsById(id)
-    }
+    override fun existByName(id: String): Boolean = dbTeamRepository.existsById(id)
 
     companion object {
         private val logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass())
