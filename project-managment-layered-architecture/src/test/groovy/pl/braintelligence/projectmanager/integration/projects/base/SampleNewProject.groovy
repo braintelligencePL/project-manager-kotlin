@@ -1,6 +1,7 @@
 package pl.braintelligence.projectmanager.integration.projects.base
 
-import pl.braintelligence.projectmanager.application.dto.NewProjectDto
+
+import pl.braintelligence.projectmanager.application.dto.NewProject
 
 import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewFeature.sampleNewFeature
 
@@ -11,10 +12,10 @@ class SampleNewProject {
             "features": [sampleNewFeature()]
     ]
 
-    static final NewProjectDto sampleNewProject(Map<String, Object> properties = [:]) {
+    static final NewProject sampleNewProject(Map<String, Object> properties = [:]) {
         properties = NEW_PROJECT_DTO + properties
-        return new NewProjectDto(
-                properties.name,
+        return new NewProject(
+                properties.name as String,
                 properties.features
         )
     }

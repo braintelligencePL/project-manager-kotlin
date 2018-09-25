@@ -2,7 +2,7 @@ package pl.braintelligence.projectmanager.application
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import pl.braintelligence.projectmanager.application.dto.ExistingTeamDto
+import pl.braintelligence.projectmanager.application.dto.ExistingTeam
 import pl.braintelligence.projectmanager.application.dto.NewTeamDto
 import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 import pl.braintelligence.projectmanager.domain.exceptions.EntityAlreadyExistsException
@@ -27,10 +27,10 @@ class TeamService(
         }
     }
 
-    fun getTeams(): List<ExistingTeamDto> {
+    fun getTeams(): List<ExistingTeam> {
         val teams = teamRepository.findAll()
 
-        return ExistingTeamDto.mapToExistingTeams(teams)
+        return ExistingTeam.mapToExistingTeams(teams)
     }
 
     fun addMemberToTeam(teamName: String, teamMemberDto: TeamMemberDto) {

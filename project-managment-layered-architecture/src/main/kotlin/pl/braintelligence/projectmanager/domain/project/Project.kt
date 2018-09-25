@@ -8,7 +8,7 @@ import pl.braintelligence.projectmanager.domain.values.Feature
 import pl.braintelligence.projectmanager.domain.values.Status
 import java.util.function.Consumer
 
-class Project(
+data class Project(
         @Id val id: String,
         val name: String,
         val status: Status = Status.TO_DO,
@@ -44,8 +44,8 @@ class Project(
     }
 
     private fun validateFeature(feature: Feature) {
-        if (feature.isUnnamed())
-            throw InvalidEntityException(ErrorCode.EMPTY_FEATURE)
+        if (feature.hasInvalidRequirement())
+            throw InvalidEntityException(ErrorCode.INVALID_FEATURE_REQUIREMENT)
         if (feature.hasNoStatus())
             throw InvalidEntityException(ErrorCode.EMPTY_FEATURE_STATUS)
         if (feature.hasNoRequirement())

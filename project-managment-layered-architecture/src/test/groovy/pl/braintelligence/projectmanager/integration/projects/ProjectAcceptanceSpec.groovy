@@ -1,12 +1,12 @@
 package pl.braintelligence.projectmanager.integration.projects
 
+import pl.braintelligence.projectmanager.application.dto.NewFeature
+import pl.braintelligence.projectmanager.application.dto.NewProject
 import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
 import pl.braintelligence.projectmanager.integration.projects.base.OperatingOnProjectsEndpoint
 import spock.lang.Unroll
 
 import static org.springframework.http.HttpStatus.CREATED
-import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewFeature.sampleNewFeature
-import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewProject.sampleNewProject
 import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewProjectDraft.sampleNewProjectDraftDto
 
 class ProjectAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnProjectsEndpoint {
@@ -22,11 +22,11 @@ class ProjectAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnPr
     @Unroll
     def "Successful flow for full-project (with features) creation"() {
         given:
-        def feature = sampleNewFeature()
-        def fullProject = sampleNewProject(feature: feature)
+        def feature = new NewFeature("feat 1", requirement)
+        def project = new NewProject('Project 1',[feature])
 
         when:
-        def response = createFullProject(fullProject)
+        def response = post('/projects', project)
 
         then:
         response.statusCode == CREATED
@@ -34,5 +34,4 @@ class ProjectAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnPr
         where:
         requirement << ['OPTIONAL', 'NECESSARY']
     }
-
 }

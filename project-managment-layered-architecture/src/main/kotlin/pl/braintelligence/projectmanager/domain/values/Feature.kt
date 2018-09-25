@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.domain.values
 
 import org.apache.commons.lang3.StringUtils.isBlank
-import pl.braintelligence.projectmanager.application.dto.NewFeatureDto
+import pl.braintelligence.projectmanager.application.dto.NewFeature
 
 data class Feature(
         val name: String,
@@ -9,19 +9,27 @@ data class Feature(
         val requirement: Requirement
 ) {
 
-    fun isUnnamed(): Boolean = isBlank(name)
+    fun hasInvalidRequirement(): Boolean = requirement.isInvalid()
     fun hasNoStatus(): Boolean = isBlank(status.toString())
     fun hasNoRequirement(): Boolean = isBlank(requirement.toString())
 
     companion object {
-        fun toFeatures(newFeatureDto: List<NewFeatureDto>): List<Feature> =
-                newFeatureDto.map { toFeature(it) }
+        fun toFeatures(newFeature: List<NewFeature>): List<Feature> =
+                newFeature.map { toFeature(it) }
 
-        fun toFeature(newFeatureDto: NewFeatureDto): Feature =
+        fun toFeature(newFeature: NewFeature): Feature =
                 Feature(
-                        name = newFeatureDto.name,
-                        requirement = Requirement.valueOf(newFeatureDto.requirement)
+                        name = newFeature.name,
+                        requirement = checkRequirement(newFeature.requirement)
                 )
+
+        fun checkRequirement(requirement: String): Requirement {
+            return try {
+                Requirement.valueOf(requirement)
+            } catch (e: IllegalArgumentException) {
+                Requirement.INVALID
+            }
+        }
     }
 
 }

@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.integration.projects.base
 
-import pl.braintelligence.projectmanager.application.dto.NewFeatureDto
+import pl.braintelligence.projectmanager.application.dto.NewFeature
 
 class SampleNewFeature {
 
@@ -9,9 +9,9 @@ class SampleNewFeature {
             "requirement": "OPTIONAL"
     ]
 
-    static final NewFeatureDto sampleNewFeature(Map<String, Object> properties = [:]) {
+    static final NewFeature sampleNewFeature(Map<String, Object> properties = [:]) {
         properties = NEW_PROJECT_DTO + properties
-        return new NewFeatureDto(
+        return new NewFeature(
                 properties.name,
                 properties.requirement
         )

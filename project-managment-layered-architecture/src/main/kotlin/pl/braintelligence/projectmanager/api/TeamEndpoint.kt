@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus.*
 import org.springframework.web.bind.annotation.*
 import pl.braintelligence.projectmanager.application.dto.NewTeamDto
 import pl.braintelligence.projectmanager.application.TeamService
-import pl.braintelligence.projectmanager.application.dto.ExistingTeamDto
+import pl.braintelligence.projectmanager.application.dto.ExistingTeam
 import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
 
 @RestController
@@ -27,7 +27,7 @@ class TeamEndpoint(
 
     @ResponseStatus(OK)
     @GetMapping
-    fun getTeams(): List<ExistingTeamDto> {
+    fun getTeams(): List<ExistingTeam> {
         return teamService.getTeams()
     }
 }
