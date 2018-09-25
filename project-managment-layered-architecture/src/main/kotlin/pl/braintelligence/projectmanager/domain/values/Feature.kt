@@ -17,13 +17,13 @@ data class Feature(
         fun toFeatures(newFeature: List<NewFeature>): List<Feature> =
                 newFeature.map { toFeature(it) }
 
-        fun toFeature(newFeature: NewFeature): Feature =
+        private fun toFeature(newFeature: NewFeature): Feature =
                 Feature(
                         name = newFeature.name,
                         requirement = checkRequirement(newFeature.requirement)
                 )
 
-        fun checkRequirement(requirement: String): Requirement {
+        private fun checkRequirement(requirement: String): Requirement {
             return try {
                 Requirement.valueOf(requirement)
             } catch (e: IllegalArgumentException) {
