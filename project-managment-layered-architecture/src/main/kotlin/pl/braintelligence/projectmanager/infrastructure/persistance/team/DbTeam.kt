@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.infrastructure.team
+package pl.braintelligence.projectmanager.infrastructure.persistance.team
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
