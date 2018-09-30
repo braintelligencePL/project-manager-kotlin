@@ -5,12 +5,12 @@ import pl.braintelligence.projectmanager.integration.projects.base.OperatingOnPr
 import spock.lang.Unroll
 
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
-import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewProjectDraftDto.sampleNewProjectDraftDto
+import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewProjectDraft.sampleNewProjectDraftDto
 
-class ProjectCreactionSpec extends BaseIntegrationSpec implements OperatingOnProjectsEndpoint {
+class DraftProjectCreactionSpec extends BaseIntegrationSpec implements OperatingOnProjectsEndpoint {
 
     @Unroll
-    def "Should not create an unnamed new project draft"() {
+    def "Should not create an unnamed new project-draft"() {
         when:
         def response = createProjectDraft(sampleNewProjectDraftDto(name: projectName))
 
@@ -21,4 +21,5 @@ class ProjectCreactionSpec extends BaseIntegrationSpec implements OperatingOnPro
         where:
         projectName << ['', '  ']
     }
+
 }

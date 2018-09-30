@@ -8,4 +8,8 @@ trait OperatingOnProjectsEndpoint implements BaseHttpMethodsSpec {
     ResponseEntity createProjectDraft(Object requestBody) {
         return post('/projects/drafts', requestBody)
     }
+
+    ResponseEntity createFullProject(Object requestBody) {
+        return post('/projects', requestBody)
+    }
 }

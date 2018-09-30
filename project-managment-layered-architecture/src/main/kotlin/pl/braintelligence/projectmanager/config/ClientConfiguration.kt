@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate
 
 @Configuration
 @EnableConfigurationProperties
-class ApplicationConfiguration(
+class ClientConfiguration(
     @Value("\${client.connectTimeout}") private val connectTimeout: Int,
     @Value("\${client.readTimeout}") private val readTimeout: Int
 ) {
