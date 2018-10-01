@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.infrastructure.persistance.project
+package pl.braintelligence.projectmanager.infrastructure.persistence.project
 
 import org.springframework.data.mongodb.core.MongoTemplate
 import org.springframework.stereotype.Repository

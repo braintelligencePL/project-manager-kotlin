@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.infrastructure.persistance.team
+package pl.braintelligence.projectmanager.infrastructure.persistence.team
 
 import org.slf4j.LoggerFactory
 import org.springframework.data.mongodb.repository.MongoRepository
