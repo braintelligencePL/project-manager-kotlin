@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.domain.values
 
 import org.apache.commons.lang3.StringUtils.isBlank
-import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
+import pl.braintelligence.projectmanager.api.team.dto.TeamMemberDto
 
 data class Employee(
     val firstName: String,

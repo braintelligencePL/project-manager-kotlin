@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.integration.projects
 
-import pl.braintelligence.projectmanager.application.dto.NewFeature
-import pl.braintelligence.projectmanager.application.dto.NewProject
+import pl.braintelligence.projectmanager.api.project.dto.NewFeature
+import pl.braintelligence.projectmanager.api.project.dto.NewProject
 import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
 import pl.braintelligence.projectmanager.integration.projects.base.OperatingOnProjectsEndpoint
 import spock.lang.Unroll

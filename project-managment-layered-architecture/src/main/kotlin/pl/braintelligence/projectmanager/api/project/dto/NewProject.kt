@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.application.dto
+package pl.braintelligence.projectmanager.api.project.dto
 
 data class NewProject(
     val name: String,

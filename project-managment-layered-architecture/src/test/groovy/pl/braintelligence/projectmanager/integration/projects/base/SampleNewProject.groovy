@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.integration.projects.base
 
 
-import pl.braintelligence.projectmanager.application.dto.NewProject
+import pl.braintelligence.projectmanager.api.project.dto.NewProject
 
 import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewFeature.sampleNewFeature
 

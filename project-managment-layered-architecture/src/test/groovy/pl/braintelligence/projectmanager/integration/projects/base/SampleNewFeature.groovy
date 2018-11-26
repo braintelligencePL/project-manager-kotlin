@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.integration.projects.base
 
-import pl.braintelligence.projectmanager.application.dto.NewFeature
+import pl.braintelligence.projectmanager.api.project.dto.NewFeature
 
 class SampleNewFeature {
 

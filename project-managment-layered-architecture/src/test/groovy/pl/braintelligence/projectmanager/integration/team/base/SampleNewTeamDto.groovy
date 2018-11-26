@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.integration.team.base
 
-import pl.braintelligence.projectmanager.application.dto.NewTeamDto
+import pl.braintelligence.projectmanager.api.team.dto.NewTeamDto
 
 
 class SampleNewTeamDto {

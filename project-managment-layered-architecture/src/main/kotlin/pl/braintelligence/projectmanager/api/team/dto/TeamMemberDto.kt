@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.application.dto
+package pl.braintelligence.projectmanager.api.team.dto
 
 import pl.braintelligence.projectmanager.domain.values.Employee
 
@@ -12,10 +12,10 @@ data class TeamMemberDto(
             members.map { mapToTeamMember(it) }
 
         fun mapToTeamMember(employee: Employee): TeamMemberDto =
-            TeamMemberDto(
-                employee.firstName,
-                employee.lastName,
-                employee.jobPosition.toString()
-            )
+                TeamMemberDto(
+                        employee.firstName,
+                        employee.lastName,
+                        employee.jobPosition.toString()
+                )
     }
 }

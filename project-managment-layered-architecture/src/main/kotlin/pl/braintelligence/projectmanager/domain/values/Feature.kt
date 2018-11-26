@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.domain.values
 
 import org.apache.commons.lang3.StringUtils.isBlank
-import pl.braintelligence.projectmanager.application.dto.NewFeature
+import pl.braintelligence.projectmanager.api.project.dto.NewFeature
 
 data class Feature(
         val name: String,

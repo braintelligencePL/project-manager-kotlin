@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.application.dto
+package pl.braintelligence.projectmanager.api.team.dto
 
 import pl.braintelligence.projectmanager.domain.team.Team
 
@@ -12,10 +12,10 @@ data class ExistingTeam(
         fun mapToExistingTeams(teams: List<Team>): List<ExistingTeam> =
             teams.map {
                 ExistingTeam(
-                    it.name,
-                    it.currentProjects,
-                    it.isBusy(),
-                    TeamMemberDto.toTeamMembers(it.members)
+                        it.name,
+                        it.currentProjects,
+                        it.isBusy(),
+                        TeamMemberDto.toTeamMembers(it.members)
                 )
             }
     }

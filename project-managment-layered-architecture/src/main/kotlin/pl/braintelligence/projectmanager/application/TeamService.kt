@@ -2,9 +2,9 @@ package pl.braintelligence.projectmanager.application
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import pl.braintelligence.projectmanager.application.dto.ExistingTeam
-import pl.braintelligence.projectmanager.application.dto.NewTeamDto
-import pl.braintelligence.projectmanager.application.dto.TeamMemberDto
+import pl.braintelligence.projectmanager.api.team.dto.ExistingTeam
+import pl.braintelligence.projectmanager.api.team.dto.NewTeamDto
+import pl.braintelligence.projectmanager.api.team.dto.TeamMemberDto
 import pl.braintelligence.projectmanager.domain.exceptions.EntityAlreadyExistsException
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.NONEXISTENT_TEAM
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.TEAM_ALREADY_EXISTS

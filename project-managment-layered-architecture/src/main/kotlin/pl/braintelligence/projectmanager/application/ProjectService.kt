@@ -1,8 +1,8 @@
 package pl.braintelligence.projectmanager.application
 
 import org.springframework.stereotype.Service
-import pl.braintelligence.projectmanager.application.dto.NewProject
-import pl.braintelligence.projectmanager.application.dto.NewProjectDraftDto
+import pl.braintelligence.projectmanager.api.project.dto.NewProject
+import pl.braintelligence.projectmanager.api.project.dto.NewProjectDraftDto
 import pl.braintelligence.projectmanager.domain.project.ProjectFactory
 import pl.braintelligence.projectmanager.domain.project.ProjectRepository
 import pl.braintelligence.projectmanager.domain.values.Feature

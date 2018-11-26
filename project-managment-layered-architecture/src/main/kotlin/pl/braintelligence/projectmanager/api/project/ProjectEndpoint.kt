@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.api
+package pl.braintelligence.projectmanager.api.project
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.PostMapping
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 import pl.braintelligence.projectmanager.application.ProjectService
-import pl.braintelligence.projectmanager.application.dto.NewProject
-import pl.braintelligence.projectmanager.application.dto.NewProjectDraftDto
+import pl.braintelligence.projectmanager.api.project.dto.NewProject
+import pl.braintelligence.projectmanager.api.project.dto.NewProjectDraftDto
 
 @RestController
 @RequestMapping("/projects")

@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.integration.team.base
 
 import org.springframework.http.ResponseEntity
-import pl.braintelligence.projectmanager.application.dto.NewTeamDto
+import pl.braintelligence.projectmanager.api.team.dto.NewTeamDto
 import pl.braintelligence.projectmanager.integration.base.BaseHttpMethodsSpec
 
 trait OperatingOnTeamEndpoint implements BaseHttpMethodsSpec {
