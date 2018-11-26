@@ -21,5 +21,6 @@ class ProjectService(
         val features = Feature.toFeatures(newProject.features)
         val project = projectFactory.createFullProject(newProject.name, features)
         projectRepository.save(project)
+        
     }
 }
