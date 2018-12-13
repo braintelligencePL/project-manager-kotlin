@@ -20,6 +20,7 @@ class Application {
     }
 }
 
+
 fun <R : Any> R.logger(): Lazy<Logger> = lazy { LoggerFactory.getLogger(unwrapCompanionClass(this.javaClass).name) }
 
 fun <T : Any> unwrapCompanionClass(ofClass: Class<T>): Class<*> =

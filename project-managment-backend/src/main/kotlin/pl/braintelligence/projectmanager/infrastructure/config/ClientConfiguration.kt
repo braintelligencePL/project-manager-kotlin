@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.config
+package pl.braintelligence.projectmanager.infrastructure.config
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.context.properties.EnableConfigurationProperties
