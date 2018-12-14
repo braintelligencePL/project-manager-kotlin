@@ -1,13 +1,13 @@
-package pl.braintelligence.projectmanager.integration.projects
+package pl.braintelligence.projectmanager
 
 import pl.braintelligence.projectmanager.api.project.dto.NewFeature
 import pl.braintelligence.projectmanager.api.project.dto.NewProject
-import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
-import pl.braintelligence.projectmanager.integration.projects.base.OperatingOnProjectsEndpoint
+import pl.braintelligence.projectmanager.base.BaseIntegrationSpec
+import pl.braintelligence.projectmanager.projects.base.OperatingOnProjectsEndpoint
 import spock.lang.Unroll
 
 import static org.springframework.http.HttpStatus.CREATED
-import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewProjectDraft.sampleNewProjectDraftDto
+import static pl.braintelligence.projectmanager.projects.base.SampleNewProjectDraft.sampleNewProjectDraftDto
 
 class ProjectAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnProjectsEndpoint {
 

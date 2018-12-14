@@ -1,14 +1,14 @@
-package pl.braintelligence.projectmanager.integration.team
+package pl.braintelligence.projectmanager.team
 
-import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
-import pl.braintelligence.projectmanager.integration.team.base.OperatingOnTeamEndpoint
+import pl.braintelligence.projectmanager.base.BaseIntegrationSpec
+import pl.braintelligence.projectmanager.team.base.OperatingOnTeamEndpoint
 import spock.lang.Unroll
 
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
-import static pl.braintelligence.projectmanager.integration.team.base.SampleNewTeamDto.sampleNewTeamDto
-import static pl.braintelligence.projectmanager.integration.team.base.SampleTeamMemberDto.sampleTeamMemberDto
+import static pl.braintelligence.projectmanager.team.base.SampleNewTeamDto.sampleNewTeamDto
+import static pl.braintelligence.projectmanager.team.base.SampleTeamMemberDto.sampleTeamMemberDto
 
-class TeamCreationSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
+class TeamEndpointSadPathSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
 
     def "Should not create a team that already exists"() {
         given: "create new team"
@@ -91,6 +91,6 @@ class TeamCreationSpec extends BaseIntegrationSpec implements OperatingOnTeamEnd
         jobPosition             | errorCode
         ''                      | 'EMPTY_OR_INVALID_JOB_POSITION'
         '  '                    | 'EMPTY_OR_INVALID_JOB_POSITION'
-        'InvalidJobPosition %$' | 'EMPTY_OR_INVALID_JOB_POSITION'
+        'invalid job position' | 'EMPTY_OR_INVALID_JOB_POSITION'
     }
 }

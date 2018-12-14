@@ -2,7 +2,7 @@ package pl.braintelligence.projectmanager.application
 
 import org.springframework.stereotype.Service
 import pl.braintelligence.projectmanager.api.project.dto.NewProject
-import pl.braintelligence.projectmanager.api.project.dto.NewProjectDraftDto
+import pl.braintelligence.projectmanager.api.project.dto.NewProjectDraft
 import pl.braintelligence.projectmanager.domain.project.ProjectFactory
 import pl.braintelligence.projectmanager.domain.project.ProjectRepository
 import pl.braintelligence.projectmanager.domain.values.Feature
@@ -12,8 +12,8 @@ class ProjectService(
     private val projectRepository: ProjectRepository,
     private val projectFactory: ProjectFactory
 ) {
-    fun createProject(newProjectDraftDto: NewProjectDraftDto) {
-        val project = projectFactory.createProjectDraft(newProjectDraftDto.name)
+    fun createProject(newProjectDraft: NewProjectDraft) {
+        val project = projectFactory.createProjectDraft(newProjectDraft.name)
         projectRepository.save(project)
     }
 

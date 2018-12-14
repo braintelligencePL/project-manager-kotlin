@@ -10,24 +10,25 @@ import pl.braintelligence.projectmanager.api.team.dto.TeamMemberDto
 @RestController
 @RequestMapping(value = ["/teams"])
 class TeamEndpoint(
-    private val teamService: TeamService
+        private val teamService: TeamService
 ) {
 
     @ResponseStatus(CREATED)
     @PostMapping
-    fun createTeam(@RequestBody newTeamDto: NewTeamDto) {
-        teamService.createTeam(newTeamDto)
-    }
+    fun createTeam(
+            @RequestBody newTeamDto: NewTeamDto
+    ) = teamService.createTeam(newTeamDto)
+
 
     @ResponseStatus(CREATED)
     @PostMapping("{teamName}/member")
-    fun addMemberToTeam(@PathVariable teamName: String, @RequestBody teamMemberDto: TeamMemberDto) {
-        teamService.addMemberToTeam(teamName, teamMemberDto)
-    }
+    fun addMemberToTeam(
+            @PathVariable teamName: String,
+            @RequestBody teamMemberDto: TeamMemberDto
+    ) = teamService.addMemberToTeam(teamName, teamMemberDto)
 
     @ResponseStatus(OK)
     @GetMapping
-    fun getTeams(): List<ExistingTeam> {
-        return teamService.getTeams()
-    }
+    fun getTeams(): List<ExistingTeam> = teamService.getTeams()
+
 }

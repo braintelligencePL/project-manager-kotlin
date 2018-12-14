@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.integration.base
+package pl.braintelligence.projectmanager.base
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule
 import org.junit.Rule

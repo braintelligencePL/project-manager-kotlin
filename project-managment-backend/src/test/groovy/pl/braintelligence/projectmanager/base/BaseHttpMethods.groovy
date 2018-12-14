@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.integration.base
+package pl.braintelligence.projectmanager.base
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.web.client.TestRestTemplate
@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity
 
 import static org.springframework.http.HttpMethod.GET
 
-trait BaseHttpMethodsSpec {
+trait BaseHttpMethods {
 
     @Autowired
     TestRestTemplate restTemplate

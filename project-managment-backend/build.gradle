@@ -54,7 +54,10 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.0.3'
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    runtime("io.micrometer:micrometer-registry-prometheus")
+
+//    compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.0.3'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
     compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.1'
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.6'

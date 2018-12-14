@@ -5,6 +5,8 @@ import pl.braintelligence.projectmanager.domain.exceptions.InvalidEntityExceptio
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.*
 import pl.braintelligence.projectmanager.domain.values.Employee
 
+data class Aa(val ss: String, val dd: String = "asd")
+
 data class Team(
     val name: String,
     val currentProjects: Int = 0,

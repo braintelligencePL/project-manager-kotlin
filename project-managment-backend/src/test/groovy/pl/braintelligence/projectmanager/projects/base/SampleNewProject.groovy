@@ -1,9 +1,9 @@
-package pl.braintelligence.projectmanager.integration.projects.base
+package pl.braintelligence.projectmanager.projects.base
 
 
 import pl.braintelligence.projectmanager.api.project.dto.NewProject
 
-import static pl.braintelligence.projectmanager.integration.projects.base.SampleNewFeature.sampleNewFeature
+import static SampleNewFeature.sampleNewFeature
 
 class SampleNewProject {
 

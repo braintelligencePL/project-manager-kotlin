@@ -1,10 +1,10 @@
-package pl.braintelligence.projectmanager.integration.team.base
+package pl.braintelligence.projectmanager.team.base
 
 import org.springframework.http.ResponseEntity
 import pl.braintelligence.projectmanager.api.team.dto.NewTeamDto
-import pl.braintelligence.projectmanager.integration.base.BaseHttpMethodsSpec
+import pl.braintelligence.projectmanager.base.BaseHttpMethods
 
-trait OperatingOnTeamEndpoint implements BaseHttpMethodsSpec {
+trait OperatingOnTeamEndpoint implements BaseHttpMethods {
 
     ResponseEntity createNewTeam(Object requestBody) {
         return post('/teams', requestBody)

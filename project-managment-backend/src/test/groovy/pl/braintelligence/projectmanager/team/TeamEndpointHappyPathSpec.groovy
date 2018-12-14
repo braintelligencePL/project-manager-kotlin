@@ -1,18 +1,21 @@
-package pl.braintelligence.projectmanager.integration.team
+package pl.braintelligence.projectmanager.team
 
-import pl.braintelligence.projectmanager.integration.team.base.OperatingOnTeamEndpoint
-import pl.braintelligence.projectmanager.integration.base.BaseIntegrationSpec
+import pl.braintelligence.projectmanager.base.BaseIntegrationSpec
+import pl.braintelligence.projectmanager.team.base.OperatingOnTeamEndpoint
+import pl.braintelligence.projectmanager.team.base.SampleTeamMemberDto
+import spock.lang.Unroll
 
-import static org.springframework.http.HttpStatus.OK
 import static org.springframework.http.HttpStatus.CREATED
-import static pl.braintelligence.projectmanager.integration.team.base.SampleNewTeamDto.sampleNewTeamDto
-import static pl.braintelligence.projectmanager.integration.team.base.SampleTeamMemberDto.sampleTeamMemberDto
-import static pl.braintelligence.projectmanager.integration.team.base.SampleTeamMemberDto.TEAM_MEMBER_DTO
+import static org.springframework.http.HttpStatus.CREATED
+import static org.springframework.http.HttpStatus.OK
+import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
+import static pl.braintelligence.projectmanager.team.base.SampleNewTeamDto.sampleNewTeamDto
+import static pl.braintelligence.projectmanager.team.base.SampleTeamMemberDto.sampleTeamMemberDto
 
-class TeamAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
+class TeamEndpointHappyPathSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
 
-    def "Should create team and add member to it "() {
-        when: "new team is created"
+    def "Should not create a team that already exists"() {
+        when:
         def response = createNewTeam(sampleNewTeamDto())
 
         then: "system response - team is created"
@@ -39,6 +42,6 @@ class TeamAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnTeamE
         response = getExistingTeams()
 
         then: "checks that member was added"
-        response.body[0].members[0] == TEAM_MEMBER_DTO
+        response.body[0].members[0] == SampleTeamMemberDto.TEAM_MEMBER_DTO
     }
 }

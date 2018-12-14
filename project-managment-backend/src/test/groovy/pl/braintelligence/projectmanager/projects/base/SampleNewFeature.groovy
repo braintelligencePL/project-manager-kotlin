@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.integration.projects.base
+package pl.braintelligence.projectmanager.projects.base
 
 import pl.braintelligence.projectmanager.api.project.dto.NewFeature
 

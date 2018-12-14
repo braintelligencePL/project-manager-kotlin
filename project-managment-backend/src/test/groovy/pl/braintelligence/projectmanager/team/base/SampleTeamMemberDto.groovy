@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.integration.team.base
+package pl.braintelligence.projectmanager.team.base
 
 import pl.braintelligence.projectmanager.api.team.dto.TeamMemberDto
 
