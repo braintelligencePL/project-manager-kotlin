@@ -33,7 +33,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 🏠 **Architecture**: Layered Architecure <BR>
 🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
-* [x] `POST: /projects/drafts` - create project draft. <br>
+* [x] `POST: /projects/drafts` - create project draft (only project name). <br>
 * [x] `POST: /projects` - create full project (project with features📊). <br>
 * [ ] `GET: /projects` - show draft projects <br>
 * [ ] `GET: /projects/:id` - show project (project not project draft)<br>
