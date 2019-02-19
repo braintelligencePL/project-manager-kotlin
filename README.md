@@ -72,6 +72,7 @@ Services from our zoo:<BR>
 
 ### #️⃣ `branch: will-be-more` <br>
 - asynchrnous examples - JavaRx or Coroutines (somewhere, sometime)
+- monitoring, grafana, actuator 
 
 <BR><BR>
   
