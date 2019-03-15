@@ -22,11 +22,6 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `POST: /teams/:teamName/members` - add members to the team. <br>
 * [x] `GET: /teams` - show teams. <br> <br>
 
-#### Tests naming convention and packages
-* TeamAcceptanceSpec - shows positive flow for interactions with team API.
-* TeamCreationSpec - tests corner cases.
-* `/base` - encapsulated things to make tests more readable. **OperatingOnEndpoint** to hide details of http requests and **SampleObjectDto** to hide details for object creation.  
-
 <BR>
 
 ### 2️⃣ `branch: step-2-projects` <br>
@@ -36,30 +31,25 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `POST: /projects/drafts` - create project draft (only project name). <br>
 * [x] `POST: /projects` - create full project (project with features📊). <br>
 * [x] `GET: /projects` - show draft projects <br>
+
+### 3️⃣ `branch: step-3-refactor` <br> 
+🏠 **Architecture**: Hexagonal Architecure <BR>
+
+Refactor to hexagonal architecture. Removed unnesesary Dto objects. Test cleanup.
+
+### 4️⃣ `branch: step-4-projects` <br> 
+🏠 **Architecture**: Hexagonal Architecure <BR>
+
 * [ ] `GET: /projects/:id` - show project (project not project draft)<br>
 * [ ] `PUT: /projects/:id` - change/update project <br>
 * [ ] `PATCH: /projects/:id/started` - start team when team assigned <br>
 * [ ] `PATCH: /projects/:id/ended` - close project when features are done <br><br>
 
-#### Tests naming convention and packages
-*  ProjectAcceptanceSpec - shows positive flow for interactions with projects API.
-*  ProjectCreationalSpec - tests corner cases.
-* `/base` - encapsulated things to make tests more readable. **OperatingOnEndpoint** to hide details of http requests and **SampleObjectDto** to hide details for object creation.
-
 <BR>
 
-### 3️⃣ `branch: step-3-refactor` <br>
-🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
-🕳 **Tests**: Integration/Acceptance along with Unit-Tests for corner-cases mostly<BR>
-🛸 **Features**: db-in-memory implementation (ConcurrentHashMap) for fast unit-tests and simple CQRS.<BR> 
-❗❗From now on only crucial parts are going to be tested with integration-tests.
-
-<BR>
-
-### 4️⃣ `branch: step-4-zoo-of-microservices` <br>
+### 5️⃣ `branch: step-5-zoo-of-microservices` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance/Unit<BR>
-🛸 **Feature**: Event-Sourcing, Microservices, Eventual-Consistency, <BR>
 Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
 Services from our zoo:<BR>
@@ -71,7 +61,6 @@ Services from our zoo:<BR>
 <BR>
 
 ### #️⃣ `branch: will-be-more` <br>
-- asynchrnous examples - JavaRx or Coroutines (somewhere, sometime)
 - monitoring, grafana, actuator 
 
 <BR><BR>
@@ -80,14 +69,12 @@ Services from our zoo:<BR>
 - kotlin with spring 
 - groovy (spock) for tests
 - gradle to build project
-- docker in the future
   
 #### Something to read on my site and credits from repos that were inspiration
 * [Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami)
 * [Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/)
 * [ Similar application in Java ](https://github.com/mkopylec/project-manager)
-* [ #1 ](https://github.com/kamranahmedse/design-patterns-for-humans)[ #2 ](https://github.com/BottegaIT/ddd-leaven-v2)[ #3 ](https://github.com/jakubnabrdalik/hentai) [ #4 ](https://github.com/heynickc/awesome-ddd)[ #5 ](https://github.com/kbastani/spring-cloud-event-sourcing-example)
-<BR>
-
-#### Other resources
+* [ design patterns for humans ](https://github.com/kamranahmedse/design-patterns-for-humans)
+* [ ddd-laeven ](https://github.com/BottegaIT/ddd-leaven-v2)
+* [ awsome-ddd ](https://github.com/heynickc/awesome-ddd)
 * [Twelve-Factor-App - methodology for building software-as-a-service](https://12factor.net/)
