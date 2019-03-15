@@ -2,6 +2,8 @@
 ## [WIP] Project-Manager 
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
+<b> We'll go from traditional layered architecture to hexagonal architecture A.K.A. Ports and Adapters architecture. </b>
+
 #### Working with Project-Manager
 
 `./gradlew bootRun` - to run application. <BR>
