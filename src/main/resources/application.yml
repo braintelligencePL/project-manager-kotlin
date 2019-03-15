@@ -1,0 +1,3 @@
+client:
+  connectTimeout: 1500
+  readTimeout: 3000
