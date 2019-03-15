@@ -73,7 +73,7 @@ Services from our zoo:<BR>
 #### Materials
 * [Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami) - opis tego projektu we wpisie.
 * [Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/)
-* [ ddd-workshop--project-manager ](https://github.com/mkopylec/project-manager)
+* [ ddd-workshop-project-manager ](https://github.com/mkopylec/project-manager)
 * [ design patterns for humans ](https://github.com/kamranahmedse/design-patterns-for-humans)
 * [ ddd-laeven ](https://github.com/BottegaIT/ddd-leaven-v2)
 * [ awsome-ddd ](https://github.com/heynickc/awesome-ddd)
