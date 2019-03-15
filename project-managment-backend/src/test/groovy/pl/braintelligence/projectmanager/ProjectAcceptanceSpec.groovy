@@ -23,7 +23,7 @@ class ProjectAcceptanceSpec extends BaseIntegrationSpec implements OperatingOnPr
     def "Successful flow for full-project (with features) creation"() {
         given:
         def feature = new NewFeature("feat 1", requirement)
-        def project = new NewProject('Project 1',[feature])
+        def project = new NewProject('Project 1', [feature])
 
         when:
         def response = post('/projects', project)

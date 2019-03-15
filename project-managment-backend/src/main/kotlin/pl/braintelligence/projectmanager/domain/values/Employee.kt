@@ -4,9 +4,9 @@ import org.apache.commons.lang3.StringUtils.isBlank
 import pl.braintelligence.projectmanager.api.team.dto.TeamMemberDto
 
 data class Employee(
-    val firstName: String,
-    val lastName: String,
-    val jobPosition: JobPosition
+        val firstName: String,
+        val lastName: String,
+        val jobPosition: JobPosition
 ) {
 
     fun hasNoFirstName(): Boolean = isBlank(firstName)
@@ -17,11 +17,11 @@ data class Employee(
 
     companion object {
         fun toEmployee(teamMemberDto: TeamMemberDto) =
-            Employee(
-                teamMemberDto.firstName,
-                teamMemberDto.lastName,
-                toJobPosition(teamMemberDto.jobPosition)
-            )
+                Employee(
+                        teamMemberDto.firstName,
+                        teamMemberDto.lastName,
+                        toJobPosition(teamMemberDto.jobPosition)
+                )
 
         fun toJobPosition(jobPosition: String): JobPosition {
             return try {

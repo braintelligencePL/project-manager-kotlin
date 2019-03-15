@@ -10,7 +10,7 @@ import java.lang.invoke.MethodHandles
 
 @Component
 class TeamRepositoryImpl(
-    private val dbTeamRepository: DbTeamRepository
+        private val dbTeamRepository: DbTeamRepository
 ) : TeamRepository {
 
     override fun findAll(): List<Team> {
