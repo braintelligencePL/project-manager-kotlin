@@ -1,14 +1,44 @@
 package pl.braintelligence.projectmanager.team
 
+import org.springframework.core.ParameterizedTypeReference
+import pl.braintelligence.projectmanager.api.team.dto.ExistingTeam
+import pl.braintelligence.projectmanager.api.team.dto.NewTeamDto
 import pl.braintelligence.projectmanager.base.BaseIntegrationSpec
 import pl.braintelligence.projectmanager.team.base.OperatingOnTeamEndpoint
 import spock.lang.Unroll
 
+import static org.springframework.http.HttpStatus.CREATED
+import static org.springframework.http.HttpStatus.OK
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
 import static pl.braintelligence.projectmanager.team.base.SampleNewTeamDto.sampleNewTeamDto
 import static pl.braintelligence.projectmanager.team.base.SampleTeamMemberDto.sampleTeamMemberDto
 
-class TeamEndpointSadPathSpec extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
+class TeamControllerTest extends BaseIntegrationSpec implements OperatingOnTeamEndpoint {
+
+    def "Should create new team and browse it"() {
+        given:
+        def newTeam1 = new NewTeamDto('Team 1')
+
+        when:
+        def response = post('/teams', newTeam1)
+
+        then:
+        response.statusCode == CREATED
+
+        when:
+        response = get('/teams', new ParameterizedTypeReference<List<ExistingTeam>>() {})
+
+        then:
+        response.statusCode == OK
+        response.body != null
+        response.body.size() == 1
+        with(response.body[0]) {
+            name == 'Team 1'
+            currentlyImplementedProjects == 0
+            !busy
+            members == []
+        }
+    }
 
     def "Should not create a team that already exists"() {
         given: "create new team"
@@ -88,9 +118,9 @@ class TeamEndpointSadPathSpec extends BaseIntegrationSpec implements OperatingOn
         response.body.message == errorCode
 
         where:
-        jobPosition             | errorCode
-        ''                      | 'EMPTY_OR_INVALID_JOB_POSITION'
-        '  '                    | 'EMPTY_OR_INVALID_JOB_POSITION'
+        jobPosition            | errorCode
+        ''                     | 'EMPTY_OR_INVALID_JOB_POSITION'
+        '  '                   | 'EMPTY_OR_INVALID_JOB_POSITION'
         'invalid job position' | 'EMPTY_OR_INVALID_JOB_POSITION'
     }
 }

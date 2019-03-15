@@ -5,7 +5,7 @@ import pl.braintelligence.projectmanager.api.project.dto.NewFeature
 class SampleNewFeature {
 
     static final Map NEW_PROJECT_DTO = [
-            "name": "feature title/name",
+            "name"       : "feature title/name",
             "requirement": "OPTIONAL"
     ]
 

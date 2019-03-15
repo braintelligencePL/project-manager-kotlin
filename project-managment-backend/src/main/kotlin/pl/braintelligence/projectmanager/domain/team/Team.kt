@@ -1,16 +1,14 @@
 package pl.braintelligence.projectmanager.domain.team
 
 import org.apache.commons.lang3.StringUtils.isBlank
-import pl.braintelligence.projectmanager.domain.exceptions.InvalidEntityException
 import pl.braintelligence.projectmanager.domain.exceptions.ErrorCode.*
+import pl.braintelligence.projectmanager.domain.exceptions.InvalidEntityException
 import pl.braintelligence.projectmanager.domain.values.Employee
 
-data class Aa(val ss: String, val dd: String = "asd")
-
 data class Team(
-    val name: String,
-    val currentProjects: Int = 0,
-    var members: MutableList<Employee> = mutableListOf()
+        val name: String,
+        val currentProjects: Int = 0,
+        var members: MutableList<Employee> = mutableListOf()
 ) {
 
     init {

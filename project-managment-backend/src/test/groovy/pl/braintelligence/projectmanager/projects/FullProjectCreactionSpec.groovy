@@ -28,7 +28,7 @@ class FullProjectCreactionSpec extends BaseIntegrationSpec implements OperatingO
     def "Should not create a new full-project with unnamed feature"() {
         given:
         def feature = new NewFeature("feature name", featureName)
-        def fullProject = new NewProject('project name',[feature])
+        def fullProject = new NewProject('project name', [feature])
 
         when:
         def response = createFullProject(fullProject)

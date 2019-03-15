@@ -16,13 +16,13 @@ import java.lang.invoke.MethodHandles
 
 @Service
 class TeamService(
-    val teamRepository: TeamRepository
+        val teamRepository: TeamRepository
 ) {
     fun createTeam(newTeamDto: NewTeamDto) {
         logger.info("Creating new team {}.", newTeamDto)
         val team = Team(newTeamDto.name)
         when (teamRepository.existByName(team.name)) {
-            true  -> throw EntityAlreadyExistsException(TEAM_ALREADY_EXISTS)
+            true -> throw EntityAlreadyExistsException(TEAM_ALREADY_EXISTS)
             false -> teamRepository.save(team)
         }
     }
@@ -37,7 +37,7 @@ class TeamService(
         val team = Team(teamName)
 
         teamRepository.findByName(teamName)
-            ?: throw MissingEntityException(NONEXISTENT_TEAM)
+                ?: throw MissingEntityException(NONEXISTENT_TEAM)
 
         Employee.toEmployee(teamMemberDto).apply {
             team.addMember(this)

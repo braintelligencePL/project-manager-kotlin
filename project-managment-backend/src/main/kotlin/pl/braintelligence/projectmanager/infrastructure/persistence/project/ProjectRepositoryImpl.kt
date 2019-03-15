@@ -7,8 +7,12 @@ import pl.braintelligence.projectmanager.domain.project.ProjectRepository
 
 @Repository
 class ProjectRepositoryImpl(
-    val mongoTemplate: MongoTemplate
+        val mongoTemplate: MongoTemplate
 ) : ProjectRepository {
+
+    override fun findAll(): List<Project> {
+        return mongoTemplate.findAll(Project::class.java, PROJECTS_COLLECTION)
+    }
 
     override fun save(project: Project) {
         mongoTemplate.save(project, PROJECTS_COLLECTION)
