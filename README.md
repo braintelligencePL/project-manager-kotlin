@@ -35,7 +35,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 
 * [x] `POST: /projects/drafts` - create project draft (only project name). <br>
 * [x] `POST: /projects` - create full project (project with features📊). <br>
-* [ ] `GET: /projects` - show draft projects <br>
+* [x] `GET: /projects` - show draft projects <br>
 * [ ] `GET: /projects/:id` - show project (project not project draft)<br>
 * [ ] `PUT: /projects/:id` - change/update project <br>
 * [ ] `PATCH: /projects/:id/started` - start team when team assigned <br>
