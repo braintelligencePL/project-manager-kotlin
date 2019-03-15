@@ -18,7 +18,6 @@ Project-Manager is a simple application for managing projects at company. You ca
   
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
-🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
 * [x] `POST: /teams` - create a team. <br>
 * [x] `POST: /teams/:teamName/members` - add members to the team. <br>
@@ -28,7 +27,6 @@ Project-Manager is a simple application for managing projects at company. You ca
 
 ### 2️⃣ `branch: step-2-projects` <br>
 🏠 **Architecture**: Layered Architecure <BR>
-🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
 * [x] `POST: /projects/drafts` - create project draft (only project name). <br>
 * [x] `POST: /projects` - create full project (project with features📊). <br>
@@ -51,7 +49,6 @@ Refactor to hexagonal architecture. Removed unnesesary Dto objects. Test cleanup
 
 ### 5️⃣ `branch: step-5-zoo-of-microservices` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
-🕳 **Tests**: Integration/Acceptance/Unit<BR>
 Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
 
 Services from our zoo:<BR>
