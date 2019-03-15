@@ -32,11 +32,15 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `POST: /projects` - create full project (project with features📊). <br>
 * [x] `GET: /projects` - show draft projects <br>
 
+<BR>
+
 ### 3️⃣ `branch: step-3-refactor` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
 
 Refactor to hexagonal architecture. Removed unnesesary Dto objects. Test cleanup.
 
+<BR>
+  
 ### 4️⃣ `branch: step-4-projects` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
 
