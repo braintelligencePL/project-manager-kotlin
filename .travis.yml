@@ -11,7 +11,7 @@ addons:
     - myshorthost
   hostname: myshorthost
 
-install: gradle clean build
+install: ./gradlew clean build
 
 # Can't use container based infra because of hosts/hostname
 sudo: true
