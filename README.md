@@ -4,6 +4,8 @@ Project-Manager is a simple application for managing projects at company. You ca
 
 <b> We'll go from traditional layered architecture to hexagonal architecture A.K.A. Ports and Adapters architecture. </b>
 
+[![Project manager - build status](https://travis-ci.com/braintelligencePL/project-manager-kotlin.svg?branch=master)](https://travis-ci.com/braintelligencePL/project-manager-kotlin)
+
 #### Working with Project-Manager
 
 `./gradlew bootRun` - to run application. <BR>
