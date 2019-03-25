@@ -2,16 +2,6 @@ language: java
 
 jdk:
   - openjdk8
-  - openjdk11
-  - oraclejdk8
-  - oraclejdk11
-
-addons:
-  hosts:
-    - myshorthost
-  hostname: myshorthost
+  - openjdk10
 
 install: ./gradlew clean build
-
-# Can't use container based infra because of hosts/hostname
-sudo: true
