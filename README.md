@@ -1,5 +1,5 @@
 
-#### 🛠[![Build Status](https://travis-ci.com/braintelligencePL/project-manager-kotlin.svg?branch=master)](https://travis-ci.com/braintelligencePL/project-manager-kotlin) 🛠
+#### [![Build Status](https://travis-ci.com/braintelligencePL/project-manager-kotlin.svg?branch=master)](https://travis-ci.com/braintelligencePL/project-manager-kotlin) 🛠 🛠 
 
 ## [WIP] Project-Manager
 
