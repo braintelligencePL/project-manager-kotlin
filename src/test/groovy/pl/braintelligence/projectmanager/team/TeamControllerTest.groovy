@@ -1,9 +1,8 @@
 package pl.braintelligence.projectmanager.team
 
 import org.springframework.core.ParameterizedTypeReference
-import org.springframework.http.HttpStatus
 import pl.braintelligence.projectmanager.base.BaseIntegrationTest
-import pl.braintelligence.projectmanager.core.team.Team
+import pl.braintelligence.projectmanager.core.team.domain.Team
 
 class TeamControllerTest extends BaseIntegrationTest {
 
@@ -22,18 +21,6 @@ class TeamControllerTest extends BaseIntegrationTest {
         }
     }
 
-    def "Should not create team that already exist"() {
-        given:
-        def teamName = "teamName"
-        prepareNewTeam(teamName)
 
-        when:
-        def response = prepareNewTeam(teamName)
 
-        then:
-        with(response) {
-            body.status == HttpStatus.UNPROCESSABLE_ENTITY
-            body.message == "Team already exist"
-        }
-    }
 }

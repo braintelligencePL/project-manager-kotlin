@@ -1,12 +1,12 @@
 package pl.braintelligence.projectmanager.infrastructure.team.entities
 
-import pl.braintelligence.projectmanager.core.team.Employee
-import pl.braintelligence.projectmanager.core.team.JobPosition
+import pl.braintelligence.projectmanager.core.team.domain.Employee
+import pl.braintelligence.projectmanager.core.team.domain.JobPosition
 
 data class DbEmployee(
         private val firstName: String,
         private val lastName: String,
-        private val position: JobPosition
+        private val position: String
 ) {
     companion object {
         fun toDbEmployee(employee: List<Employee>): List<DbEmployee> =
@@ -16,14 +16,15 @@ data class DbEmployee(
                 DbEmployee(
                         employee.firstName,
                         employee.lastName,
-                        employee.position
+                        employee.position.toString()
                 )
 
         fun toEmployee(dbEmployee: DbEmployee): Employee =
+
                 Employee(
                         dbEmployee.firstName,
                         dbEmployee.lastName,
-                        dbEmployee.position
+                        JobPosition.valueOf(dbEmployee.position)
                 )
     }
 }

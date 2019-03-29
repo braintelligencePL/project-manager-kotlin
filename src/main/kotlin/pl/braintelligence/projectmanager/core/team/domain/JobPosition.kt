@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.core.team
+package pl.braintelligence.projectmanager.core.team.domain
 
 enum class JobPosition {
     DEVELOPER,

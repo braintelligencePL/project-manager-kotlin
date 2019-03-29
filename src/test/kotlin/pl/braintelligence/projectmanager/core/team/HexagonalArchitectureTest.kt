@@ -12,7 +12,7 @@ import org.junit.jupiter.api.TestInstance
  *
  */
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS) // new instance each time, basically
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @AnalyzeClasses(packagesOf = [HexagonalArchitectureTest::class])
 internal class HexagonalArchitectureTest {
 

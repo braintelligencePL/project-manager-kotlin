@@ -6,8 +6,7 @@ Project-Manager is a simple application for managing projects at company. You ca
 
 `./gradlew bootRun` - to run application. <BR>
 `./gradlew test` - to run unit tests. <BR>
-`./gradlew integrationTest` - to run integration tests. <BR>
-`./gradlew clean build test integrationTest`- one to rule them all 💍 <BR>
+`./gradlew clean build test`- one to rule them all 💍 <BR>
 <BR>
 
 ## Implementation step-by-step
@@ -61,20 +60,22 @@ Services from our zoo:<BR>
 <BR>
 
 ### #️⃣ `branch: will-be-more` <br>
-- monitoring, grafana, actuator 
+- monitoring, grafana, actuator, performance tests with gatling
 
 <BR><BR>
   
 ## Technologies used: 
-- kotlin with spring 
-- groovy (spock) for tests
-- gradle to build project
+- Kotlin with spring 
+- Spock (groovy) for tests
+- ArchUnit (kotlin) for architecture tests
+- Gradle to build project
   
 #### Materials
-* [Prawie trywialna aplikacja do zarządzania projektami (PL)](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami) - opis tego projektu we wpisie.
-* [Strategic Tools from Domain-Driven-Design (ENG)](http://www.braintelligence.pl/the-nature-of-domain-driven-design/)
-* [ ddd-workshop-project-manager (most credits here)](https://github.com/mkopylec/project-manager)
-* [ design patterns for humans ](https://github.com/kamranahmedse/design-patterns-for-humans)
-* [ ddd-laeven ](https://github.com/BottegaIT/ddd-leaven-v2)
-* [ awsome-ddd ](https://github.com/heynickc/awesome-ddd)
-* [Twelve-Factor-App - methodology for building software-as-a-service](https://12factor.net/)
+* PL: [Prawie trywialna aplikacja do zarządzania projektami](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami) - bardziej szczegółowy opis projektu.
+* ENG: [ The nature of domain driven design](http://www.braintelligence.pl/the-nature-of-domain-driven-design/)
+* ENG: [ ddd-workshop-project-manager (most credits here)](https://github.com/mkopylec/project-manager)
+* ENG: [ example of hexagonal architecture (on package level)](https://github.com/jakubnabrdalik/hentai)
+* ENG: [ design patterns for humans ](https://github.com/kamranahmedse/design-patterns-for-humans)
+* ENG: [ ddd-laeven ](https://github.com/BottegaIT/ddd-leaven-v2)
+* ENG: [ awsome-ddd ](https://github.com/heynickc/awesome-ddd)
+* ENG: [ twelve-factor-app - methodology for building software-as-a-service](https://12factor.net/)

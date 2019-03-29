@@ -2,7 +2,8 @@ package pl.braintelligence.projectmanager.infrastructure.team.entities
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
-import pl.braintelligence.projectmanager.core.team.Team
+import pl.braintelligence.projectmanager.core.team.domain.Employee
+import pl.braintelligence.projectmanager.core.team.domain.Team
 
 @Document(collection = "teams")
 data class DbTeam(
@@ -26,5 +27,12 @@ data class DbTeam(
                             it.members.map { member -> DbEmployee.toEmployee(member) }
                     )
                 }
+
+        fun toTeam(dbTeam: DbTeam): Team? =
+                Team(
+                        dbTeam.name,
+                        dbTeam.currentlyImplementedProjects,
+                        dbTeam.members.map { DbEmployee.toEmployee(it) }
+                )
     }
 }

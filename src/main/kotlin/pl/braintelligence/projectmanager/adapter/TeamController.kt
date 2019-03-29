@@ -2,27 +2,37 @@ package pl.braintelligence.projectmanager.adapter
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
-import pl.braintelligence.projectmanager.core.ProjectManager
-import pl.braintelligence.projectmanager.core.team.Team
+import pl.braintelligence.projectmanager.core.ports.`in`.TeamManager
+import pl.braintelligence.projectmanager.core.team.domain.Team
+
+/**
+ * Primary Adapter
+ */
 
 @RestController
 @RequestMapping("/teams")
-class TeamController(
-        private val projectManager: ProjectManager
+class TeamEndpoint(
+        private val teamManager: TeamManager
 ) {
 
-    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun createTeam(@RequestBody newTeam: NewTeam) =
-            projectManager.createTeam(newTeam)
+    @PostMapping
+    fun createTeam(
+            @RequestBody newTeamDto: NewTeam
+    ) = teamManager.createTeam(newTeamDto)
 
-    fun addMemberToTeam(@PathVariable teamName: String, @RequestBody teamMember: TeamMember) =
-            projectManager.addMemberToTeam(teamName, teamMember)
 
-    @GetMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("{teamName}/members")
+    fun addMemberToTeam(
+            @PathVariable teamName: String,
+            @RequestBody teamMember: TeamMember
+    ) = teamManager.addMemberToTeam(teamName, teamMember)
+
     @ResponseStatus(HttpStatus.OK)
+    @GetMapping
     fun getTeams(): List<Team> =
-            projectManager.getTeams()
-
+            teamManager.getTeams()
 
 }
+
