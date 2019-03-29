@@ -39,3 +39,5 @@ class ErrorHandler {
 }
 
 data class ErrorMessage(val message: String, val timestamp: Instant)
+
+

@@ -18,12 +18,11 @@ class Employee(
                 Employee(
                         teamMember.firstName,
                         teamMember.lastName,
-                        toJobPosition(teamMember)
+                        toJobPosition(teamMember.jobPosition)
                 )
 
-        private fun toJobPosition(teamMember: TeamMember) = Try {
-            JobPosition.valueOf(teamMember.jobPosition)
-        }.getOrElse { JobPosition.INVALID }
-
+        private fun toJobPosition(jobPosition: String) =
+                Try { JobPosition.valueOf(jobPosition) }
+                        .getOrElse { JobPosition.INVALID }
     }
 }

@@ -22,5 +22,4 @@ class TeamControllerTest extends BaseIntegrationTest {
     }
 
 
-
 }

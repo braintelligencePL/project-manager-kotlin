@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.core.team.configuration
+package pl.braintelligence.projectmanager.core.team.domain.configuration
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
