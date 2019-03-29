@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.core.ports.out
+package pl.braintelligence.projectmanager.core.team.ports.out
 
 import pl.braintelligence.projectmanager.core.team.domain.Team
 

@@ -2,9 +2,9 @@ package pl.braintelligence.projectmanager.team.domain
 
 import pl.braintelligence.projectmanager.adapter.TeamMember
 import pl.braintelligence.projectmanager.base.BaseUnitTest
-import pl.braintelligence.projectmanager.core.ports.in.TeamManager
 import pl.braintelligence.projectmanager.core.team.configuration.TeamConfiguration
-import pl.braintelligence.projectmanager.core.team.exception.InvalidTeamMemberException
+import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamMemberException
+import pl.braintelligence.projectmanager.core.team.ports.in.TeamManager
 import spock.lang.Unroll
 
 class TeamMembersValidationTest extends BaseUnitTest {
@@ -41,6 +41,7 @@ class TeamMembersValidationTest extends BaseUnitTest {
         errorMessage               | firstName          | lastName          | jobPosition
         "Empty member first name." | '   '              | 'valid last name' | 'DEVELOPER'
         "Empty member last name."  | 'valid first name' | '    '            | 'DEVELOPER'
+        "Invalid job position."    | 'valid first name' | 'valid last name' | 'upps! not valid'
     }
 
 

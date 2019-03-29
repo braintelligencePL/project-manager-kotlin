@@ -1,8 +1,12 @@
 package pl.braintelligence.projectmanager.core.team.domain
 
 enum class JobPosition {
-    DEVELOPER,
     SCRUM_MASTER,
+    DEVELOPER,
     PRODUCT_OWNER,
-    INVALID
+    INVALID;
+
+    fun isValid(): Boolean {
+        return this != INVALID
+    }
 }

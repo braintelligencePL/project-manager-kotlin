@@ -1,21 +1,29 @@
 package pl.braintelligence.projectmanager.core.team.domain
 
+import arrow.core.Try
+import arrow.core.getOrElse
 import pl.braintelligence.projectmanager.adapter.TeamMember
 
 class Employee(
         val firstName: String,
         val lastName: String,
-        val position: JobPosition
+        val jobPosition: JobPosition
 ) {
     fun hasNoFirstName(): Boolean = firstName.isNotBlank()
     fun hasNoLastName(): Boolean = lastName.isNotBlank()
+    fun hasInvalidJobPosition(): Boolean = jobPosition.isValid()
 
     companion object {
-        fun toEmployee(teamMember: TeamMember): Employee =
+        fun mapToEmployee(teamMember: TeamMember): Employee =
                 Employee(
                         teamMember.firstName,
                         teamMember.lastName,
-                        JobPosition.valueOf(teamMember.jobPosition)
+                        toJobPosition(teamMember)
                 )
+
+        private fun toJobPosition(teamMember: TeamMember) = Try {
+            JobPosition.valueOf(teamMember.jobPosition)
+        }.getOrElse { JobPosition.INVALID }
+
     }
 }

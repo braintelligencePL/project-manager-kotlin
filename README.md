@@ -1,5 +1,5 @@
 
-## [WIP] Project-Manager 
+## Project-Manager - Journey from layered (n-tier) architecture to hexagonal architecture
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 #### Working with Project-Manager

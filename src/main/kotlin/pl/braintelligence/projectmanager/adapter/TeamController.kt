@@ -2,8 +2,8 @@ package pl.braintelligence.projectmanager.adapter
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
-import pl.braintelligence.projectmanager.core.ports.`in`.TeamManager
 import pl.braintelligence.projectmanager.core.team.domain.Team
+import pl.braintelligence.projectmanager.core.team.ports.`in`.TeamManager
 
 /**
  * Primary Adapter

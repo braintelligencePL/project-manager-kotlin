@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.core.ports.`in`
+package pl.braintelligence.projectmanager.core.team.ports.`in`
 
 import pl.braintelligence.projectmanager.adapter.NewTeam
 import pl.braintelligence.projectmanager.adapter.TeamMember

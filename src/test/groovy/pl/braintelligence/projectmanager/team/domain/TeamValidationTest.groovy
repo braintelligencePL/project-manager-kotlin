@@ -1,11 +1,11 @@
 package pl.braintelligence.projectmanager.team.domain
 
 import pl.braintelligence.projectmanager.base.BaseUnitTest
-import pl.braintelligence.projectmanager.core.ports.in.TeamManager
 import pl.braintelligence.projectmanager.core.team.configuration.TeamConfiguration
 import pl.braintelligence.projectmanager.core.team.domain.Team
-import pl.braintelligence.projectmanager.core.team.exception.EntityAlreadyExistsException
-import pl.braintelligence.projectmanager.core.team.exception.MissingTeamException
+import pl.braintelligence.projectmanager.core.team.domain.EntityAlreadyExistsException
+import pl.braintelligence.projectmanager.core.team.domain.MissingTeamException
+import pl.braintelligence.projectmanager.core.team.ports.in.TeamManager
 
 class TeamValidationTest extends BaseUnitTest {
 

@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.http.ResponseEntity.status
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
-import pl.braintelligence.projectmanager.core.team.exception.EntityAlreadyExistsException
+import pl.braintelligence.projectmanager.core.team.domain.EntityAlreadyExistsException
 import pl.braintelligence.projectmanager.shared.DomainException
 import java.lang.invoke.MethodHandles
 import java.time.Instant

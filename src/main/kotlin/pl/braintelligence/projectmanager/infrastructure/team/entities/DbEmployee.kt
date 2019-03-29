@@ -6,7 +6,7 @@ import pl.braintelligence.projectmanager.core.team.domain.JobPosition
 data class DbEmployee(
         private val firstName: String,
         private val lastName: String,
-        private val position: String
+        private val jobPosition: String
 ) {
     companion object {
         fun toDbEmployee(employee: List<Employee>): List<DbEmployee> =
@@ -16,7 +16,7 @@ data class DbEmployee(
                 DbEmployee(
                         employee.firstName,
                         employee.lastName,
-                        employee.position.toString()
+                        employee.jobPosition.toString()
                 )
 
         fun toEmployee(dbEmployee: DbEmployee): Employee =
@@ -24,7 +24,7 @@ data class DbEmployee(
                 Employee(
                         dbEmployee.firstName,
                         dbEmployee.lastName,
-                        JobPosition.valueOf(dbEmployee.position)
+                        JobPosition.valueOf(dbEmployee.jobPosition)
                 )
     }
 }

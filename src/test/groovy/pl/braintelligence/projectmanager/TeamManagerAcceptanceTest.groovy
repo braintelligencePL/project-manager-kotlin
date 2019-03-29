@@ -29,8 +29,7 @@ class TeamManagerAcceptanceTest extends BaseIntegrationTest {
         with(response.body[0].members[0]) {
             firstName == "first"
             lastName == "sec"
-            position == JobPosition.DEVELOPER
+            jobPosition == JobPosition.DEVELOPER
         }
-
     }
 }

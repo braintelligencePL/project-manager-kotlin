@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.core.team.configuration
 
-import pl.braintelligence.projectmanager.core.ports.out.TeamRepository
+import pl.braintelligence.projectmanager.core.team.ports.out.TeamRepository
 import pl.braintelligence.projectmanager.core.team.domain.Team
 import java.util.concurrent.ConcurrentHashMap
 

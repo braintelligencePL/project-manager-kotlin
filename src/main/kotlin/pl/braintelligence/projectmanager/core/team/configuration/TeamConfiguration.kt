@@ -2,9 +2,9 @@ package pl.braintelligence.projectmanager.core.team.configuration
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import pl.braintelligence.projectmanager.core.ports.`in`.TeamManager
-import pl.braintelligence.projectmanager.core.ports.out.TeamRepository
-import pl.braintelligence.projectmanager.core.team.TeamManagerFacade
+import pl.braintelligence.projectmanager.core.team.ports.`in`.TeamManager
+import pl.braintelligence.projectmanager.core.team.ports.out.TeamRepository
+import pl.braintelligence.projectmanager.core.team.domain.TeamFacade
 
 @Configuration
 class TeamConfiguration {
@@ -14,5 +14,5 @@ class TeamConfiguration {
 
     @Bean
     fun teamManager(teamRepository: TeamRepository): TeamManager =
-            TeamManagerFacade(teamRepository)
+            TeamFacade(teamRepository)
 }
