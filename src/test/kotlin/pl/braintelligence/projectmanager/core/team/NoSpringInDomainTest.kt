@@ -6,9 +6,7 @@ import com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses
 import org.junit.jupiter.api.TestInstance
 
 /**
- *
  * Feel free to create PR with more rules :)
- *
  */
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -16,12 +14,11 @@ import org.junit.jupiter.api.TestInstance
 internal class NoSpringInDomainTest {
 
     @ArchTest
-    val `domain should not depend on spring` =
+    val `Core (domain) should not depend on spring` =
             noClasses()
                     .that()
                     .resideInAPackage("..pl.braintelligence.projectmanager.core..domain..")
                     .should()
                     .dependOnClassesThat()
                     .resideInAPackage("org.springframework..")
-
 }

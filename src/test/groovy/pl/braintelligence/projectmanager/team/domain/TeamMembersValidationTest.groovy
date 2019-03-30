@@ -2,8 +2,8 @@ package pl.braintelligence.projectmanager.team.domain
 
 import pl.braintelligence.projectmanager.adapter.TeamMember
 import pl.braintelligence.projectmanager.base.BaseUnitTest
-import pl.braintelligence.projectmanager.core.team.configuration.TeamConfiguration
 import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamMemberException
+import pl.braintelligence.projectmanager.core.team.domain.configuration.TeamConfiguration
 import pl.braintelligence.projectmanager.core.team.ports.in.TeamManager
 import spock.lang.Unroll
 

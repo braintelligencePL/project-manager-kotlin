@@ -2,9 +2,10 @@ package pl.braintelligence.projectmanager.core.team
 
 import com.tngtech.archunit.junit.AnalyzeClasses
 import com.tngtech.archunit.junit.ArchTest
+import com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes
 import com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses
 import com.tngtech.archunit.library.dependencies.SlicesRuleDefinition
-import org.junit.jupiter.api.TestInstance
+import pl.braintelligence.projectmanager.Application
 
 /**
  *
@@ -12,16 +13,16 @@ import org.junit.jupiter.api.TestInstance
  *
  */
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@AnalyzeClasses(packagesOf = [HexagonalArchitectureTest::class])
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@AnalyzeClasses(packagesOf = [Application::class])
 internal class HexagonalArchitectureTest {
 
     @ArchTest
-    val `there are no package cycles` =
+    val `other domain features does dont depend on each other` =
             SlicesRuleDefinition.slices()
-                    .matching("$BASE_PACKAGE.(**)..")
+                    .matching("..core.(*)..")
                     .should()
-                    .beFreeOfCycles()
+                    .notDependOnEachOther()
 
     @ArchTest
     val `Core (domain) does not have infrastructure code` =
@@ -32,7 +33,12 @@ internal class HexagonalArchitectureTest {
                     .accessClassesThat()
                     .resideInAnyPackage("..infrastructure..")
 
-    companion object {
-        private val BASE_PACKAGE = HexagonalArchitectureTest::class.java.`package`.name
-    }
+    @ArchTest
+    val `Controllers are in adapters` =
+            classes()
+                    .that()
+                    .haveSimpleNameStartingWith("Controller")
+                    .should()
+                    .resideInAPackage("..adapter..")
+
 }

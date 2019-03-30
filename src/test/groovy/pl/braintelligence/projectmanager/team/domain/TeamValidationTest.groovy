@@ -1,10 +1,11 @@
 package pl.braintelligence.projectmanager.team.domain
 
 import pl.braintelligence.projectmanager.base.BaseUnitTest
-import pl.braintelligence.projectmanager.core.team.configuration.TeamConfiguration
+import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamException
 import pl.braintelligence.projectmanager.core.team.domain.Team
 import pl.braintelligence.projectmanager.core.team.domain.EntityAlreadyExistsException
 import pl.braintelligence.projectmanager.core.team.domain.MissingTeamException
+import pl.braintelligence.projectmanager.core.team.domain.configuration.TeamConfiguration
 import pl.braintelligence.projectmanager.core.team.ports.in.TeamManager
 
 class TeamValidationTest extends BaseUnitTest {
@@ -36,7 +37,7 @@ class TeamValidationTest extends BaseUnitTest {
         new Team(teamName)
 
         then:
-        def ex = thrown(IllegalArgumentException.class)
+        def ex = thrown(InvalidTeamException.class)
         ex.message == "Empty team name."
 
         where:

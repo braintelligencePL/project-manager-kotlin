@@ -21,6 +21,11 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `POST: /teams/:teamName/members` - add members to the team. <br>
 * [x] `GET: /teams` - show teams. <br> <br>
 
+Needs and constraints: 
+* Team cannot be created if already exists
+* How many projects team has? 
+
+
 <BR>
 
 ### 2️⃣ `branch: step-2-projects` <br>
@@ -30,6 +35,10 @@ Project-Manager is a simple application for managing projects at company. You ca
 * [x] `POST: /projects/drafts` - create project draft (only project name). <br>
 * [x] `POST: /projects` - create full project (project with features📊). <br>
 * [x] `GET: /projects` - show draft projects <br>
+
+Needs and constraints: 
+* JobPosition must be valid (Developer, Scrum Master...)
+* Team can have no more than 3 projects at the time
 
 ### 3️⃣ `branch: step-3-refactor` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
@@ -70,10 +79,12 @@ Services from our zoo:<BR>
 - ArchUnit (kotlin) for architecture tests
 - Gradle to build project
   
-#### Materials
+### Materials from mine blog: 
 * PL: [Prawie trywialna aplikacja do zarządzania projektami](http://braintelligence.pl/prawie-trywialna-aplikacja-do-zarzadzania-projektami) - bardziej szczegółowy opis projektu.
-* ENG: [ The nature of domain driven design](http://www.braintelligence.pl/the-nature-of-domain-driven-design/)
-* ENG: [ ddd-workshop-project-manager (most credits here)](https://github.com/mkopylec/project-manager)
+* ENG: [ The nature of domain driven design](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) - about DDD strategic tools.
+
+### Materials from outside world: 
+* ENG: [ ddd-workshop-project-manager (most credits to this repo)](https://github.com/mkopylec/project-manager)
 * ENG: [ example of hexagonal architecture (on package level)](https://github.com/jakubnabrdalik/hentai)
 * ENG: [ design patterns for humans ](https://github.com/kamranahmedse/design-patterns-for-humans)
 * ENG: [ ddd-laeven ](https://github.com/BottegaIT/ddd-leaven-v2)

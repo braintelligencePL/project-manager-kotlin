@@ -2,7 +2,7 @@ package pl.braintelligence.projectmanager.adapter
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
-import pl.braintelligence.projectmanager.core.team.domain.Team
+import pl.braintelligence.projectmanager.adapter.ExistingTeam.Companion.toExistingTeams
 import pl.braintelligence.projectmanager.core.team.ports.`in`.TeamManager
 
 /**
@@ -31,8 +31,8 @@ class TeamEndpoint(
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping
-    fun getTeams(): List<Team> =
-            teamManager.getTeams()
+    fun getTeams(): List<ExistingTeam> =
+            toExistingTeams(teamManager.getTeams())
 
 }
 

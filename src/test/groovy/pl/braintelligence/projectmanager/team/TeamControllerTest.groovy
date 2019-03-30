@@ -1,8 +1,8 @@
 package pl.braintelligence.projectmanager.team
 
 import org.springframework.core.ParameterizedTypeReference
+import pl.braintelligence.projectmanager.adapter.ExistingTeam
 import pl.braintelligence.projectmanager.base.BaseIntegrationTest
-import pl.braintelligence.projectmanager.core.team.domain.Team
 
 class TeamControllerTest extends BaseIntegrationTest {
 
@@ -11,7 +11,7 @@ class TeamControllerTest extends BaseIntegrationTest {
         prepareNewTeam("teamName")
 
         when:
-        def response = get('/teams', new ParameterizedTypeReference<List<Team>>() {})
+        def response = get('/teams', new ParameterizedTypeReference<List<ExistingTeam>>() {})
 
         then:
         with(response.body[0]) {
