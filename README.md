@@ -1,7 +1,7 @@
 
 #### [![Build Status](https://travis-ci.com/braintelligencePL/project-manager-kotlin.svg?branch=master)](https://travis-ci.com/braintelligencePL/project-manager-kotlin) 🛠 
 
-### Project-Manager 
+### [Project-Manager - just like trello but only backend](https://github.com/braintelligencePL/project-manager-kotlin) 
 #### Journey from layered (n-tier) architecture to hexagonal architecture in Kotlin 💪
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
