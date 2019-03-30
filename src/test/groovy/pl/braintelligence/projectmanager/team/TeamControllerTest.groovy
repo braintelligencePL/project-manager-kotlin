@@ -20,6 +20,4 @@ class TeamControllerTest extends BaseIntegrationTest {
             members == []
         }
     }
-
-
 }

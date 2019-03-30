@@ -27,10 +27,20 @@ class BaseIntegrationTest extends Specification implements BaseHttpMethods, Base
     @Autowired
     private MongoTemplate mongo
 
+    void setup() {
+        clearMongoDb()
+    }
+
+    private void clearMongoDb() {
+        for (def collection : mongo.collectionNames) {
+            mongo.dropCollection(collection)
+        }
+    }
+
+    protected TeamMember teamMemberDto = new TeamMember("first", "sec", "DEVELOPER")
+
     protected ResponseEntity prepareNewTeam(String teamName) {
         def newTeam = new NewTeam(teamName)
         post(TEAMS_ENDPOINT, newTeam)
     }
-
-    def teamMemberDto = new TeamMember("first", "sec", "DEVELOPER")
 }
