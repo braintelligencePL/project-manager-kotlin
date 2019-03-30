@@ -25,15 +25,15 @@ class BaseIntegrationTest extends Specification implements BaseHttpMethods, Base
     private TestRestTemplate restTemplate
 
     @Autowired
-    private MongoTemplate mongo
+    private MongoTemplate mongoTemplate
 
     void setup() {
-        clearMongoDb()
+        clearMongoDB()
     }
 
-    private void clearMongoDb() {
-        for (def collection : mongo.collectionNames) {
-            mongo.dropCollection(collection)
+    private void clearMongoDB() {
+        for (def collection : mongoTemplate.collectionNames) {
+            mongoTemplate.dropCollection(collection)
         }
     }
 

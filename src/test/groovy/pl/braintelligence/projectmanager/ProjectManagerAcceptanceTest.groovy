@@ -6,7 +6,7 @@ import pl.braintelligence.projectmanager.base.BaseIntegrationTest
 import pl.braintelligence.projectmanager.core.team.domain.JobPosition
 import pl.braintelligence.projectmanager.core.team.domain.Team
 
-class TeamManagerAcceptanceTest extends BaseIntegrationTest {
+class ProjectManagerAcceptanceTest extends BaseIntegrationTest {
 
     def "User flow while using project manager"() {
         when: "new team is created"
