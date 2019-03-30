@@ -1,8 +1,8 @@
 
-#### [![Build Status](https://travis-ci.com/braintelligencePL/project-manager-kotlin.svg?branch=master)](https://travis-ci.com/braintelligencePL/project-manager-kotlin) 🛠 🛠 
+#### [![Build Status](https://travis-ci.com/braintelligencePL/project-manager-kotlin.svg?branch=master)](https://travis-ci.com/braintelligencePL/project-manager-kotlin) 🛠 
 
 ### Project-Manager 
-#### Journey from layered (n-tier) architecture to hexagonal architecture in Kotlin
+#### Journey from layered (n-tier) architecture to hexagonal architecture in Kotlin 💪
 Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. (basically something similar to Trello - [wiki](https://en.wikipedia.org/wiki/Project_management_software))
 
 We'll go from traditional layered architecture to hexagonal architecture A.K.A. Ports and Adapters architecture.
