@@ -8,9 +8,7 @@ import com.tngtech.archunit.library.dependencies.SlicesRuleDefinition
 import pl.braintelligence.projectmanager.Application
 
 /**
- *
  * Feel free to create PR with more rules :)
- *
  */
 
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS)

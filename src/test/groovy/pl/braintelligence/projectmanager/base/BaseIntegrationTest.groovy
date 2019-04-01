@@ -7,16 +7,17 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.data.mongodb.core.MongoTemplate
 import org.springframework.http.ResponseEntity
-import pl.braintelligence.projectmanager.adapter.NewTeam
-import pl.braintelligence.projectmanager.adapter.TeamMember
-import pl.braintelligence.projectmanager.base.http.BaseHttpEndpoints
 import pl.braintelligence.projectmanager.base.http.BaseHttpMethods
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
 import spock.lang.Specification
 
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-class BaseIntegrationTest extends Specification implements BaseHttpMethods, BaseHttpEndpoints {
+class BaseIntegrationTest extends Specification implements BaseHttpMethods {
+
+    private String TEAMS_ENDPOINT = "/teams"
 
     @Rule
     public WireMockRule reportingService = new WireMockRule(8081)
@@ -37,7 +38,7 @@ class BaseIntegrationTest extends Specification implements BaseHttpMethods, Base
         }
     }
 
-    protected TeamMember teamMemberDto = new TeamMember("first", "sec", "DEVELOPER")
+    protected TeamMember teamMemberDto = new TeamMember("first", "last", "DEVELOPER")
 
     protected ResponseEntity prepareNewTeam(String teamName) {
         def newTeam = new NewTeam(teamName)

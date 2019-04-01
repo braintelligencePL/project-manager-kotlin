@@ -1,10 +1,10 @@
 package pl.braintelligence.projectmanager.core.team.domain
 
 import org.springframework.stereotype.Service
-import pl.braintelligence.projectmanager.adapter.NewTeam
-import pl.braintelligence.projectmanager.adapter.TeamMember
-import pl.braintelligence.projectmanager.core.team.ports.`in`.TeamManager
-import pl.braintelligence.projectmanager.core.team.ports.out.TeamRepository
+import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
+import pl.braintelligence.projectmanager.core.team.ports.outgoing.TeamRepository
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
 
 @Service
 class TeamFacade(
@@ -13,7 +13,7 @@ class TeamFacade(
 
     override fun createTeam(newTeam: NewTeam) = when (teamRepository.existsByName(newTeam.name)) {
         true -> throw EntityAlreadyExistsException("Team already exist.")
-        false -> teamRepository.save(Team(newTeam.name))
+        false -> teamRepository.save(Team(name = newTeam.name))
     }
 
     override fun addMemberToTeam(teamName: String, teamMember: TeamMember) {

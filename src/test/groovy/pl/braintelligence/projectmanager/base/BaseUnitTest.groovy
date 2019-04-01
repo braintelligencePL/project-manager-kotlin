@@ -1,8 +1,7 @@
 package pl.braintelligence.projectmanager.base
 
-
-import pl.braintelligence.projectmanager.adapter.NewTeam
-import pl.braintelligence.projectmanager.adapter.TeamMember
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
 import spock.lang.Specification
 
 class BaseUnitTest extends Specification {

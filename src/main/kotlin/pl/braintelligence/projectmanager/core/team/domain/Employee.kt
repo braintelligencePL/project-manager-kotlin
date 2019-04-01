@@ -2,7 +2,7 @@ package pl.braintelligence.projectmanager.core.team.domain
 
 import arrow.core.Try
 import arrow.core.getOrElse
-import pl.braintelligence.projectmanager.adapter.TeamMember
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
 
 class Employee(
         val firstName: String,

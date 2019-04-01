@@ -1,9 +1,12 @@
-package pl.braintelligence.projectmanager.adapter
+package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
-import pl.braintelligence.projectmanager.adapter.ExistingTeam.Companion.toExistingTeams
-import pl.braintelligence.projectmanager.core.team.ports.`in`.TeamManager
+import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ExistingTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ExistingTeam.Companion.toExistingTeams
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
 
 /**
  * Primary Adapter
@@ -11,7 +14,7 @@ import pl.braintelligence.projectmanager.core.team.ports.`in`.TeamManager
 
 @RestController
 @RequestMapping("/teams")
-class TeamEndpoint(
+class TeamController(
         private val teamManager: TeamManager
 ) {
 
