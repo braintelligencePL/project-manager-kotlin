@@ -48,7 +48,11 @@ Needs and constraints:
 ### 3️⃣ `branch: step-3-refactor` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
 
-Refactor to hexagonal architecture. Removed unnesesary Dto objects. Test cleanup.
+Refactor to hexagonal architecture. Removed unnesesary Dto objects. Test cleanup. 
+
+`InMemoryRepository` - domain is tested with unit tests. 
+
+<br>
 
 ### 4️⃣ `branch: step-4-projects` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
