@@ -1,7 +1,6 @@
 package pl.braintelligence.projectmanager.shared
 
 import java.util.concurrent.ConcurrentHashMap
-import kotlin.reflect.KClass
 
 abstract class InMemoryCrudRepository<ENTITY, ID> : CustomRepository<ENTITY, ID> {
 
