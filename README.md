@@ -20,7 +20,6 @@ We'll go from traditional layered architecture to hexagonal architecture A.K.A. 
   
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
-🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
 * [x] `POST: /teams` - create a team. <br>
 * [x] `POST: /teams/:teamName/members` - add members to the team. <br>
@@ -35,7 +34,6 @@ Needs and constraints:
 
 ### 2️⃣ `branch: step-2-projects` <br>
 🏠 **Architecture**: Layered Architecure <BR>
-🕳 **Tests**: Integration/Acceptance with TDD/BDD approach (more like BDD).
 
 * [x] `POST: /projects/drafts` - create project draft (only project name). <br>
 * [x] `POST: /projects` - create full project (project with features📊). <br>
