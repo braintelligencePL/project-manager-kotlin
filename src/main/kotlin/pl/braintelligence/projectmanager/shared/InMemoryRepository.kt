@@ -3,7 +3,6 @@ package pl.braintelligence.projectmanager.shared
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.reflect.KClass
 
-
 abstract class InMemoryCrudRepository<ENTITY, ID> : CustomRepository<ENTITY, ID> {
 
     private val dataStore = ConcurrentHashMap<ID, ENTITY>()
@@ -26,5 +25,3 @@ interface CustomRepository<ENTITY, ID> {
     fun findById(id: ID): ENTITY?
     fun findAll(): List<ENTITY>
 }
-
-internal class IdExtractorException(entity: KClass<*>) : Exception("Entity = $entity has no id.")
