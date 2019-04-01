@@ -50,10 +50,15 @@ Needs and constraints:
 
 Things done: 
 
-* Moving from layered (n-tier) architecture to Hexagonal Architecture. 😎
-* Unit tests without touching IO. Domain is mainly tested with unit tests. Idea of `InMemoryRepository` as HashMap.
-* Controller (integration tests) - only the main paths (with happy paths) because sad path was tested with unit tests.
-* Acceptance tests - practically the same code as in integration tests, but more in BDD style that shows flow of the bounded context (service).
+* Moving from layered (n-tier) architecture to <b>Hexagonal Architecture</b> (ports and adapters). 😎
+* Introduced idea of shared-kernel from DDD
+
+Improved tests: 
+
+* Unit tests without touching IO.
+* Domain is tested with unit tests. Idea of `InMemoryRepository` as HashMap. 
+* Only the main paths (happy paths) are integration tests because sad path was tested with unit tests.
+* We also have acceptance tests that are practically similar to above, but shows complete flow of bounded-context. 
 
 <br>
 
