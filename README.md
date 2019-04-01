@@ -45,6 +45,8 @@ Needs and constraints:
 * JobPosition must be valid (Developer, Scrum Master...)
 * Team can have no more than 3 projects at the time
 
+<BR>
+
 ### 3️⃣ `branch: step-3-refactor` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
 
