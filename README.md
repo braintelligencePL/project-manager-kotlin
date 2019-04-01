@@ -48,9 +48,10 @@ Needs and constraints:
 ### 3️⃣ `branch: step-3-refactor` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
 
-Refactor to hexagonal architecture. Removed unnesesary Dto objects. Test cleanup. 
+Things done: 
 
-`InMemoryRepository` - domain is tested with unit tests. 
+* Layered (n-tier) architecture to hexagonal architecture
+* Improved tests, domain is mainly tested with unit tests. Idea of `InMemoryRepository - as HashMap`.
 
 <br>
 
