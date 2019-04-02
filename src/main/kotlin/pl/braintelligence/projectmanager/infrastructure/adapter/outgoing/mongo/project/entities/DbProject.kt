@@ -18,5 +18,8 @@ class DbProject(
                 project.status,
                 project.teamAssigned
         )
+
+        fun toProject(dbProject: DbProject?): Project = TODO("Mapping")
+
     }
 }

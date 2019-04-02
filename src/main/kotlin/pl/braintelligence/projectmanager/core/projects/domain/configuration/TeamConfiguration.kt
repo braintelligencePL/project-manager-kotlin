@@ -7,7 +7,7 @@ import pl.braintelligence.projectmanager.core.projects.domain.ProjectFactory
 import pl.braintelligence.projectmanager.core.projects.domain.ProjectQuery
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreatorPort
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
-import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectRepository
+import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCreatorRepository
 
 @Configuration
 open class ProjectConfiguration {
@@ -15,24 +15,24 @@ open class ProjectConfiguration {
     open fun projectCreator(
             projectFactory: ProjectFactory
     ): ProjectCreatorPort =
-            projectCreator(projectFactory, InMemoryProjectRepository())
+            projectCreator(projectFactory, InMemoryProjectCreatorRepository())
 
     @Bean
     open fun projectCreator(
             projectFactory: ProjectFactory,
-            projectRepository: ProjectRepository
+            projectCreatorRepository: ProjectCreatorRepository
     ): ProjectCreatorPort =
-            ProjectCreator(projectFactory, projectRepository)
+            ProjectCreator(projectFactory, projectCreatorRepository)
 
 
     open fun projectQuery(): ProjectQueryPort =
-            projectQuery(InMemoryProjectRepository())
+            projectQuery(InMemoryProjectCreatorRepository())
 
     @Bean
     open fun projectQuery(
-            projectRepository: ProjectRepository
+            projectCreatorRepository: ProjectCreatorRepository
     ): ProjectQueryPort =
-            ProjectQuery(projectRepository)
+            ProjectQuery(projectCreatorRepository)
 
 
 }

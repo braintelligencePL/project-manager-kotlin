@@ -4,26 +4,20 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
 import pl.braintelligence.projectmanager.core.projects.domain.Project
-import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectRepository
+import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCreatorRepository
 import pl.braintelligence.projectmanager.infrastructure.adapter.outgoing.mongo.project.entities.DbProject
 
 @Repository
-interface CrudProjectRepository : CrudRepository<DbProject, String> {
-
-}
+interface MongoTeamCreationRepository : CrudRepository<DbProject, String>
 
 @Component
-class MongoProjectRepository(
-        private val mongo: CrudProjectRepository
-) : ProjectRepository {
+class TeamCreatorRepository(
+        private val mongo: MongoTeamCreationRepository
+) : ProjectCreatorRepository {
 
     override fun save(project: Project) {
         val dbProject = DbProject.toDbProject(project)
         mongo.save(dbProject)
-    }
-
-    override fun findById(id: String): Project {
-        TODO("not implemented")
     }
 
 }
