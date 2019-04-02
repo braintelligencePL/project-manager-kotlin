@@ -9,12 +9,12 @@ open class ProjectFactory {
 
     fun createProjectDraft(projectName: String): Project {
         val id = generateProjectUniqueId()
-        return Project(id, projectName)
+        return Project(id = id, name = projectName)
     }
 
     fun createProjectWithFeatures(projectWithFeatures: ProjectWithFeatures): Project {
         val id = generateProjectUniqueId()
-        val name = projectWithFeatures.name
+        val name = projectWithFeatures.projectName
         val features = projectWithFeatures.features
 
         return Project(id = id, name = name, features = features)

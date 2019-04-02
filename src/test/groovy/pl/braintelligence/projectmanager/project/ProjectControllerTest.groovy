@@ -15,8 +15,5 @@ class ProjectControllerTest extends BaseIntegrationTest {
 
         then:
         response.statusCode == HttpStatus.CREATED
-        with(response.body) {
-
-        }
     }
 }

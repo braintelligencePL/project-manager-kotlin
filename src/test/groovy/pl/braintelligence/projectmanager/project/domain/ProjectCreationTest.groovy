@@ -1,16 +1,20 @@
 package pl.braintelligence.projectmanager.project.domain
 
-
 import pl.braintelligence.projectmanager.base.BaseUnitTest
 import pl.braintelligence.projectmanager.core.projects.domain.ProjectFactory
 import pl.braintelligence.projectmanager.core.projects.domain.Status
 import pl.braintelligence.projectmanager.core.projects.domain.configuration.ProjectConfiguration
-import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreator
+import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreatorPort
+import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
 
 class ProjectCreationTest extends BaseUnitTest {
 
-    private ProjectCreator projectCreator = new ProjectConfiguration()
+    private ProjectCreatorPort projectCreator = new ProjectConfiguration()
             .projectCreator(Mock(ProjectFactory))
+
+    private ProjectQueryPort projectQuery = new ProjectConfiguration()
+            .projectQuery()
+
 
     def "Should create a project draft and browse for it"() {
         when:
@@ -23,6 +27,7 @@ class ProjectCreationTest extends BaseUnitTest {
     def "Should create project with features"() {
         when:
         def project = projectCreator.createProjectWithFeatures(projectWithFeaturesDto)
+
         then:
         project != null
     }
@@ -32,12 +37,12 @@ class ProjectCreationTest extends BaseUnitTest {
         def project = projectCreator.createProjectWithFeatures(projectWithFeaturesDto)
 
         when:
-        def response = projectCreator.getProject(project.id)
+        def response = projectQuery.getProject(project.id)
 
         then:
         with(response) {
             id != null
-            name == projectWithFeaturesDto.name
+            name == projectWithFeaturesDto.projectName
             status == Status.TO_DO
             teamAssigned.isBlank()
             with(features[0]) {

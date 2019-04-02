@@ -9,9 +9,4 @@ class InMemoryProjectRepository : InMemoryCrudRepository<Project, String>(), Pro
     override fun save(project: Project) {
         super.save(entity = project, id = project.id)
     }
-
-    override fun findById(id: String): Project? {
-        return super.findById(id)
-    }
-
 }

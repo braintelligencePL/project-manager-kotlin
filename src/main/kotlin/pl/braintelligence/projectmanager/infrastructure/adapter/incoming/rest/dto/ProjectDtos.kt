@@ -2,6 +2,6 @@ package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.d
 
 import pl.braintelligence.projectmanager.core.projects.domain.Feature
 
-data class ProjectDraft(val name: String)
+data class ProjectDraft(val projectName: String)
 
-data class ProjectWithFeatures(val name: String, val features: List<Feature>)
+data class ProjectWithFeatures(val projectName: String, val features: List<Feature>)

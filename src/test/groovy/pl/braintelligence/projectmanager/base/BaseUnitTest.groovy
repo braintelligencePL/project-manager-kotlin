@@ -3,6 +3,8 @@ package pl.braintelligence.projectmanager.base
 import pl.braintelligence.projectmanager.core.projects.domain.Feature
 import pl.braintelligence.projectmanager.core.projects.domain.PriorityLevel
 import pl.braintelligence.projectmanager.core.projects.domain.Status
+import pl.braintelligence.projectmanager.core.team.domain.configuration.TeamConfiguration
+import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ProjectDraft
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ProjectWithFeatures
@@ -10,6 +12,8 @@ import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dt
 import spock.lang.Specification
 
 class BaseUnitTest extends Specification {
+
+    protected TeamManager teamService = new TeamConfiguration().teamManager()
 
     def newTeamDto = new NewTeam("123")
 

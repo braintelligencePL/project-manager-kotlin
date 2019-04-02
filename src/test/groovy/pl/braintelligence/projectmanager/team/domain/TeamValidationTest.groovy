@@ -11,8 +11,6 @@ import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
 
 class TeamValidationTest extends BaseUnitTest {
 
-    private TeamManager teamService = new TeamConfiguration().teamManager()
-
     def "Should create a team"() {
         given:
         teamService.createTeam(newTeamDto)
