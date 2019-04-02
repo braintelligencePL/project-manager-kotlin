@@ -2,13 +2,13 @@ package pl.braintelligence.projectmanager.infrastructure.adapter.outgoing.mongo.
 
 import org.springframework.data.mongodb.core.mapping.Document
 import pl.braintelligence.projectmanager.core.projects.domain.Project
-import pl.braintelligence.projectmanager.core.projects.domain.ProjectStatus
+import pl.braintelligence.projectmanager.core.projects.domain.Status
 
 @Document(collection = "projects")
 class DbProject(
         val id: String,
         val name: String,
-        val status: ProjectStatus = ProjectStatus.TO_DO,
+        val status: Status = Status.TO_DO,
         val teamAssigned: String = ""
 ) {
     companion object {

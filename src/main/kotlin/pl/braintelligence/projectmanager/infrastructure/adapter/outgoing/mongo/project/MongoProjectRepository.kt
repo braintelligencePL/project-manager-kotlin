@@ -16,8 +16,14 @@ interface CrudProjectRepository : CrudRepository<DbProject, String> {
 class MongoProjectRepository(
         private val mongo: CrudProjectRepository
 ) : ProjectRepository {
+
     override fun save(project: Project) {
         val dbProject = DbProject.toDbProject(project)
         mongo.save(dbProject)
     }
+
+    override fun findById(id: String): Project {
+        TODO("not implemented")
+    }
+
 }

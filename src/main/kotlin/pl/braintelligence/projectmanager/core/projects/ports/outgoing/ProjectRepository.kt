@@ -6,4 +6,6 @@ interface ProjectRepository {
 
     fun save(project: Project)
 
+    fun findById(id: String): Project?
+
 }

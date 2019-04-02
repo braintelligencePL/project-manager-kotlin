@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import pl.braintelligence.projectmanager.core.projects.domain.Project
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreator
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewProjectDraft
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ProjectDraft
 
 /**
  * Primary Adapter
@@ -19,8 +19,14 @@ internal class ProjectController(
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun createProjectDraft(
-            @RequestBody newProjectDraft: NewProjectDraft
-    ): Project = projectCreator.createProjectDraft(newProjectDraft)
+            @RequestBody projectDraft: ProjectDraft
+    ): Project = projectCreator.createProjectDraft(projectDraft)
+
+//    @PostMapping
+//    @ResponseStatus(HttpStatus.CREATED)
+//    fun createProjectDraft(
+//            @RequestBody projectDraft: ProjectDraft
+//    ): Project = projectCreator.createProjectDraft(projectDraft)
 
 
 }

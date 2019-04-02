@@ -1,5 +1,6 @@
 package pl.braintelligence.projectmanager.team.domain
 
+
 import pl.braintelligence.projectmanager.base.BaseUnitTest
 import pl.braintelligence.projectmanager.core.team.domain.EntityAlreadyExistsException
 import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamException
@@ -14,10 +15,10 @@ class TeamValidationTest extends BaseUnitTest {
 
     def "Should create a team"() {
         given:
-        def teamName = "valid team name"
+        teamService.createTeam(newTeamDto)
 
         when:
-        def team = new Team(teamName)
+        def team = teamService.getTeam(newTeamDto.name)
 
         then:
         team != null

@@ -1,9 +1,7 @@
 package pl.braintelligence.projectmanager.core.projects.domain
 
-data class Project(
-        val id: String,
+class Feature(
         val name: String,
         val status: Status = Status.TO_DO,
-        val teamAssigned: String = "",
-        val features: List<Feature> = listOf()
+        val priorityLevel: PriorityLevel = PriorityLevel.NOT_DEFINED
 )

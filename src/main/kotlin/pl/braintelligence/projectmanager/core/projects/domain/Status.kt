@@ -1,5 +1,7 @@
 package pl.braintelligence.projectmanager.core.projects.domain
 
-enum class ProjectStatus {
-    TO_DO
+enum class Status {
+    TO_DO,
+    IN_PROGRESS,
+    COMPLETED
 }
