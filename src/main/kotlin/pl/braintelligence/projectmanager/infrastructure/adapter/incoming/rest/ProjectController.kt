@@ -22,11 +22,5 @@ internal class ProjectController(
             @RequestBody projectDraft: ProjectDraft
     ): Project = projectCreator.createProjectDraft(projectDraft)
 
-//    @PostMapping
-//    @ResponseStatus(HttpStatus.CREATED)
-//    fun createProjectDraft(
-//            @RequestBody projectDraft: ProjectDraft
-//    ): Project = projectCreator.createProjectDraft(projectDraft)
-
 
 }
