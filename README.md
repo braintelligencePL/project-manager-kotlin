@@ -16,6 +16,8 @@ We'll go from traditional layered architecture to hexagonal architecture A.K.A. 
 
 ## Implementation step-by-step
 
+Idea is to see how does project changes while time passes with each branch there some change to the project structure or just new features that were implemented.
+
 <BR>
   
 ### 1️⃣ `branch: step-1-team` <br>
