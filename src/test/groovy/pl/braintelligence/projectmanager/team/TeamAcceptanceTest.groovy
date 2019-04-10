@@ -9,7 +9,7 @@ class TeamAcceptanceTest extends BaseIntegrationTest {
 
     def "User flow while using project manager"() {
         when: "new team is created"
-        prepareNewTeam("teamName")
+        prepareNewTeam(newTeamDto.name)
 
         then: "user gets all teams created"
         get('/teams', new ParameterizedTypeReference<List<Team>>() {})

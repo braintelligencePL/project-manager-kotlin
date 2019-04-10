@@ -6,9 +6,7 @@ abstract class InMemoryCrudRepository<ENTITY, ID> : CustomRepository<ENTITY, ID>
 
     private val dataStore = ConcurrentHashMap<ID, ENTITY>()
 
-    override fun save(entity: ENTITY, id: ID) {
-        dataStore[id] = entity
-    }
+    override fun save(entity: ENTITY, id: ID) = run { dataStore[id] = entity }
 
     override fun contains(id: ID): Boolean = dataStore.containsKey(id)
 

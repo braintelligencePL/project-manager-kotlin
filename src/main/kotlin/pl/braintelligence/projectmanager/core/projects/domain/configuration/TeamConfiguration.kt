@@ -2,37 +2,41 @@ package pl.braintelligence.projectmanager.core.projects.domain.configuration
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import pl.braintelligence.projectmanager.core.projects.domain.ProjectCreator
+import pl.braintelligence.projectmanager.core.projects.domain.ProjectCreatorService
 import pl.braintelligence.projectmanager.core.projects.domain.ProjectFactory
-import pl.braintelligence.projectmanager.core.projects.domain.ProjectQuery
+import pl.braintelligence.projectmanager.core.projects.domain.ProjectQueryService
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreatorPort
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCreatorRepository
+import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectQueryRepository
 
 @Configuration
 open class ProjectConfiguration {
 
-    open fun projectCreator(
-            projectFactory: ProjectFactory
+    open fun buildProjectCreator(
+            projectFactory: ProjectFactory,
+            inMemoryProjectRepository: InMemoryProjectRepository
     ): ProjectCreatorPort =
-            projectCreator(projectFactory, InMemoryProjectCreatorRepository())
+            ProjectCreatorService(projectFactory, inMemoryProjectRepository)
 
     @Bean
-    open fun projectCreator(
+    open fun buildProjectCreator(
             projectFactory: ProjectFactory,
             projectCreatorRepository: ProjectCreatorRepository
     ): ProjectCreatorPort =
-            ProjectCreator(projectFactory, projectCreatorRepository)
+            ProjectCreatorService(projectFactory, projectCreatorRepository)
 
 
-    open fun projectQuery(): ProjectQueryPort =
-            projectQuery(InMemoryProjectCreatorRepository())
+    open fun buildProjectQuery(
+            inMemoryProjectRepository: InMemoryProjectRepository
+    ): ProjectQueryPort =
+            ProjectQueryService(inMemoryProjectRepository)
 
     @Bean
-    open fun projectQuery(
-            projectCreatorRepository: ProjectCreatorRepository
+    open fun buildProjectQuery(
+            projectQueryRepository: ProjectQueryRepository
     ): ProjectQueryPort =
-            ProjectQuery(projectCreatorRepository)
+            ProjectQueryService(projectQueryRepository)
 
 
 }

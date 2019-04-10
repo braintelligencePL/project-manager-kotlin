@@ -7,7 +7,7 @@ import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dt
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ProjectWithFeatures
 
 @Service
-class ProjectCreator(
+class ProjectCreatorService(
         private val projectFactory: ProjectFactory,
         private val projectCreatorRepository: ProjectCreatorRepository
 ) : ProjectCreatorPort {
