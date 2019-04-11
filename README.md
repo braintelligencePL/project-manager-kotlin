@@ -16,7 +16,12 @@ We'll go from traditional layered architecture to hexagonal architecture A.K.A. 
 
 ## Implementation step-by-step
 
-Idea is to see how does project changes while time passes with each branch there some change to the project structure or just new features that were implemented. Start looking at application from endpoints [/infrastructure/adapter/incoming/rest/](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/main/kotlin/pl/braintelligence/projectmanager/infrastructure/adapter/incoming/rest) and [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager). 
+Idea is to see how does project changes while time passes with each branch there some change to the project structure or just new features that were implemented. 
+
+## Quick Start
+* Look at endpoints here: [/infrastructure/adapter/incoming/rest/](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/main/kotlin/pl/braintelligence/projectmanager/infrastructure/adapter/incoming/rest) 
+
+* Checkout [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager). In domain package you have unit tests that do tests of application core. They are isolated from framework and outside world. Tests are made on repository implemented as HashMap.
 
 <BR>
   
