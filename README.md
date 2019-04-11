@@ -21,7 +21,7 @@ Idea is to see how does project changes while time passes with each branch there
 ## Quick Start
 Checkout Endpoints here: [/infrastructure/adapter/incoming/rest/](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/main/kotlin/pl/braintelligence/projectmanager/infrastructure/adapter/incoming/rest) 
 
-Then checkout [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager) - in domain package you have unit tests that do tests of application core. They are isolated from framework and outside world. Tests are made on repository implemented as HashMap.
+Then checkout [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager) - whole domain is tested with unit tests. Isolated from controllers, database, framework. Tests are done with a use of repository implemented as HashMap. 
 
 <BR>
   
@@ -77,10 +77,13 @@ Improved tests:
 * [ ] `PATCH: /projects/:id/started` - start project when team assigned <br>
 * [ ] `PATCH: /projects/:id/ended` - close project when features are done <br><br>
 
-Refactor introducing simple CQRS.
+Needs and constraints: 
+* No `if` statements! We can do better in Kotlin. Just as an exercise (kata).
+
 
 ### 5️⃣ `branch: step-5-projects` <br> 
 
+Refactor introducing simple CQRS.
 <BR>
 
 ### 5️⃣ `branch: step-5-zoo-of-microservices` <br>
