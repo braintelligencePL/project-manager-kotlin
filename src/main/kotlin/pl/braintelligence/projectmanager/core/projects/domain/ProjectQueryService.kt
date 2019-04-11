@@ -13,4 +13,9 @@ class ProjectQueryService(
             projectQueryRepository.findById(id)
                     ?: throw MissingProjectException("Project does not exist.")
 
+    override fun getProjects(): List<Project> {
+        TODO("not implemented")
+    }
+
+
 }
