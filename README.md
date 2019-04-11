@@ -16,7 +16,7 @@ We'll go from traditional layered architecture to hexagonal architecture A.K.A. 
 
 ## Implementation step-by-step
 
-Idea is to see how does project changes while time passes with each branch there some change to the project structure or just new features that were implemented.
+Idea is to see how does project changes while time passes with each branch there some change to the project structure or just new features that were implemented. Start looking at application from endpoints [/infrastructure/adapter/incoming/rest/](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/main/kotlin/pl/braintelligence/projectmanager/infrastructure/adapter/incoming/rest) and [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager). 
 
 <BR>
   
