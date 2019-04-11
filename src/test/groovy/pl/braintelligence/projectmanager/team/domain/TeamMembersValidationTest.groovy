@@ -1,15 +1,12 @@
 package pl.braintelligence.projectmanager.team.domain
 
-import pl.braintelligence.projectmanager.adapter.TeamMember
-import pl.braintelligence.projectmanager.base.BaseUnitTest
+
 import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamMemberException
-import pl.braintelligence.projectmanager.core.team.domain.configuration.TeamConfiguration
-import pl.braintelligence.projectmanager.core.team.ports.in.TeamManager
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
+import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
 import spock.lang.Unroll
 
-class TeamMembersValidationTest extends BaseUnitTest {
-
-    private TeamManager teamService = new TeamConfiguration().teamManager()
+class TeamMembersValidationTest extends BaseTeamUnitTest {
 
     def "Should add member to a team"() {
         given: "team is created"
@@ -43,6 +40,4 @@ class TeamMembersValidationTest extends BaseUnitTest {
         "Empty member last name."  | 'valid first name' | '    '            | 'DEVELOPER'
         "Invalid job position."    | 'valid first name' | 'valid last name' | 'upps! not valid'
     }
-
-
 }

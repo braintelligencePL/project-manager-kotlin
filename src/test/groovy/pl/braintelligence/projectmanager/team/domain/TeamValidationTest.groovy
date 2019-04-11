@@ -1,27 +1,13 @@
 package pl.braintelligence.projectmanager.team.domain
 
-import pl.braintelligence.projectmanager.base.BaseUnitTest
-import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamException
-import pl.braintelligence.projectmanager.core.team.domain.Team
+
 import pl.braintelligence.projectmanager.core.team.domain.EntityAlreadyExistsException
+import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamException
 import pl.braintelligence.projectmanager.core.team.domain.MissingTeamException
-import pl.braintelligence.projectmanager.core.team.domain.configuration.TeamConfiguration
-import pl.braintelligence.projectmanager.core.team.ports.in.TeamManager
+import pl.braintelligence.projectmanager.core.team.domain.Team
+import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
 
-class TeamValidationTest extends BaseUnitTest {
-
-    private TeamManager teamService = new TeamConfiguration().teamManager()
-
-    def "Should create a team"() {
-        given:
-        def teamName = "valid team name"
-
-        when:
-        def team = new Team(teamName)
-
-        then:
-        team != null
-    }
+class TeamValidationTest extends BaseTeamUnitTest {
 
     def "Should throw exception when team does not exist"() {
         when:

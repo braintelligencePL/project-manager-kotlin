@@ -1,27 +1,20 @@
 package pl.braintelligence.projectmanager.core.team.domain.configuration
 
-import pl.braintelligence.projectmanager.core.team.ports.out.TeamRepository
 import pl.braintelligence.projectmanager.core.team.domain.Team
-import java.util.concurrent.ConcurrentHashMap
+import pl.braintelligence.projectmanager.core.team.ports.outgoing.TeamRepository
+import pl.braintelligence.projectmanager.shared.InMemoryCrudRepository
 
-class InMemoryTeamRepository : TeamRepository {
-
-    private var map = ConcurrentHashMap<String, Team>()
+class InMemoryTeamRepository : InMemoryCrudRepository<Team, String>(), TeamRepository {
 
     override fun existsByName(name: String): Boolean {
-        return map.containsKey(name)
+        return super.contains(id = name)
     }
 
     override fun findByName(name: String): Team? {
-        return map[name]
-    }
-
-    override fun findAll(): List<Team> {
-        return map.values.toList()
+        return super.findById(id = name)
     }
 
     override fun save(team: Team) {
-        map[team.name] = team
+        super.save(entity = team, id = team.name)
     }
-
 }

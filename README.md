@@ -63,7 +63,11 @@ Improved tests:
 
 <br>
 
-### 4️⃣ `branch: step-4-projects` <br> 
+### 4️⃣ `branch: step-4-refactor` <br>
+
+Refactor introducing simple CQRS. 
+
+### 5️⃣ `branch: step-5-projects` <br> 
 🏠 **Architecture**: Hexagonal Architecure <BR>
 
 * [ ] `GET: /projects/:id` - show project (project not project draft)<br>
