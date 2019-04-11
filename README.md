@@ -80,6 +80,7 @@ Improved tests:
 Needs and constraints: 
 * No `if` statements! We can do better in Kotlin. Just as an exercise (kata).
 
+<BR>
 
 ### 5️⃣ `branch: step-5-projects` <br> 
 
