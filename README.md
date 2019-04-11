@@ -68,17 +68,18 @@ Improved tests:
 
 <br>
 
-### 4️⃣ `branch: step-4-refactor` <br>
-
-Refactor introducing simple CQRS. 
-
-### 5️⃣ `branch: step-5-projects` <br> 
+### 4️⃣ `branch: step-4-projects` <br>
 🏠 **Architecture**: Hexagonal Architecure <BR>
 
-* [ ] `GET: /projects/:id` - show project (project not project draft)<br>
+* [ ] `GET: /projects/:id` - show project <br>
+* [ ] `GET: /projects` - show projects <br>
 * [ ] `PUT: /projects/:id` - change/update project <br>
-* [ ] `PATCH: /projects/:id/started` - start team when team assigned <br>
+* [ ] `PATCH: /projects/:id/started` - start project when team assigned <br>
 * [ ] `PATCH: /projects/:id/ended` - close project when features are done <br><br>
+
+Refactor introducing simple CQRS.
+
+### 5️⃣ `branch: step-5-projects` <br> 
 
 <BR>
 
