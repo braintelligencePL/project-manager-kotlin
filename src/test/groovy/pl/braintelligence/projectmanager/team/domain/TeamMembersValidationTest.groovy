@@ -1,11 +1,12 @@
 package pl.braintelligence.projectmanager.team.domain
 
-import pl.braintelligence.projectmanager.base.BaseUnitTest
+
 import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamMemberException
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
+import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
 import spock.lang.Unroll
 
-class TeamMembersValidationTest extends BaseUnitTest {
+class TeamMembersValidationTest extends BaseTeamUnitTest {
 
     def "Should add member to a team"() {
         given: "team is created"

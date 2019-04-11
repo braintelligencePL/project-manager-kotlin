@@ -1,9 +1,9 @@
 package pl.braintelligence.projectmanager.team.domain
 
 
-import pl.braintelligence.projectmanager.base.BaseUnitTest
+import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
 
-class AddingTeamMembersToTeamTest extends BaseUnitTest {
+class AddingTeamMembersToTeamTest extends BaseTeamUnitTest {
 
     def "Should add member to a team"() {
         given: "new team is created"

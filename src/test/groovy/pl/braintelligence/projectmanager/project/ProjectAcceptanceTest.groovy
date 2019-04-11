@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.project
 
-import org.springframework.core.ParameterizedTypeReference
+
 import org.springframework.http.HttpStatus
 import pl.braintelligence.projectmanager.base.BaseIntegrationTest
 import pl.braintelligence.projectmanager.core.projects.domain.Project

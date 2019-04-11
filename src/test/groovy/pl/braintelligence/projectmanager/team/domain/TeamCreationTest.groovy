@@ -1,9 +1,8 @@
 package pl.braintelligence.projectmanager.team.domain
 
+import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
 
-import pl.braintelligence.projectmanager.base.BaseUnitTest
-
-class TeamCreationTest extends BaseUnitTest {
+class TeamCreationTest extends BaseTeamUnitTest {
 
     def "Should create a team (with default values)"() {
         given:
