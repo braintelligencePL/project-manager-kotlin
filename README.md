@@ -82,12 +82,12 @@ Needs and constraints:
 
 <BR>
 
-### 5️⃣ `branch: step-5-projects` <br> 
+### #️⃣ `branch: will-be-more` <br>
+- Refactor introducing simple CQRS.
+- monitoring, grafana, actuator, performance tests with gatling
 
-Refactor introducing simple CQRS.
-<BR>
+`branch: step-X-zoo-of-microservices` <br>
 
-### 5️⃣ `branch: step-5-zoo-of-microservices` <br>
 🏠 **Architecture**: Hexagonal Architecture (modularization on package level) <BR>
 🕳 **Tests**: Integration/Acceptance/Unit<BR>
 Backing-Services from [Twelve-Factor-App](https://12factor.net/) methodology.
@@ -99,11 +99,6 @@ Services from our zoo:<BR>
 🐿 **centralized-configuration-server** - Spring Cloud application that centralizes external configurations using various methodologies of [building twelve-factor applications](https://12factor.net/config). <BR><BR>
 
 <BR>
-
-### #️⃣ `branch: will-be-more` <br>
-- monitoring, grafana, actuator, performance tests with gatling
-
-<BR><BR>
   
 ## Technologies used: 
 - Kotlin with spring 
