@@ -26,7 +26,6 @@ open class ProjectConfiguration {
     ): ProjectCreatorPort =
             ProjectCreatorService(projectFactory, projectCreatorRepository)
 
-
     open fun buildProjectQuery(
             inMemoryProjectRepository: InMemoryProjectRepository
     ): ProjectQueryPort =
@@ -37,6 +36,5 @@ open class ProjectConfiguration {
             projectQueryRepository: ProjectQueryRepository
     ): ProjectQueryPort =
             ProjectQueryService(projectQueryRepository)
-
 
 }

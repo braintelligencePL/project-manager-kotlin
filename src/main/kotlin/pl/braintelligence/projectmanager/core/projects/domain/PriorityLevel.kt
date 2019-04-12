@@ -6,5 +6,6 @@ enum class PriorityLevel {
     MEDIUM,
     LOW,
     LOWEST,
-    NOT_DEFINED
+    NOT_DEFINED,
+    INVALID;
 }

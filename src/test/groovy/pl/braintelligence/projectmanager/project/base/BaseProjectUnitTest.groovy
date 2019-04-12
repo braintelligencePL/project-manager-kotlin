@@ -26,7 +26,7 @@ class BaseProjectUnitTest extends BaseUnitTest {
             id != null
             name == newProjectDraftDto.projectName
             status == Status.TO_DO
-            teamAssigned == ""
+            teamAssigned.isBlank()
             features == []
         }
     }

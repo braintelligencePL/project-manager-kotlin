@@ -1,7 +1,6 @@
 package pl.braintelligence.projectmanager.core.projects.domain
 
 import org.springframework.stereotype.Component
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ProjectWithFeatures
 import java.util.*
 
 @Component
@@ -12,14 +11,10 @@ open class ProjectFactory {
         return Project(id = id, name = projectName)
     }
 
-    fun createProjectWithFeatures(projectWithFeatures: ProjectWithFeatures): Project {
+    fun createProjectWithFeatures(name: String, features: List<Feature>): Project {
         val id = generateProjectUniqueId()
-        val name = projectWithFeatures.projectName
-        val features = projectWithFeatures.features
-
         return Project(id = id, name = name, features = features)
     }
-
 
     private fun generateProjectUniqueId() = UUID.randomUUID().toString()
 }

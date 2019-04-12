@@ -1,6 +1,6 @@
 package pl.braintelligence.projectmanager.project
 
-
+import org.springframework.core.ParameterizedTypeReference
 import org.springframework.http.HttpStatus
 import pl.braintelligence.projectmanager.base.BaseIntegrationTest
 import pl.braintelligence.projectmanager.core.projects.domain.Project
@@ -24,11 +24,11 @@ class ProjectAcceptanceTest extends BaseIntegrationTest {
         then:
         response.statusCode == HttpStatus.CREATED
 
-//        when: "browse for all projects"
-//        response = get("/projects", new ParameterizedTypeReference<List<Project>>() {})
+        when: "browse for all projects"
+        response = get("/projects", new ParameterizedTypeReference<List<Project>>() {})
 
-//        then:
-//        response.statusCode == HttpStatus.OK
+        then:
+        response.statusCode == HttpStatus.OK
 
     }
 }

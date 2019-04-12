@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pl.braintelligence.project-manager-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/pl.braintelligence.project-manager-kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pl.braintelligence.project-manager-kotlin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/pl.braintelligence.project-manager-kotlin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pl.braintelligence.project-manager-kotlin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/pl.braintelligence.project-manager-kotlin.test.iml" />
+    </modules>
+  </component>
+</project>

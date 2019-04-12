@@ -16,8 +16,11 @@ class ProjectCreatorService(
             projectFactory.createProjectDraft(projectDraft.projectName)
                     .also { projectCreatorRepository.save(it) }
 
-    override fun createProjectWithFeatures(projectWithFeatures: ProjectWithFeatures): Project =
-            projectFactory.createProjectWithFeatures(projectWithFeatures)
-                    .also { projectCreatorRepository.save(it) }
+    override fun createProjectWithFeatures(projectWithFeatures: ProjectWithFeatures): Project {
+        val features = Feature.toFeatures(projectWithFeatures.features)
+
+        return projectFactory.createProjectWithFeatures(projectWithFeatures.projectName, features)
+                .also { projectCreatorRepository.save(it) }
+    }
 
 }

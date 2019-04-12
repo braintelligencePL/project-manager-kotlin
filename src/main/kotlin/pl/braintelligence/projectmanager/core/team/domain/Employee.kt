@@ -22,7 +22,6 @@ class Employee(
                 )
 
         private fun toJobPosition(jobPosition: String) =
-                Try { JobPosition.valueOf(jobPosition) }
-                        .getOrElse { JobPosition.INVALID }
+                Try { JobPosition.valueOf(jobPosition) }.getOrElse { JobPosition.INVALID }
     }
 }
