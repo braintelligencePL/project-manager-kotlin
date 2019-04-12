@@ -22,8 +22,9 @@ After that check [tests](https://github.com/braintelligencePL/project-manager-ko
 
 ## Implementation step-by-step
 
-Idea is to see how does project changes while time passes with each branch there some change to the project structure or just new features that were implemented. 
+Idea is to see how does project changes while time passes. Each branch has some changes either refactor or new features implemented.  
 
+<BR>
   
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
