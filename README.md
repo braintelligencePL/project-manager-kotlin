@@ -63,8 +63,8 @@ Things done:
 Improved tests: 
 
 * Unit tests without touching IO. Domain is tested with unit tests. Idea of `InMemoryRepository` as HashMap. 
-* Only the main paths (most important to business) are integration tests because whole business domain was tested with unit tests.
-* We also have acceptance tests that are practically similar to above, but shows complete flow of bounded-context. 
+* Acceptance tests show flow of the app or bounded-context. 
+* Integration tests are only for most important business value paths because whole domain is tested with unit tests.
 
 <br>
 
