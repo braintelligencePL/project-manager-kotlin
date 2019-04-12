@@ -63,7 +63,7 @@ Things done:
 Improved tests: 
 
 * Unit tests without touching IO. Domain is tested with unit tests. Idea of `InMemoryRepository` as HashMap. 
-* Only the main paths (happy paths) are integration tests because sad path was tested with unit tests.
+* Only the main paths (most important to business) are integration tests because whole business domain was tested with unit tests.
 * We also have acceptance tests that are practically similar to above, but shows complete flow of bounded-context. 
 
 <br>
