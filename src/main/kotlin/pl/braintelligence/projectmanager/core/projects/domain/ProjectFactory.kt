@@ -1,6 +1,7 @@
 package pl.braintelligence.projectmanager.core.projects.domain
 
 import org.springframework.stereotype.Component
+import pl.braintelligence.projectmanager.core.projects.domain.values.Feature
 import java.util.*
 
 @Component

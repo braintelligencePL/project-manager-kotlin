@@ -1,12 +1,12 @@
 package pl.braintelligence.projectmanager.base
 
-import pl.braintelligence.projectmanager.core.projects.domain.Feature
-import pl.braintelligence.projectmanager.core.projects.domain.PriorityLevel
-import pl.braintelligence.projectmanager.core.projects.domain.Status
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ProjectDraft
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ProjectWithFeatures
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
+import pl.braintelligence.projectmanager.core.projects.domain.values.Feature
+import pl.braintelligence.projectmanager.core.projects.domain.values.PriorityLevel
+import pl.braintelligence.projectmanager.core.projects.domain.values.Status
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectDraft
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectWithFeatures
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.TeamMember
 
 trait BaseDtoObjects {
 

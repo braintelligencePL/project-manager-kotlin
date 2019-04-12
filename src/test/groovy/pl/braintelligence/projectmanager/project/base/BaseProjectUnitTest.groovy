@@ -3,7 +3,7 @@ package pl.braintelligence.projectmanager.project.base
 import pl.braintelligence.projectmanager.base.BaseUnitTest
 import pl.braintelligence.projectmanager.core.projects.domain.Project
 import pl.braintelligence.projectmanager.core.projects.domain.ProjectFactory
-import pl.braintelligence.projectmanager.core.projects.domain.Status
+import pl.braintelligence.projectmanager.core.projects.domain.values.Status
 import pl.braintelligence.projectmanager.core.projects.domain.configuration.InMemoryProjectRepository
 import pl.braintelligence.projectmanager.core.projects.domain.configuration.ProjectConfiguration
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreatorPort
@@ -45,3 +45,4 @@ class BaseProjectUnitTest extends BaseUnitTest {
         }
     }
 }
+

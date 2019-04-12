@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.core.team.ports.incoming
 
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.TeamMember
 import pl.braintelligence.projectmanager.core.team.domain.Team
 
 /**

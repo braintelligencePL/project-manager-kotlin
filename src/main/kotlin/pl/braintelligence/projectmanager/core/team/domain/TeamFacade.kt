@@ -3,8 +3,8 @@ package pl.braintelligence.projectmanager.core.team.domain
 import org.springframework.stereotype.Service
 import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
 import pl.braintelligence.projectmanager.core.team.ports.outgoing.TeamRepository
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.TeamMember
 
 @Service
 class TeamFacade(
