@@ -13,17 +13,17 @@ We'll go from traditional layered architecture to hexagonal architecture A.K.A. 
 `./gradlew test` - to run unit tests. <BR>
 `./gradlew clean build test`- one to rule them all 💍 <BR>
 <BR>
+  
+# Quick Start
+Start with [endpoints: ](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/main/kotlin/pl/braintelligence/projectmanager/infrastructure/adapter/incoming/rest) 
+Then check [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager) - whole domain is tested with unit tests. Isolated from controllers, database, framework. Tests are done with a use of repository implemented as HashMap. You have also [AcceptanceTests](https://github.com/braintelligencePL/project-manager-kotlin/blob/master/src/test/groovy/pl/braintelligence/projectmanager/project/ProjectAcceptanceTest.groovy) that show user flow, bigger picture.
+
+<BR>
 
 ## Implementation step-by-step
 
 Idea is to see how does project changes while time passes with each branch there some change to the project structure or just new features that were implemented. 
 
-## Quick Start
-Checkout Endpoints here: [/infrastructure/adapter/incoming/rest/](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/main/kotlin/pl/braintelligence/projectmanager/infrastructure/adapter/incoming/rest) 
-
-Then checkout [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager) - whole domain is tested with unit tests. Isolated from controllers, database, framework. Tests are done with a use of repository implemented as HashMap. 
-
-<BR>
   
 ### 1️⃣ `branch: step-1-team` <br>
 🏠 **Architecture**: Layered Architecure <BR>
