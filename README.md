@@ -43,7 +43,7 @@ Needs and constraints:
 🏠 **Architecture**: Layered Architecure <BR>
 
 * [x] `POST: /projects/drafts` - create project draft (only project name). <br>
-* [x] `POST: /projects` - create full project (project with features📊). <br>
+* [x] `POST: /projects` - create project with features. 📊 <br>
 * [x] `GET: /projects` - show draft projects <br>
 
 Needs and constraints: 
