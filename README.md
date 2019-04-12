@@ -79,6 +79,8 @@ Improved tests:
 
 Needs and constraints: 
 * No `if` statements! We can do better in Kotlin. Not something that you should avoid at any cost (just simple kata).
+* ProjectStatus or ProjectFeatureStatus -> `Status` must be valid (TO_DO, IN_PROGRESS...)
+* `PriorityLevel` for project features must be valid (HIGH, MEDIUM, NOT_DEFINED...)
 
 <BR>
 
