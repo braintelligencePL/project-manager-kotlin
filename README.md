@@ -78,7 +78,7 @@ Improved tests:
 * [ ] `PATCH: /projects/:id/ended` - close project when features are done <br><br>
 
 Needs and constraints: 
-* No `if` statements! We can do better in Kotlin. Not something that you should avoid at any cost. Just exercise (kata).
+* No `if` statements! We can do better in Kotlin. Not something that you should avoid at any cost (just simple kata).
 
 <BR>
 
