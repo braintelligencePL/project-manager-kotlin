@@ -16,15 +16,6 @@ class ProjectQueryTest extends BaseProjectUnitTest {
         verifyProjectWithFeatures(response)
     }
 
-    def "Should throw MissingProjectException when project does not exist"() {
-        when:
-        projectQuery.getProject("projectId")
-
-        then:
-        def thrown = thrown(MissingProjectException)
-        thrown.message == "Project does not exist."
-    }
-
     def "Should browse for projects"() {
         given:
         projectCreator.createProjectWithFeatures(newProjectWithFeaturesDto)
@@ -37,7 +28,17 @@ class ProjectQueryTest extends BaseProjectUnitTest {
         response.size() == 2
     }
 
-    def "Should throw MissingProjectException when there is no projects available"() {
+    def "Should throw MissingProjectException when project does not exist"() {
+        when:
+        projectQuery.getProject("projectId")
+
+        then:
+        def thrown = thrown(MissingProjectException)
+        thrown.message == "Project does not exist."
+    }
+
+
+    def "Should return empty list when there no projects available"() {
         when:
         def response = projectQuery.getProjects()
 

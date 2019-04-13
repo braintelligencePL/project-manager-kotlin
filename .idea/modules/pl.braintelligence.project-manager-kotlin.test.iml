@@ -192,5 +192,5 @@
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.11.1" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="project-manager-kotlin.main" />
+  <component name="TestModuleProperties" production-module="pl.braintelligence.project-manager-kotlin.main" />
 </module>

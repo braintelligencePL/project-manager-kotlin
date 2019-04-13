@@ -9,15 +9,15 @@ import spock.lang.Unroll
 class TeamMembersValidationTest extends BaseTeamUnitTest {
 
     def "Should add member to a team"() {
-        given: "team is created"
+        given: "teamName is created"
         def teamName = newTeamDto.name
         teamService.createTeam(newTeamDto)
 
-        when: "two members are added to a team"
+        when: "two members are added to a teamName"
         teamService.addMemberToTeam(teamName, teamMemberDto)
         teamService.addMemberToTeam(teamName, teamMemberDto)
 
-        then: "two members are in a team"
+        then: "two members are in a teamName"
         teamService.getTeam(teamName).members.size() == 2
     }
 
