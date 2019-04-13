@@ -114,7 +114,7 @@ Services from our zoo:<BR>
 * ENG: [ The nature of domain driven design](http://www.braintelligence.pl/the-nature-of-domain-driven-design/) - about DDD strategic tools.
 
 ### Materials from outside world: 
-* ENG: [ ddd-workshop-project-manager (most credits to this repo)](https://github.com/mkopylec/project-manager)
+* ENG: [ ddd-workshop-project-manager (business requirments from this repo)](https://github.com/mkopylec/project-manager)
 * ENG: [ example of hexagonal architecture (on package level)](https://github.com/jakubnabrdalik/hentai)
 * ENG: [ design patterns for humans ](https://github.com/kamranahmedse/design-patterns-for-humans)
 * ENG: [ ddd-laeven ](https://github.com/BottegaIT/ddd-leaven-v2)
