@@ -24,7 +24,7 @@ class ProjectModifierService(
         project.assignTeam(updateProject.teamName)
 
         val team = teamManager.getTeam(updateProject.teamName)
-        team.incrementOngoingTeamProjects() // TODO cleanup - maybe more functional way? Tuple?
+        team.incrementOngoingTeamProjects()
         teamManager.updateTeam(team)
 
         projectCreatorRepository.save(project)
