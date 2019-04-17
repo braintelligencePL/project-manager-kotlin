@@ -23,6 +23,7 @@ data class Team @JvmOverloads constructor(
     }
 
     fun isTeamBusy(): Boolean = numberOfOngoingProjects > BUSY_TEAM_THRESHOLD
+    fun incrementOngoingTeamProjects() = numberOfOngoingProjects++
 
     companion object {
         const val BUSY_TEAM_THRESHOLD = 3

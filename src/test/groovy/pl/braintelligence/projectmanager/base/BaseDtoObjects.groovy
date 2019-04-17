@@ -15,7 +15,6 @@ trait BaseDtoObjects {
     NewFeature newFeature = new NewFeature("feature name 1", "TO_DO", "NOT_DEFINED")
     NewFeature updatedFeature = new NewFeature("feature name 2", "IN_PROGRESS", "HIGH")
 
-
     ProjectWithFeatures newProjectWithFeaturesDto = new ProjectWithFeatures("feature 1", List.of(newFeature))
 
     ProjectDraft newProjectDraft = new ProjectDraft("project name")

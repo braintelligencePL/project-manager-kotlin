@@ -12,6 +12,10 @@ class TeamFacade(
         private val teamRepository: TeamRepository
 ) : TeamManager {
 
+    override fun updateTeam(team: Team) {
+        teamRepository.save(team)
+    }
+
     override fun createTeam(newTeam: NewTeam): Team {
 
         val team = Team(name = newTeam.name)

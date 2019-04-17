@@ -39,4 +39,8 @@ class BaseIntegrationTest extends Specification implements BaseHttpMethods, Base
         def newTeam = new NewTeam(teamName)
         post("/teams", newTeam)
     }
+
+    protected ResponseEntity prepareNewProject() {
+        post("/projects", newProjectWithFeaturesDto)
+    }
 }

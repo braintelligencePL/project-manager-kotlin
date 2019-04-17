@@ -21,4 +21,5 @@ internal class NoSpringInDomainTest {
                     .should()
                     .dependOnClassesThat()
                     .resideInAPackage("org.springframework..")
+
 }

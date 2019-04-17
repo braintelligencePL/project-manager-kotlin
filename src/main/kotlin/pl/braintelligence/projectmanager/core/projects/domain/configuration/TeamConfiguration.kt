@@ -11,6 +11,7 @@ import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectMod
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCreatorRepository
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectQueryRepository
+import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
 
 @Configuration
 open class ProjectConfiguration {
@@ -41,15 +42,17 @@ open class ProjectConfiguration {
 
     open fun buildProjectModifier(
             projectQueryService: ProjectQueryService,
-            inMemoryProjectRepository: InMemoryProjectRepository
+            inMemoryProjectRepository: InMemoryProjectRepository,
+            teamManager: TeamManager
     ): ProjectModifierPort =
-            ProjectModifierService(projectQueryService, inMemoryProjectRepository)
+            ProjectModifierService(projectQueryService, inMemoryProjectRepository, teamManager)
 
     @Bean
     open fun buildProjectModifier(
             projectQueryService: ProjectQueryService,
-            projectCreatorRepository: ProjectCreatorRepository
+            projectCreatorRepository: ProjectCreatorRepository,
+            teamManager: TeamManager
     ): ProjectModifierPort =
-            ProjectModifierService(projectQueryService, projectCreatorRepository)
+            ProjectModifierService(projectQueryService, projectCreatorRepository, teamManager)
 
 }

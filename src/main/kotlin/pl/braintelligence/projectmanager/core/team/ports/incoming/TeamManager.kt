@@ -18,4 +18,5 @@ interface TeamManager {
 
     fun getTeam(teamName: String): Team
 
+    fun updateTeam(team: Team)
 }

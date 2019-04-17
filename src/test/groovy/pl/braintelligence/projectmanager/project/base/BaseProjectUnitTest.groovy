@@ -10,6 +10,7 @@ import pl.braintelligence.projectmanager.core.projects.domain.values.Status
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreatorPort
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectModifierPort
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
+import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectWithFeatures
 
 class BaseProjectUnitTest extends BaseUnitTest {
@@ -28,7 +29,8 @@ class BaseProjectUnitTest extends BaseUnitTest {
             new ProjectConfiguration()
                     .buildProjectModifier(
                     new ProjectQueryService(inMemoryProjectRepository),
-                    inMemoryProjectRepository)
+                    inMemoryProjectRepository,
+                    Mock(TeamManager))
 
     protected void verifyProjectDraft(Project project) {
         assert with(project) {
