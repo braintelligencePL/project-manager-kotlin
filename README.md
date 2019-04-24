@@ -3,7 +3,11 @@
 
 ### [Project-Manager - just like trello but only backend](https://github.com/braintelligencePL/project-manager-kotlin) 
 #### Journey from layered (n-tier) architecture to hexagonal architecture in Kotlin 💪
-Project-Manager is a simple application for managing projects at company. You can create teams and add members to it. You can create, modify projects and assing teams to them. More you'll find below.
+Project-Manager is a simple application for managing projects at company.
+You can create projects and teams. 
+Projects can have features and status.
+Teams can have members and projects.
+You'll find more business requirments below. 
 
 We'll go from traditional layered architecture to hexagonal architecture A.K.A. Ports and Adapters architecture.
 
