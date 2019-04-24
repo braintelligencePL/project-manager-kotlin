@@ -10,15 +10,16 @@ Teams can have members and projects.
 You'll find more business requirments below. 
 
 We'll go from traditional layered architecture to hexagonal architecture A.K.A. Ports and Adapters architecture.
+  
+# Quick Start
 
-#### Working with Project-Manager
+### Working with Project-Manager
 
 `./gradlew bootRun` - to run application. <BR>
 `./gradlew test` - to run unit tests. <BR>
 `./gradlew clean build test`- one to rule them all 💍 <BR>
 <BR>
-  
-# Quick Start
+
 Start with [endpoints](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/main/kotlin/pl/braintelligence/projectmanager/infrastructure/adapter/incoming/rest). 
 After that check [tests](https://github.com/braintelligencePL/project-manager-kotlin/tree/master/src/test/groovy/pl/braintelligence/projectmanager). Whole domain is tested with unit tests. Isolated from controllers, database, framework. Tests are done with a use of repository implemented as HashMap. You also have [AcceptanceTests](https://github.com/braintelligencePL/project-manager-kotlin/blob/master/src/test/groovy/pl/braintelligence/projectmanager/project/ProjectAcceptanceTest.groovy) that show user flow, bigger picture.
 
