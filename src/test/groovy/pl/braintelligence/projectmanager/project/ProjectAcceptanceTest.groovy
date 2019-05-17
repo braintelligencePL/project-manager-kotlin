@@ -13,7 +13,7 @@ class ProjectAcceptanceTest extends BaseIntegrationTest {
         response.statusCode == HttpStatus.CREATED
 
         when: "browse for this project draft"
-        response = get("/projects/${response.body.id}", Project.class)
+        response = get("/projects/$response.body.id", Project.class)
 
         then:
         response.statusCode == HttpStatus.OK

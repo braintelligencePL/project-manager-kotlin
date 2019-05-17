@@ -1,7 +1,7 @@
 package pl.braintelligence.projectmanager.core.projects.ports.incoming
 
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectEndCondition
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.UpdateProject
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectEndCondition
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.UpdateProject
 
 interface ProjectModifierPort {
 

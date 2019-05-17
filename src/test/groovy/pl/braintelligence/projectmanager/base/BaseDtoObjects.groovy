@@ -1,9 +1,9 @@
 package pl.braintelligence.projectmanager.base
 
 
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.NewFeature
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectDraft
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectWithFeatures
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.NewFeature
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectDraft
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectWithFeatures
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.NewTeam
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.TeamMember
 

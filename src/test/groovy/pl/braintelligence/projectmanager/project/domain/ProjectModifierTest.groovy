@@ -1,12 +1,16 @@
 package pl.braintelligence.projectmanager.project.domain
 
+import pl.braintelligence.projectmanager.core.projects.domain.InvalidProjectException
+import pl.braintelligence.projectmanager.core.projects.domain.Project
+import pl.braintelligence.projectmanager.core.projects.domain.values.Status
 import pl.braintelligence.projectmanager.core.team.domain.configuration.TeamConfiguration
 import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.NewFeature
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.UpdateProject
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.NewFeature
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.UpdateProject
 import pl.braintelligence.projectmanager.project.base.BaseProjectUnitTest
+import spock.lang.Unroll
 
-class ProjectUpdateTest extends BaseProjectUnitTest {
+class ProjectModifierTest extends BaseProjectUnitTest {
 
     protected TeamManager teamService = new TeamConfiguration().teamManager()
 
@@ -41,5 +45,33 @@ class ProjectUpdateTest extends BaseProjectUnitTest {
                 priorityLevel.toString() == updatedProjectFeatures.first().priorityLevel
             }
         }
+    }
+
+    def "Should not start project when no team assigned"() {
+        given:
+        Project project = new Project("id", "name")
+
+        when:
+        project.startProject()
+
+        then:
+        def thrown = thrown(InvalidProjectException)
+        thrown.message == "Project must have team assigned."
+    }
+
+    @Unroll
+    def "Should not start project with status #status"() {
+        given:
+        Project project = new Project("id", "name", status, "team")
+
+        when:
+        project.startProject()
+
+        then:
+        def thrown = thrown(InvalidProjectException)
+        thrown.message == "Project has already started."
+
+        where:
+        status << [Status.IN_PROGRESS, Status.INVALID, Status.COMPLETED]
     }
 }

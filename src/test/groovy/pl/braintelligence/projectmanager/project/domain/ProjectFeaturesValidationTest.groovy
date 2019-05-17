@@ -1,18 +1,18 @@
 package pl.braintelligence.projectmanager.project.domain
 
 import pl.braintelligence.projectmanager.core.projects.domain.InvalidProjectFeatureException
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.NewFeature
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectWithFeatures
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.NewFeature
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectWithFeatures
 import pl.braintelligence.projectmanager.project.base.BaseProjectUnitTest
 
 class ProjectFeaturesValidationTest extends BaseProjectUnitTest {
 
     def "Should not allow to create project feature"() {
+        given:
+        def features = new ProjectWithFeatures("123", [new NewFeature(featureName, status, priorityLevel)])
+
         when:
-        def feature = [new NewFeature(featureName, status, priorityLevel)]
-        projectCreator.createProjectWithFeatures(
-                new ProjectWithFeatures("123", feature)
-        )
+        projectCreator.createProjectWithFeatures(features)
 
         then:
         def thrown = thrown(InvalidProjectFeatureException)

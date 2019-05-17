@@ -6,8 +6,8 @@ import pl.braintelligence.projectmanager.core.projects.domain.ProjectFactory
 import pl.braintelligence.projectmanager.core.projects.domain.values.Feature
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreatorPort
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCreatorRepository
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectDraft
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectWithFeatures
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectDraft
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectWithFeatures
 
 @Service
 class ProjectCreatorService(
@@ -25,5 +25,4 @@ class ProjectCreatorService(
         return projectFactory.createProjectWithFeatures(projectWithFeatures.projectName, features)
                 .also { projectCreatorRepository.save(it) }
     }
-
 }

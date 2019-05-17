@@ -2,7 +2,7 @@ package pl.braintelligence.projectmanager.core.projects.domain.values
 
 import arrow.core.Try
 import arrow.core.getOrElse
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.NewFeature
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.NewFeature
 
 class Feature(
         val name: String,

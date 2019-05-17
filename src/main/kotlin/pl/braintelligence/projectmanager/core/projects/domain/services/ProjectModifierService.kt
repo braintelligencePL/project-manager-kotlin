@@ -5,8 +5,8 @@ import pl.braintelligence.projectmanager.core.projects.domain.values.Feature
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectModifierPort
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCreatorRepository
 import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectEndCondition
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.UpdateProject
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectEndCondition
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.UpdateProject
 
 @Service
 class ProjectModifierService(

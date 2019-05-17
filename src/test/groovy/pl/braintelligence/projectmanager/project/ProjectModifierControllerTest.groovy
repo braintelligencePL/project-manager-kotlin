@@ -1,10 +1,10 @@
 package pl.braintelligence.projectmanager.project
 
 import pl.braintelligence.projectmanager.base.BaseIntegrationTest
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.UpdateProject
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.UpdateProject
 import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.ExistingTeam
 
-class ProjectControllerTest extends BaseIntegrationTest {
+class ProjectModifierControllerTest extends BaseIntegrationTest {
 
     def "Should increment team numberOfOngoingProjects when team is assigned to project"() {
         given: "new team is created"
@@ -31,5 +31,4 @@ class ProjectControllerTest extends BaseIntegrationTest {
             currentlyImplementedProjects == 1
         }
     }
-
 }

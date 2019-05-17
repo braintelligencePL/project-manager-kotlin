@@ -1,4 +1,5 @@
-package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project
+package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto
+
 
 data class ProjectDraft(val projectName: String)
 

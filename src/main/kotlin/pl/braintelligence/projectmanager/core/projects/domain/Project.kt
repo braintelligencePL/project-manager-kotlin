@@ -7,7 +7,7 @@ import pl.braintelligence.projectmanager.core.projects.domain.values.Status
 data class Project @JvmOverloads constructor(
         val id: String,
         var name: String,
-        val status: Status = Status.TO_DO,
+        var status: Status = Status.TO_DO,
         var teamAssigned: String = "",
         var features: List<Feature> = listOf()
 ) {
@@ -29,6 +29,12 @@ data class Project @JvmOverloads constructor(
 
     fun assignTeam(team: String) {
         this.teamAssigned = trimToNull(team)
+    }
+
+    fun startProject() {
+        require(teamAssigned.isNotBlank()) { throw InvalidProjectException("Project must have team assigned.") }
+        require(status.hasToDoStatus()) { throw InvalidProjectException("Project has already started.") }
+        status = Status.IN_PROGRESS
     }
 
     private fun validateName(name: String) = require(name.isNotBlank()) {

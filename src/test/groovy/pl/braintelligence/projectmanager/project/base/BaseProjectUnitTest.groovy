@@ -11,7 +11,7 @@ import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCre
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectModifierPort
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
 import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.ProjectWithFeatures
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.project.dto.ProjectWithFeatures
 
 class BaseProjectUnitTest extends BaseUnitTest {
 

@@ -5,4 +5,7 @@ enum class Status {
     IN_PROGRESS,
     COMPLETED,
     INVALID;
+
+    fun hasToDoStatus(): Boolean = this == TO_DO
+
 }

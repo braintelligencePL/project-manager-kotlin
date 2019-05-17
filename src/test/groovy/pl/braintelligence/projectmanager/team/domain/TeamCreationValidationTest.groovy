@@ -5,9 +5,9 @@ import pl.braintelligence.projectmanager.core.team.domain.EntityAlreadyExistsExc
 import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamException
 import pl.braintelligence.projectmanager.core.team.domain.MissingTeamException
 import pl.braintelligence.projectmanager.core.team.domain.Team
-import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
+import pl.braintelligence.projectmanager.team.base.BaseTeamSetupUnitTest
 
-class TeamCreationValidationTest extends BaseTeamUnitTest {
+class TeamCreationValidationTest extends BaseTeamSetupUnitTest {
 
     def "Should throw exception when team does not exist"() {
         when:
