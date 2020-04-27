@@ -10,6 +10,10 @@ Teams can have members and projects.
 You'll find more business requirments below. 
 
 We'll go from traditional layered architecture to hexagonal architecture A.K.A. Ports and Adapters architecture.
+
+There is also newer repository with similar architecture style:
+
+[Online Store - clean architecture](https://github.com/braintelligencePL/online-store-clean-architecture) 
   
 # Quick Start
 
