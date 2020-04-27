@@ -13,9 +13,9 @@ We'll go from traditional layered architecture to hexagonal architecture A.K.A. 
 
 <br>
 
-### There is also newer repository with similar architecture style:
+### **There is also newer repository with similar architecture style:**
 
-- [Online Store - clean architecture](https://github.com/braintelligencePL/online-store-clean-architecture) 
+#### [Online Store - clean architecture](https://github.com/braintelligencePL/online-store-clean-architecture) 
   
   <br>
 
