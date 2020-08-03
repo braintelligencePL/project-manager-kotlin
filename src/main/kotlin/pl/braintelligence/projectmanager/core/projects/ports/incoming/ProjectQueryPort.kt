@@ -7,4 +7,5 @@ interface ProjectQueryPort {
     fun getProject(id: String): Project
 
     fun getProjects(): List<Project>
+
 }

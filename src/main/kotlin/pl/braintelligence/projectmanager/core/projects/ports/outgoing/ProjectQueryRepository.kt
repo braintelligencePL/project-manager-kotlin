@@ -6,4 +6,6 @@ interface ProjectQueryRepository {
 
     fun findById(id: String): Project?
 
+    fun findAll(): List<Project>
+
 }

@@ -2,20 +2,7 @@
 # Created by https://www.gitignore.io/api/web,git,node,java,maven,macos,linux,gradle,kotlin,eclipse,vagrant,netbeans,intellij,archlinuxpackages
 # Edit at https://www.gitignore.io/?templates=web,git,node,java,maven,macos,linux,gradle,kotlin,eclipse,vagrant,netbeans,intellij,archlinuxpackages
 
-### ArchLinuxPackages ###
-*.tar
-*.tar.*
-*.jar
-*.exe
-*.msi
-*.zip
-*.tgz
-*.log
-*.log.*
-*.sig
 
-pkg/
-src/
 
 ### Eclipse ###
 .metadata

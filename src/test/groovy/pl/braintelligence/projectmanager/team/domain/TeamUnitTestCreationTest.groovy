@@ -1,37 +1,34 @@
 package pl.braintelligence.projectmanager.team.domain
 
-import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
+import pl.braintelligence.projectmanager.team.base.BaseTeamSetupUnitTest
 
-class TeamCreationTest extends BaseTeamUnitTest {
+class TeamUnitTestCreationTest extends BaseTeamSetupUnitTest {
 
-    def "Should create a team (with default values)"() {
+    def "Should create multiple teams (with default values)"() {
         given:
         teamService.createTeam(newTeamDto)
 
         when:
         def response = teamService.getTeam(newTeamDto.name)
 
-        then:
+        then: "teamName has default settings"
         with(response) {
             name == newTeamDto.name
             numberOfOngoingProjects == 0
             members == []
         }
-    }
 
-    def "Should create a teams (with default values)"() {
-        given:
-        teamService.createTeam(newTeamDto)
+        when: "another teamName is created"
         teamService.createTeam(newTeamDto1)
 
-        when:
-        def response = teamService.getTeams()
+        and: "getting all teams"
+        response = teamService.getTeams()
 
-        then:
+        then: "two teams are created"
         with(response) {
             name[0] == newTeamDto.name
             name[1] == newTeamDto1.name
         }
-    }
 
+    }
 }

@@ -1,6 +1,8 @@
-package pl.braintelligence.projectmanager.core.projects.domain
+package pl.braintelligence.projectmanager.core.projects.domain.services
 
 import org.springframework.stereotype.Service
+import pl.braintelligence.projectmanager.core.projects.domain.MissingProjectException
+import pl.braintelligence.projectmanager.core.projects.domain.Project
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectQueryRepository
 
@@ -13,9 +15,8 @@ class ProjectQueryService(
             projectQueryRepository.findById(id)
                     ?: throw MissingProjectException("Project does not exist.")
 
-    override fun getProjects(): List<Project> {
-        TODO("not implemented")
-    }
+    override fun getProjects(): List<Project> =
+            projectQueryRepository.findAll()
 
 
 }

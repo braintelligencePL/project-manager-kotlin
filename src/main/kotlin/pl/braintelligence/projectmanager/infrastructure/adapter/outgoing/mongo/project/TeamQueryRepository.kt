@@ -15,6 +15,8 @@ class TeamQueryRepository(
         private val mongo: MongoTeamCreationRepository
 ) : ProjectQueryRepository {
 
+    override fun findAll(): List<Project> = DbProject.toProjects(mongo.findAll())
+
     override fun findById(id: String): Project? = DbProject.toProject(mongo.findById(id).get())
 
 }

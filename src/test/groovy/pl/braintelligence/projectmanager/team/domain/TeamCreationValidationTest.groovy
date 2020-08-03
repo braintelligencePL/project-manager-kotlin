@@ -5,13 +5,13 @@ import pl.braintelligence.projectmanager.core.team.domain.EntityAlreadyExistsExc
 import pl.braintelligence.projectmanager.core.team.domain.InvalidTeamException
 import pl.braintelligence.projectmanager.core.team.domain.MissingTeamException
 import pl.braintelligence.projectmanager.core.team.domain.Team
-import pl.braintelligence.projectmanager.team.base.BaseTeamUnitTest
+import pl.braintelligence.projectmanager.team.base.BaseTeamSetupUnitTest
 
-class TeamValidationTest extends BaseTeamUnitTest {
+class TeamCreationValidationTest extends BaseTeamSetupUnitTest {
 
     def "Should throw exception when team does not exist"() {
         when:
-        teamService.addMemberToTeam("non-existent team name", teamMemberDto)
+        teamService.addMemberToTeam("non-existent teamName name", teamMemberDto)
 
         then:
         def thrown = thrown(MissingTeamException.class)
@@ -24,17 +24,17 @@ class TeamValidationTest extends BaseTeamUnitTest {
 
         then:
         def ex = thrown(InvalidTeamException.class)
-        ex.message == "Empty team name."
+        ex.message == "Empty teamName name."
 
         where:
         teamName << ['', ' ']
     }
 
     def "Should not create team that already exists"() {
-        given: "create a team"
+        given: "create a teamName"
         teamService.createTeam(newTeamDto)
 
-        when: "create another team with the same name"
+        when: "create another teamName with the same name"
         teamService.createTeam(newTeamDto)
 
         then:

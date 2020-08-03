@@ -4,10 +4,10 @@ import arrow.core.Try
 import arrow.core.getOrElse
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
-import pl.braintelligence.projectmanager.core.projects.domain.Feature
-import pl.braintelligence.projectmanager.core.projects.domain.PriorityLevel
 import pl.braintelligence.projectmanager.core.projects.domain.Project
-import pl.braintelligence.projectmanager.core.projects.domain.Status
+import pl.braintelligence.projectmanager.core.projects.domain.values.Feature
+import pl.braintelligence.projectmanager.core.projects.domain.values.PriorityLevel
+import pl.braintelligence.projectmanager.core.projects.domain.values.Status
 
 @Document(collection = "projects")
 class DbProject(
@@ -25,9 +25,9 @@ class DbProject(
                 project.teamAssigned,
                 project.features.map {
                     DbFeature(
-                            name = it.name,
-                            status = it.status.toString(),
-                            priorityLevel = it.priorityLevel.toString()
+                            it.name,
+                            it.status.toString(),
+                            it.priorityLevel.toString()
                     )
                 }
         )
@@ -48,6 +48,10 @@ class DbProject(
                 }
 
         )
+
+        fun toProjects(dbProjects: MutableIterable<DbProject>): List<Project> =
+                dbProjects.map { toProject(it) }
+
 
     }
 }

@@ -1,5 +1,5 @@
-import pl.braintelligence.projectmanager.core.team.domain.Employee
-import pl.braintelligence.projectmanager.core.team.domain.JobPosition
+import pl.braintelligence.projectmanager.core.team.domain.values.Employee
+import pl.braintelligence.projectmanager.core.team.domain.values.JobPosition
 
 data class DbEmployee(
         private val firstName: String,

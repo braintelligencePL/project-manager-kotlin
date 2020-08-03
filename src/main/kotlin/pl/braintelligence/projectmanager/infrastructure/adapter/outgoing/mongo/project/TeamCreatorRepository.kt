@@ -1,5 +1,6 @@
 package pl.braintelligence.projectmanager.infrastructure.adapter.outgoing.mongo.project
 
+import kotlinx.coroutines.Dispatchers.IO
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
@@ -19,5 +20,4 @@ class TeamCreatorRepository(
         val dbProject = DbProject.toDbProject(project)
         mongo.save(dbProject)
     }
-
 }

@@ -8,14 +8,14 @@ import pl.braintelligence.projectmanager.core.team.domain.Team
 class TeamAcceptanceTest extends BaseIntegrationTest {
 
     def "User flow while using project manager"() {
-        when: "new team is created"
+        when: "new teamName is created"
         prepareNewTeam(newTeamDto.name)
 
         then: "user gets all teams created"
         get('/teams', new ParameterizedTypeReference<List<Team>>() {})
                 .statusCode == HttpStatus.OK
 
-        when: "new member is added to a team"
+        when: "new member is added to a teamName"
         post('/teams/teamName/members', teamMemberDto)
                 .statusCode == HttpStatus.CREATED
 

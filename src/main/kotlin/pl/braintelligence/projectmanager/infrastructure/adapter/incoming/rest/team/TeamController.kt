@@ -1,11 +1,8 @@
-package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest
+package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.ExistingTeam
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
 
 /**
  * Primary Adapter
@@ -32,9 +29,13 @@ class TeamController(
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping
-    fun getTeams(): List<ExistingTeam> =
-            ExistingTeam.toExistingTeams(teamManager.getTeams())
+    fun getTeams(): List<ExistingTeam> = ExistingTeam.toExistingTeams(teamManager.getTeams())
 
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("{teamName}")
+    fun getTeam(
+            @PathVariable teamName: String
+    ): ExistingTeam = ExistingTeam.toExistingTeam(teamManager.getTeam(teamName))
 
 }
 

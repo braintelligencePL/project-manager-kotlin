@@ -1,8 +1,8 @@
-package pl.braintelligence.projectmanager.core.team.domain
+package pl.braintelligence.projectmanager.core.team.domain.values
 
 import arrow.core.Try
 import arrow.core.getOrElse
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.TeamMember
 
 class Employee(
         val firstName: String,
@@ -22,7 +22,6 @@ class Employee(
                 )
 
         private fun toJobPosition(jobPosition: String) =
-                Try { JobPosition.valueOf(jobPosition) }
-                        .getOrElse { JobPosition.INVALID }
+                Try { JobPosition.valueOf(jobPosition) }.getOrElse { JobPosition.INVALID }
     }
 }

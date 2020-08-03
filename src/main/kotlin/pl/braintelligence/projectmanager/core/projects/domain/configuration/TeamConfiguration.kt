@@ -2,13 +2,16 @@ package pl.braintelligence.projectmanager.core.projects.domain.configuration
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import pl.braintelligence.projectmanager.core.projects.domain.ProjectCreatorService
 import pl.braintelligence.projectmanager.core.projects.domain.ProjectFactory
-import pl.braintelligence.projectmanager.core.projects.domain.ProjectQueryService
+import pl.braintelligence.projectmanager.core.projects.domain.services.ProjectCreatorService
+import pl.braintelligence.projectmanager.core.projects.domain.services.ProjectModifierService
+import pl.braintelligence.projectmanager.core.projects.domain.services.ProjectQueryService
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectCreatorPort
+import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectModifierPort
 import pl.braintelligence.projectmanager.core.projects.ports.incoming.ProjectQueryPort
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCreatorRepository
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectQueryRepository
+import pl.braintelligence.projectmanager.core.team.ports.incoming.TeamManager
 
 @Configuration
 open class ProjectConfiguration {
@@ -26,8 +29,7 @@ open class ProjectConfiguration {
     ): ProjectCreatorPort =
             ProjectCreatorService(projectFactory, projectCreatorRepository)
 
-
-    open fun buildProjectQuery(
+    fun buildProjectQuery(
             inMemoryProjectRepository: InMemoryProjectRepository
     ): ProjectQueryPort =
             ProjectQueryService(inMemoryProjectRepository)
@@ -38,5 +40,19 @@ open class ProjectConfiguration {
     ): ProjectQueryPort =
             ProjectQueryService(projectQueryRepository)
 
+    open fun buildProjectModifier(
+            projectQueryService: ProjectQueryService,
+            inMemoryProjectRepository: InMemoryProjectRepository,
+            teamManager: TeamManager
+    ): ProjectModifierPort =
+            ProjectModifierService(projectQueryService, inMemoryProjectRepository, teamManager)
+
+    @Bean
+    open fun buildProjectModifier(
+            projectQueryService: ProjectQueryService,
+            projectCreatorRepository: ProjectCreatorRepository,
+            teamManager: TeamManager
+    ): ProjectModifierPort =
+            ProjectModifierService(projectQueryService, projectCreatorRepository, teamManager)
 
 }

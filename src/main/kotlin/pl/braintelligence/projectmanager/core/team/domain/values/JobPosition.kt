@@ -1,4 +1,4 @@
-package pl.braintelligence.projectmanager.core.team.domain
+package pl.braintelligence.projectmanager.core.team.domain.values
 
 enum class JobPosition {
     SCRUM_MASTER,

@@ -1,8 +1,8 @@
 package pl.braintelligence.projectmanager.core.team.ports.incoming
 
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.NewTeam
-import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto.TeamMember
 import pl.braintelligence.projectmanager.core.team.domain.Team
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.NewTeam
+import pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team.TeamMember
 
 /**
  * Primary Port
@@ -10,7 +10,7 @@ import pl.braintelligence.projectmanager.core.team.domain.Team
 
 interface TeamManager {
 
-    fun createTeam(newTeam: NewTeam)
+    fun createTeam(newTeam: NewTeam): Team
 
     fun addMemberToTeam(teamName: String, teamMember: TeamMember)
 
@@ -18,4 +18,5 @@ interface TeamManager {
 
     fun getTeam(teamName: String): Team
 
+    fun updateTeam(team: Team)
 }

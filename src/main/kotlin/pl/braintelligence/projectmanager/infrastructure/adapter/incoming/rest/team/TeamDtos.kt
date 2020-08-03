@@ -1,7 +1,7 @@
-package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.dto
+package pl.braintelligence.projectmanager.infrastructure.adapter.incoming.rest.team
 
-import pl.braintelligence.projectmanager.core.team.domain.Employee
 import pl.braintelligence.projectmanager.core.team.domain.Team
+import pl.braintelligence.projectmanager.core.team.domain.values.Employee
 
 data class NewTeam(val name: String)
 
@@ -29,12 +29,12 @@ data class ExistingTeam(
 ) {
     companion object {
         fun toExistingTeams(teams: List<Team>): List<ExistingTeam> =
-                teams.map {
-                    ExistingTeam(
-                            it.name,
-                            it.numberOfOngoingProjects,
-                            TeamMember.toTeamMembers(it.members),
-                            it.isTeamBusy())
-                }
+                teams.map { toExistingTeam(it) }
+
+        fun toExistingTeam(team: Team) = ExistingTeam(
+                team.name,
+                team.numberOfOngoingProjects,
+                TeamMember.toTeamMembers(team.members),
+                team.isTeamBusy())
     }
 }

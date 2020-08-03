@@ -5,7 +5,9 @@ import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectCre
 import pl.braintelligence.projectmanager.core.projects.ports.outgoing.ProjectQueryRepository
 import pl.braintelligence.projectmanager.shared.InMemoryCrudRepository
 
-open class InMemoryProjectRepository : InMemoryCrudRepository<Project, String>(), ProjectCreatorRepository, ProjectQueryRepository {
+open class InMemoryProjectRepository
+    : InMemoryCrudRepository<Project, String>(),
+        ProjectCreatorRepository, ProjectQueryRepository {
 
     override fun save(project: Project) {
         super.save(entity = project, id = project.id)

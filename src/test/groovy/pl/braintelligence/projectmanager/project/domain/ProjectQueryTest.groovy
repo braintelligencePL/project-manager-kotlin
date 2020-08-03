@@ -1,5 +1,6 @@
 package pl.braintelligence.projectmanager.project.domain
 
+import pl.braintelligence.projectmanager.core.projects.domain.MissingProjectException
 import pl.braintelligence.projectmanager.project.base.BaseProjectUnitTest
 
 class ProjectQueryTest extends BaseProjectUnitTest {
@@ -15,4 +16,33 @@ class ProjectQueryTest extends BaseProjectUnitTest {
         verifyProjectWithFeatures(response)
     }
 
+    def "Should browse for projects"() {
+        given:
+        projectCreator.createProjectWithFeatures(newProjectWithFeaturesDto)
+        projectCreator.createProjectDraft(newProjectDraftDto)
+
+        when:
+        def response = projectQuery.getProjects()
+
+        then:
+        response.size() == 2
+    }
+
+    def "Should throw MissingProjectException when project does not exist"() {
+        when:
+        projectQuery.getProject("projectId")
+
+        then:
+        def thrown = thrown(MissingProjectException)
+        thrown.message == "Project does not exist."
+    }
+
+
+    def "Should return empty list when there no projects available"() {
+        when:
+        def response = projectQuery.getProjects()
+
+        then:
+        response.empty
+    }
 }
